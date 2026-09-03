@@ -20,11 +20,11 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%;overflow:hidden;font-family:var(--body-font);-webkit-font-smoothing:antialiased;
-    background:#050506}
+    background:linear-gradient(170deg,#EEF1F6,#EDE7F0)}
   #frame{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:2.6vh 2vw}
   #stage{position:relative;aspect-ratio:16/9;width:min(96vw,calc(94vh*16/9));
     border-radius:12px;overflow:hidden;background:var(--bg);
-    box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04)}
+    box-shadow:0 28px 70px rgba(20,22,34,.32),0 6px 20px rgba(20,22,34,.16)}
   .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease;background:var(--bg)}
   .slide.active{opacity:1;visibility:visible}
   .pad{position:absolute;inset:0;padding:6.4% 7%;display:flex;flex-direction:column;justify-content:center}
@@ -144,9 +144,9 @@
     text-transform:uppercase;color:#5a5d66;pointer-events:none}
   .onphoto .sfoot{color:rgba(255,255,255,.5)}
   #ctr{position:fixed;bottom:1vh;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:30}
-  #ctr button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(255,255,255,.18);cursor:pointer;padding:0;transition:.3s}
-  #ctr button:hover{background:rgba(255,255,255,.4)}
-  #ctr button.on{background:var(--teal);box-shadow:0 0 10px rgba(13,252,211,.7);transform:scale(1.25)}
+  #ctr button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(20,26,38,.24);cursor:pointer;padding:0;transition:.3s}
+  #ctr button:hover{background:rgba(20,26,38,.48)}
+  #ctr button.on{background:var(--teal);box-shadow:0 0 0 1.5px rgba(20,26,38,.28),0 0 10px rgba(13,252,211,.55);transform:scale(1.25)}
   @media(max-width:760px){
     .split{grid-template-columns:1fr}.accent{display:none}
     .tiles,.pillars{grid-template-columns:repeat(2,1fr)}
@@ -426,9 +426,10 @@
     <div class="sfoot"><span>Photography · The Bailey Perspective · Andrianna Kaimis · James Cook · Monica Cazes · Shane Baby Billy Fowler · Daniel · Thad · Nanaka · Caitlin Guidry · Lauren Bruno · Kayla Pittman · Allison Powers</span><span></span></div>
   </section>
 
+  <div id="brand" hidden><img src="assets/iceland-eclipse-logo.png" alt=""/><span>Iceland Eclipse</span></div>
+
 </div></div>
 
-<div id="brand" hidden><img src="assets/iceland-eclipse-logo.png" alt=""/><span>Iceland Eclipse</span></div>
 <div id="ctr"></div>
 
 <script>

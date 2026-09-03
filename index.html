@@ -65,8 +65,8 @@
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,.2) 0%,rgba(9,9,11,.62) 68%,rgba(9,9,11,.88) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
   /* cover logo marks */
-  .cover-mark{margin-bottom:1.5em}
-  .cover-mark img{width:clamp(74px,11vh,120px);height:auto;display:block;filter:drop-shadow(0 0 22px rgba(0,0,0,.45))}
+  .cover-mark{margin-bottom:1.4em}
+  .cover-mark img{width:clamp(98px,14.5vh,168px);height:auto;display:block;filter:drop-shadow(0 0 26px rgba(0,0,0,.5))}
   .cover-imxp{margin-top:1.5em}
   .cover-imxp img{width:clamp(84px,9vw,124px);height:auto;display:block;opacity:.92;filter:drop-shadow(0 0 14px rgba(0,0,0,.5))}
   @media (prefers-reduced-motion: reduce){
@@ -117,6 +117,9 @@
   .gslide.light-bg .softphoto img{opacity:1}
   .gslide.light-bg .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.72) 0%,rgba(9,9,11,.4) 34%,rgba(9,9,11,.46) 100%)}
   .gslide.light-bg .small{color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.85)}
+  /* subtle under-layer (keeps split + accent, replaces plain black) */
+  .gslide.underbg .softphoto img{opacity:.5}
+  .gslide.underbg .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.6) 55%,rgba(9,9,11,.74) 100%)}
   /* eclipse trilogy map + legs */
   .trilomap{width:100%;margin:.9em 0 1em;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4)}
   .trilomap img{width:100%;display:block}
@@ -146,6 +149,12 @@
     padding:.6em 1.15em;border-radius:999px;border:1px solid rgba(13,252,211,.45);color:var(--ink);
     background:rgba(13,252,211,.05);transition:background .25s ease,transform .25s ease}
   .chip:hover{background:rgba(13,252,211,.14);transform:translateY(-2px)}
+  /* press testimonials grid */
+  .voices{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.55rem,1.3vw,1.05rem);margin-top:1.1em}
+  .vq{border-left:2px solid var(--teal);padding-left:.85em}
+  .vq p{font-size:clamp(.5rem,.84vw,.74rem);font-style:italic;color:var(--ink);line-height:1.4;max-width:none;margin:0}
+  .vq span{display:block;margin-top:.35em;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.68vw,.58rem);letter-spacing:.06em;color:var(--orange)}
+  @media(max-width:760px){ .voices{grid-template-columns:1fr} }
   /* timeline */
   .timeline{display:flex;gap:clamp(.45rem,1vw,.85rem);margin-top:1.1em;flex-wrap:wrap}
   .tlyear{border-radius:10px;padding:clamp(.55rem,1.1vw,.9rem) clamp(.6rem,1.3vw,1rem);
@@ -333,7 +342,8 @@
   </section>
 
   <!-- 7 · THE SCHEDULE -->
-  <section class="slide">
+  <section class="slide gslide">
+    <div class="softphoto"><img src="assets/schedule-bg.jpg" alt=""/></div>
     <div class="pad">
       <div class="eyebrow">The Schedule · 11 – 15 August</div>
       <h2>Five Days, One Totality.</h2>
@@ -398,29 +408,29 @@
 
   <!-- 8 · IN THE PRESS -->
   <section class="slide gslide">
-    <div class="softphoto"><img src="assets/press.jpg" alt=""/></div>
-    <div class="pad">
-      <div class="eyebrow">In the Press · In Their Words</div>
-      <h2>The New York Times Came to Hellissandur.</h2>
-      <p>Callie Holtermann covered the festival for The New York Times. Condé Nast Traveler joined the Into the Glacier concert, and Dazed, Live Science and Schön! Magazine followed the artists, astronauts and side quests.</p>
-      <div class="chips">
-        <div class="chip">The New York Times</div>
-        <div class="chip">Condé Nast Traveler</div>
-        <div class="chip">Dazed</div>
-        <div class="chip">Live Science</div>
-        <div class="chip">Schön! Magazine</div>
-      </div>
-      <div style="display:grid;grid-template-columns:1.35fr .65fr;gap:2.4em;margin-top:1.5em;max-width:96%">
-        <div>
-          <div class="quote">"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence, all aligned on making the world a better place through community, art, music and healing."</div>
-          <div class="quote-src">- @exologik, attendee</div>
+    <div class="softphoto"><img src="assets/press-bg.jpg" alt=""/></div>
+    <div class="pad"><div class="split" style="grid-template-columns:1.32fr .68fr;gap:4.5%">
+      <div class="content">
+        <div class="eyebrow">In the Press · In Their Words</div>
+        <h2>The Story Traveled the World.</h2>
+        <div class="chips">
+          <div class="chip">The New York Times</div>
+          <div class="chip">Condé Nast Traveler</div>
+          <div class="chip">Dazed</div>
+          <div class="chip">Live Science</div>
+          <div class="chip">Schön! Magazine</div>
         </div>
-        <div>
-          <div class="quote">"Such an epic experience."</div>
-          <div class="quote-src">- @joshuabear.music</div>
+        <div class="voices">
+          <div class="vq"><p>"Definitely one of the best moments of the decade: a total solar eclipse captured through a telescope in Iceland."</p><span>@iwona.fluda</span></div>
+          <div class="vq"><p>"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence."</p><span>@exologik</span></div>
+          <div class="vq"><p>"Such an epic experience."</p><span>@joshuabear.music</span></div>
+          <div class="vq"><p>"My favorite keepsake from Iceland."</p><span>@salenasalinas</span></div>
+          <div class="vq"><p>"Thank you for creating such a masterpiece and time capsule."</p><span>@alli_empowers</span></div>
+          <div class="vq"><p>"It was an honor to be part of your team."</p><span>@zen.meets.chaos</span></div>
         </div>
       </div>
-    </div>
+      <div class="accent" style="background:#000"><img src="assets/nyt-feature.jpg" alt="The New York Times feature on Iceland Eclipse" style="object-fit:contain"/></div>
+    </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
@@ -473,7 +483,7 @@
           <div class="tlyear"><div class="y">2009</div><div class="p">Japan</div></div>
           <div class="tlyear"><div class="y">2012</div><div class="p">Australia</div></div>
           <div class="tlyear"><div class="y">2017</div><div class="p">Oregon</div></div>
-          <div class="tlyear"><div class="y">2024</div><div class="p">Texas · IMXP</div></div>
+          <div class="tlyear"><div class="y">2024</div><div class="p">Texas</div></div>
           <div class="tlyear now"><div class="y">2026</div><div class="p">Iceland</div></div>
         </div>
       </div>
@@ -483,7 +493,8 @@
   </section>
 
   <!-- 12 · WHAT'S NEXT -->
-  <section class="slide">
+  <section class="slide gslide underbg">
+    <div class="softphoto"><img src="assets/whatsnext-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">What's Next · Iceland</div>

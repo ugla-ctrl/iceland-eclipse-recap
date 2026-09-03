@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iceland Eclipse 2026 · Event Recap</title>
+<link rel="icon" href="assets/iceland-eclipse-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --polar:#FFFDF6; --mist:#DDE6ED; --pearl:#F9E8D2; --glacial:#BCD3E4;
+    --lavender:#BFB4DC; --msun:#C9CDE4; --rose:#D9A9A2; --indigo:#3D55A8; --navy:#2C3763;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Inter','Helvetica Neue',Arial,sans-serif;
+    --g1:linear-gradient(160deg,#E4DDF0 0%,#F3D9E2 100%);
+    --g2:linear-gradient(160deg,#8FA6DA 0%,#E5C1D8 100%);
+    --g3:linear-gradient(160deg,#BFD4E6 0%,#E9E4F2 100%);
+    --g4:linear-gradient(160deg,#F5C9A8 0%,#B9B4DC 100%);
+    --g5:linear-gradient(160deg,#9CA8DC 0%,#4E5FA8 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;font-family:var(--sans);-webkit-font-smoothing:antialiased;
+    background:linear-gradient(170deg,#EEF1F6,#EDE7F0)}
+  #frame{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:3.2vh 2.4vw}
+  #stage{position:relative;aspect-ratio:16/9;width:min(94vw,calc(93vh*16/9));
+    border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(44,55,99,.28),0 4px 16px rgba(44,55,99,.12);
+    background:var(--polar)}
+  .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;background:var(--polar)}
+  .slide.active{opacity:1;visibility:visible}
+  .pad{position:absolute;inset:0;padding:6.5% 7%;display:flex;flex-direction:column;justify-content:center}
+  .split{display:grid;grid-template-columns:1.15fr .85fr;gap:5%;align-items:stretch;height:100%}
+  .split .content{display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .accent{border-radius:12px;overflow:hidden;position:relative;min-height:100%}
+  .accent img{width:100%;height:100%;object-fit:cover;display:block}
+  .accent::after{content:'';position:absolute;inset:0;background:linear-gradient(200deg,rgba(191,180,220,.18),rgba(249,232,210,.10))}
+  .eyebrow{font-size:clamp(.55rem,.95vw,.78rem);font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--rose);margin-bottom:1.3em}
+  h1.word{font-family:var(--serif);font-weight:300;letter-spacing:.24em;line-height:1.05;
+    font-size:clamp(1.7rem,5.6vw,4.9rem);text-transform:uppercase;color:#fff;text-indent:.24em}
+  h2{font-family:var(--serif);font-weight:400;letter-spacing:.01em;line-height:1.08;
+    font-size:clamp(1.35rem,3.2vw,3rem);color:var(--navy);margin-bottom:.6em}
+  h2 em{font-style:italic;color:var(--indigo)}
+  p{font-weight:300;line-height:1.6;font-size:clamp(.74rem,1.25vw,1.08rem);color:#57608A;max-width:58ch}
+  .lead{font-family:var(--serif);font-weight:400;font-size:clamp(1.05rem,2.15vw,1.95rem);line-height:1.34;color:var(--navy);max-width:34ch}
+  .small{font-size:clamp(.6rem,.9vw,.8rem);color:#8A90AE;line-height:1.55}
+  /* cover */
+  .coverbg{position:absolute;inset:0}
+  .coverbg img{width:100%;height:100%;object-fit:cover}
+  .coverbg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,85,168,.22),rgba(44,55,99,.10) 45%,rgba(44,55,99,.4))}
+  .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
+  .mark{margin-bottom:1.6em;filter:drop-shadow(0 0 14px rgba(255,255,255,.9)) drop-shadow(0 0 34px rgba(255,255,255,.5))}
+  .mark img{width:clamp(46px,6vw,72px);height:auto;display:block}
+  .cover-sub{margin-top:1.8em;font-weight:400;letter-spacing:.3em;text-transform:uppercase;
+    font-size:clamp(.55rem,1vw,.85rem);line-height:2.1;color:rgba(255,255,255,.95)}
+  .cover-tag{margin-top:2em;font-size:clamp(.5rem,.8vw,.68rem);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  /* soft background photo (for gslide-style slides) */
+  .softphoto{position:absolute;inset:0}
+  .softphoto img{width:100%;height:100%;object-fit:cover;opacity:.22}
+  .softphoto::after{content:'';position:absolute;inset:0;background:linear-gradient(170deg,rgba(238,241,246,.9),rgba(237,231,240,.94))}
+  .gslide .pad{z-index:2}
+  /* tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.55rem,1.3vw,1.2rem);margin-top:.5em}
+  .tiles.t3{grid-template-columns:repeat(3,1fr)}
+  .tile{border-radius:12px;padding:clamp(.7rem,1.6vw,1.45rem);background:var(--g3);border:1px solid rgba(61,85,168,.08)}
+  .tile:nth-child(2){background:var(--g1)}
+  .tile:nth-child(3){background:var(--g4)}
+  .tile:nth-child(4){background:var(--g2)}
+  .tile:nth-child(5){background:var(--g4)}
+  .tile:nth-child(6){background:var(--g2)}
+  .tile:nth-child(7){background:var(--g3)}
+  .tile:nth-child(8){background:var(--g1)}
+  .tile .n{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2.9vw,2.6rem);line-height:1;color:var(--navy)}
+  .tile .l{margin-top:.5em;font-size:clamp(.5rem,.78vw,.7rem);letter-spacing:.15em;text-transform:uppercase;color:#5A6390}
+  .tile p{font-size:clamp(.6rem,.95vw,.85rem);margin-top:.6em;max-width:none}
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.55rem,1.2vw,1.1rem);margin-top:1em}
+  .pillar{border-radius:12px;padding:clamp(.7rem,1.4vw,1.2rem);background:#fff;border:1px solid rgba(61,85,168,.12)}
+  .pillar .t{font-family:var(--serif);font-size:clamp(.95rem,1.6vw,1.4rem);color:var(--indigo);letter-spacing:.06em}
+  .pillar p{font-size:clamp(.58rem,.92vw,.82rem);margin-top:.5em;max-width:none}
+  /* timeline */
+  .timeline{display:flex;gap:clamp(.5rem,1.2vw,1rem);margin-top:1.1em;flex-wrap:wrap}
+  .tlyear{border-radius:12px;padding:clamp(.6rem,1.2vw,1rem) clamp(.7rem,1.4vw,1.2rem);background:var(--g3);border:1px solid rgba(61,85,168,.08);flex:1;min-width:110px}
+  .tlyear.now{background:var(--g5)}
+  .tlyear.now .y,.tlyear.now .p{color:#fff}
+  .tlyear .y{font-family:var(--serif);font-size:clamp(1rem,1.9vw,1.6rem);color:var(--navy)}
+  .tlyear .p{margin-top:.3em;font-size:clamp(.5rem,.78vw,.68rem);letter-spacing:.1em;text-transform:uppercase;color:#5A6390}
+  /* quotes */
+  .quote{font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(.95rem,1.8vw,1.6rem);line-height:1.35;color:var(--navy)}
+  .quote-src{margin-top:.5em;font-size:clamp(.52rem,.82vw,.72rem);letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+  /* contacts */
+  .contacts{display:grid;grid-template-columns:repeat(2,minmax(0,320px));gap:3em;justify-content:center;margin-top:2.2em;text-align:left}
+  .contact .nm{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.6rem);color:#fff}
+  .contact .rl{font-size:clamp(.55rem,.85vw,.75rem);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin:.3em 0 .5em}
+  .contact .em{font-size:clamp(.62rem,1vw,.9rem);color:rgba(255,255,255,.92)}
+  .sfoot{position:absolute;left:7%;right:7%;bottom:4.2%;display:flex;justify-content:space-between;z-index:5;
+    font-size:clamp(.44rem,.7vw,.6rem);letter-spacing:.3em;text-transform:uppercase;color:#9AA0BC;pointer-events:none}
+  .onphoto .sfoot{color:rgba(255,255,255,.7)}
+  #ctr{position:fixed;bottom:1.1vh;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:30}
+  #ctr button{width:6px;height:6px;border-radius:50%;border:none;background:rgba(61,85,168,.25);cursor:pointer;padding:0;transition:.3s}
+  #ctr button.on{background:var(--indigo);transform:scale(1.45)}
+  @media(max-width:760px){
+    .split{grid-template-columns:1fr}.accent{display:none}
+    .tiles,.pillars{grid-template-columns:repeat(2,1fr)}
+    .contacts{grid-template-columns:1fr}
+    .timeline{flex-direction:column}
+  }
+
+  /* ---- mobile & tablet-portrait additions (desktop/landscape untouched) ---- */
+  @media (max-height:520px){
+    .pad{overflow-y:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch}
+  }
+  @media (max-width:1024px) and (orientation:portrait){
+    #frame{padding:1.4vh 3vw}
+    #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.8vh - 30px);height:calc(100dvh - 2.8vh - 30px)}
+    .pad{overflow-y:auto;justify-content:flex-start;padding:8% 6.5%;-webkit-overflow-scrolling:touch}
+    .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
+    .accent{display:block;order:-1;flex:none;width:100%;height:34vw;min-height:150px;max-height:240px}
+    .coverwrap{padding:10% 7%}
+    h1.word{font-size:clamp(1.5rem,7.5vw,3.1rem)}
+    .cover-sub{font-size:.64rem}
+    .cover-tag{font-size:.56rem}
+    h2{font-size:1.5rem}
+    p{font-size:.94rem;max-width:none}
+    .lead{font-size:1.2rem;max-width:none}
+    .small{font-size:.78rem}
+    .eyebrow{font-size:.66rem;margin-bottom:1em}
+    .tiles{grid-template-columns:repeat(2,1fr);gap:.7rem}
+    .tile{padding:.85rem}
+    .tile .n{font-size:1.5rem}
+    .tile .l{font-size:.58rem}
+    .pillars{grid-template-columns:repeat(2,1fr);gap:.7rem}
+    .pillar{padding:.8rem}
+    .pillar .t{font-size:.98rem}
+    .pillar p{font-size:.74rem}
+    .timeline{flex-direction:column;gap:.6rem}
+    .quote{font-size:1.08rem}
+    .quote-src{font-size:.58rem}
+    .contacts{grid-template-columns:1fr;gap:1.2em;margin-top:1.4em}
+    .contact .nm{font-size:1.15rem}
+    .contact .em{font-size:.82rem}
+    .sfoot{display:none}
+    #ctr{bottom:.7vh;gap:6px}
+  }
+</style>
+</head>
+<body>
+<div id="frame"><div id="stage">
+
+  <!-- 1 · COVER -->
+  <section class="slide active onphoto">
+    <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
+    <div class="coverwrap">
+      <div class="mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
+      <h1 class="word">Iceland Eclipse</h1>
+      <div class="cover-sub">A Celestial Gathering in the Land of Fire &amp; Ice<br/>11 – 15 August 2026 · Hellissandur · Snæfellsnes Peninsula</div>
+      <div class="cover-tag">Event Recap · IMXP + Secret Solstice</div>
+    </div>
+    <div class="sfoot"><span>64.9578° N</span><span>23.9066° W</span></div>
+  </section>
+
+  <!-- 2 · THE MOMENT -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">The Moment</div>
+        <p class="lead">At 17:47 UTC on 12 August 2026, totality swept across Snæfellsnes for over two minutes.</p>
+        <p style="margin-top:1.2em">Iceland's last total solar eclipse was in 1954. The next won't happen until 2196. For one afternoon, the path of totality ran straight through Hellissandur, and totality overlapped the Perseid meteor shower, a pairing that won't come around again.</p>
+        <div class="tiles t3" style="margin-top:1.2em">
+          <div class="tile"><div class="n">1954</div><div class="l">Iceland's last total eclipse</div></div>
+          <div class="tile"><div class="n">2+ min</div><div class="l">Duration of totality</div></div>
+          <div class="tile"><div class="n">2196</div><div class="l">Iceland's next total eclipse</div></div>
+        </div>
+      </div>
+      <div class="accent"><img src="assets/eclipse-sky.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>02</span></div>
+  </section>
+
+  <!-- 3 · BY THE NUMBERS -->
+  <section class="slide">
+    <div class="pad"><div class="split" style="grid-template-columns:.75fr 1.25fr">
+      <div class="accent"><img src="assets/crowd-aerial.jpg" alt=""/></div>
+      <div class="content">
+        <div class="eyebrow">By the Numbers</div>
+        <h2>A sold-out proof of demand.</h2>
+        <div class="tiles">
+          <div class="tile"><div class="n">3,000</div><div class="l">Passes sold, sold out</div></div>
+          <div class="tile"><div class="n">75+</div><div class="l">Countries represented</div></div>
+          <div class="tile"><div class="n">287</div><div class="l">Artists &amp; speakers</div></div>
+          <div class="tile"><div class="n">50M+</div><div class="l">Campaign impressions</div></div>
+        </div>
+        <p class="small" style="margin-top:1.1em">Hellissandur, a village of 400, hosted a gathering built for a fraction of that size, and it sold out anyway.</p>
+      </div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>03</span></div>
+  </section>
+
+  <!-- 4 · DIGITAL REACH -->
+  <section class="slide gslide">
+    <div class="softphoto"><img src="assets/ceremony.jpg" alt=""/></div>
+    <div class="pad">
+      <div class="eyebrow">Digital Reach</div>
+      <h2>The campaign traveled further than the guests did.</h2>
+      <div class="tiles">
+        <div class="tile"><div class="n">1.5M</div><div class="l">Page views</div></div>
+        <div class="tile"><div class="n">750k</div><div class="l">Unique visitors</div></div>
+        <div class="tile"><div class="n">100k+</div><div class="l">Email list</div></div>
+        <div class="tile"><div class="n">82k+</div><div class="l">Facebook fans</div></div>
+        <div class="tile"><div class="n">44k+</div><div class="l">Instagram audience</div></div>
+        <div class="tile"><div class="n">12k+</div><div class="l">X (Twitter) followers</div></div>
+      </div>
+      <p class="small" style="margin-top:1.1em">Guests spent an average of 2+ minutes on site before ever booking, well above a typical event campaign.</p>
+    </div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>04</span></div>
+  </section>
+
+  <!-- 5 · THE SETTING -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">The Setting · Hellissandur</div>
+        <h2>"Iceland in <em>miniature.</em>"</h2>
+        <p>Set at the westernmost edge of Iceland with minimal light pollution, Hellissandur put guests within reach of glaciers, black sand beaches, lava fields and ice caves, all inside one geologically dense peninsula.</p>
+        <p style="margin-top:1em">Icelandic and international artists brought local stories, landscapes and legends to life across the town in the Murals of Hellissandur, a living, community-driven canvas that guests could walk between programming blocks.</p>
+      </div>
+      <div class="accent"><img src="assets/village.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>05</span></div>
+  </section>
+
+  <!-- 6 · PROGRAMMING · Fourth Contact pillars -->
+  <section class="slide gslide">
+    <div class="softphoto"><img src="assets/site-setup.jpg" alt=""/></div>
+    <div class="pad">
+      <div class="eyebrow">Programming · Fourth Contact</div>
+      <h2>Dance. Learn. Connect. Explore.</h2>
+      <div class="pillars">
+        <div class="pillar"><div class="t">DANCE</div><p>Global music, from Icelandic dreamscapes to electronic live performances</p></div>
+        <div class="pillar"><div class="t">LEARN</div><p>International leaders in science, technology and innovation</p></div>
+        <div class="pillar"><div class="t">CONNECT</div><p>Yoga, ceremony and story, guided by wellness visionaries</p></div>
+        <div class="pillar"><div class="t">EXPLORE</div><p>Iceland's iconic landmarks and elemental wilderness</p></div>
+      </div>
+      <p class="small" style="margin-top:1.2em">Across the four days: live performances and stunning visual art, panels and keynotes from thought leaders in science and space, hands-on tech demos, and conscious exploration of the cosmos and our inner worlds.</p>
+    </div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>06</span></div>
+  </section>
+
+  <!-- 7 · SIDE QUESTS -->
+  <section class="slide">
+    <div class="pad"><div class="split" style="grid-template-columns:.75fr 1.25fr">
+      <div class="accent"><img src="assets/glasses.jpg" alt=""/></div>
+      <div class="content">
+        <div class="eyebrow">Side Quests</div>
+        <h2>Bucket-list nights beyond the field.</h2>
+        <div class="pillars">
+          <div class="pillar"><div class="t">Into the Glacier</div><p>A concert inside Snæfellsjökull, one of the world's seven main energy centers, made famous by Jules Verne</p></div>
+          <div class="pillar"><div class="t">The Lava Tunnel</div><p>An acoustic set inside Raufarhólshellir, one of Iceland's largest lava tunnels, shaped 5,000+ years ago</p></div>
+          <div class="pillar"><div class="t">Icelandic Pool Party</div><p>Geothermal, mineral-rich waters where ancient lava fields meet mossy hills</p></div>
+          <div class="pillar"><div class="t">Beyond the Eclipse</div><p>Helicopter tours and 1–7 day Ring Road excursions from Reykjavík, before and after the festival</p></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>07</span></div>
+  </section>
+
+  <!-- 8 · OUR COMMUNITY -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">Our Community</div>
+        <h2>Influential. Affluent. <em>Global.</em></h2>
+        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions and representation from 40+ countries. Over half of attendees were considered high net worth.</p>
+        <div class="tiles t3" style="margin-top:1.1em">
+          <div class="tile"><div class="n">35</div><div class="l">Average age</div></div>
+          <div class="tile"><div class="n">75%</div><div class="l">Hold a higher-education degree</div></div>
+          <div class="tile"><div class="n">53/47</div><div class="l">Male / female split</div></div>
+        </div>
+      </div>
+      <div class="accent"><img src="assets/crowd-cheer.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>08</span></div>
+  </section>
+
+  <!-- 9 · THE PARTNERSHIP -->
+  <section class="slide gslide">
+    <div class="softphoto"><img src="assets/ab-crowd.jpg" alt=""/></div>
+    <div class="pad">
+      <div class="eyebrow">The Partnership</div>
+      <h2>IMXP + Secret Solstice</h2>
+      <p>IMXP has built and grown the biggest events at the intersection of total solar eclipses, music and technology, producing Texas Eclipse Festival in 2024 before Iceland. Founded in 2014, Secret Solstice is one of Iceland's biggest and highest-rated international festivals: 18K attendees, 70+ global and Icelandic artists, 100% renewable geothermal power, ranked in the top 7% most digitally engaged festival audiences globally. Secret Solstice's team led local promotion, partnerships, production and operations for Iceland Eclipse.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3em;margin-top:1.6em;max-width:90%">
+        <div>
+          <div class="quote">"Secret Solstice is the summer festival to end all summer festivals."</div>
+          <div class="quote-src">- X</div>
+        </div>
+        <div>
+          <div class="quote">"There's truly nothing like Secret Solstice."</div>
+          <div class="quote-src">- Thump</div>
+        </div>
+      </div>
+    </div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
+  </section>
+
+  <!-- 10 · THE TRADITION -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">The Tradition</div>
+        <h2>Part of a <em>lineage.</em></h2>
+        <p>Iceland Eclipse continues a tradition of global gatherings that celebrate rare celestial alignments, a shared moment of wonder for humankind. Before Iceland, IMXP produced Texas Eclipse 2024: 38,000+ attendees from 40 countries and 300+ contributors, called "a celestial event like no other, blending the ultimate Burning Man, Art Basel, SXSW, and TED Talks into one" by Uproxx.</p>
+        <div class="timeline">
+          <div class="tlyear"><div class="y">1999</div><div class="p">Turkey / Hungary</div></div>
+          <div class="tlyear"><div class="y">2001</div><div class="p">Zambia</div></div>
+          <div class="tlyear"><div class="y">2009</div><div class="p">Japan</div></div>
+          <div class="tlyear"><div class="y">2012</div><div class="p">Australia</div></div>
+          <div class="tlyear"><div class="y">2017</div><div class="p">Oregon</div></div>
+          <div class="tlyear"><div class="y">2024</div><div class="p">Texas · IMXP</div></div>
+          <div class="tlyear now"><div class="y">2026</div><div class="p">Iceland</div></div>
+        </div>
+      </div>
+      <div class="accent"><img src="assets/eclipse-crowd.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+  </section>
+
+  <!-- 11 · WHAT'S NEXT -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">What's Next</div>
+        <h2>Midnight Sun<br/><em>9 – 11 July 2027 · Reykjavík</em></h2>
+        <p>Iceland Eclipse took 3,000 people to the edge of the world for two minutes of darkness. Midnight Sun brings twice that many into the middle of Reykjavík for three days where the darkness never comes at all.</p>
+        <p class="small" style="margin-top:1em">Same producers, same spirit, a new stage: IMXP + Secret Solstice, from the wilderness to the city.</p>
+      </div>
+      <div class="accent"><img src="assets/aurora.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
+  </section>
+
+  <!-- 12 · THANK YOU + CONTACT -->
+  <section class="slide onphoto">
+    <div class="coverbg"><img src="assets/golden-hug.jpg" alt=""/></div>
+    <div class="coverwrap">
+      <div class="mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
+      <h1 class="word" style="font-size:clamp(1.5rem,4.2vw,3.6rem)">Thank You</h1>
+      <div class="contacts">
+        <div class="contact"><div class="nm">Mitch Morales</div><div class="rl">Co-founder · IMXP</div><div class="em">mitch@im-xp.com</div></div>
+        <div class="contact"><div class="nm">Fred Olafsson</div><div class="rl">Co-founder · Secret Solstice</div><div class="em">fo@eclipse.is</div></div>
+      </div>
+      <div class="cover-sub" style="margin-top:2em">Iceland Eclipse · 11 – 15 August 2026 · Hellissandur, Iceland</div>
+    </div>
+    <div class="sfoot"><span>64.9578° N</span><span>23.9066° W</span></div>
+  </section>
+
+</div></div>
+
+<div id="ctr"></div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const ctr=document.getElementById('ctr');
+  let i=0;
+  slides.forEach((_,n)=>{const b=document.createElement('button');b.onclick=()=>go(n);ctr.appendChild(b);});
+  function go(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    [...ctr.children].forEach((d,k)=>d.classList.toggle('on',k===i));
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(i+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp')go(i-1);
+    if(e.key==='Home')go(0); if(e.key==='End')go(slides.length-1);
+  });
+  let sx=0,sy=0,st=0;
+  document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;st=Date.now();},{passive:true});
+  document.addEventListener('touchend',e=>{
+    const t=e.changedTouches[0];
+    const dx=t.clientX-sx, dy=t.clientY-sy, dt=Date.now()-st;
+    if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){go(i+(dx<0?1:-1));return;}
+    if(dt<350 && Math.abs(dx)<10 && Math.abs(dy)<10){
+      if(e.target.closest('#ctr')||e.target.closest('a'))return;
+      if(t.clientX < window.innerWidth*0.2){go(i-1);}
+      else{go(i+1);}
+    }
+  },{passive:true});
+  let wl=0;
+  document.addEventListener('wheel',e=>{const t=Date.now();if(t-wl<700)return;
+    if(Math.abs(e.deltaY)>30||Math.abs(e.deltaX)>30){wl=t;go(i+((e.deltaY+e.deltaX)>0?1:-1));}},{passive:true});
+  go(0);
+</script>
+</body>
+</html>

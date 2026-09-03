@@ -64,21 +64,12 @@
   .coverbg::after{content:'';position:absolute;inset:0;
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,.2) 0%,rgba(9,9,11,.62) 68%,rgba(9,9,11,.88) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
-  /* animated eclipse mark */
-  .eclipse{position:relative;width:clamp(78px,11.5vh,132px);aspect-ratio:1;margin-bottom:1.8em}
-  .eclipse .sun{position:absolute;inset:0;border-radius:50%;
-    background:radial-gradient(circle at 50% 50%,#fff 0%,#ffe4bd 30%,var(--orange) 66%,#bf520b 100%);
-    box-shadow:0 0 42px 6px rgba(238,119,23,.5),0 0 96px 26px rgba(238,119,23,.2)}
-  .eclipse .moon{position:absolute;inset:0;border-radius:50%;background:var(--bg);
-    animation:eclipseCross 11s ease-in-out infinite}
-  .eclipse .glow{position:absolute;inset:-42%;border-radius:50%;
-    background:radial-gradient(circle,rgba(13,252,211,.22),rgba(13,252,211,0) 60%);
-    opacity:0;animation:coronaPulse 11s ease-in-out infinite}
-  @keyframes eclipseCross{0%{transform:translateX(-135%)}45%{transform:translateX(-1%)}55%{transform:translateX(1%)}100%{transform:translateX(135%)}}
-  @keyframes coronaPulse{0%,34%{opacity:0}50%{opacity:1}66%,100%{opacity:0}}
+  /* cover logo marks */
+  .cover-mark{margin-bottom:1.5em}
+  .cover-mark img{width:clamp(74px,11vh,120px);height:auto;display:block;filter:drop-shadow(0 0 22px rgba(0,0,0,.45))}
+  .cover-imxp{margin-top:1.5em}
+  .cover-imxp img{width:clamp(84px,9vw,124px);height:auto;display:block;opacity:.92;filter:drop-shadow(0 0 14px rgba(0,0,0,.5))}
   @media (prefers-reduced-motion: reduce){
-    .eclipse .moon{animation:none;transform:translateX(-4%)}
-    .eclipse .glow{animation:none;opacity:.9}
     .slide{transition:none}
     .slide.active .accent img{animation:none}
   }
@@ -223,12 +214,12 @@
   <section class="slide active onphoto">
     <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
     <div class="coverwrap">
-      <div class="eclipse" aria-hidden="true"><div class="glow"></div><div class="sun"></div><div class="moon"></div></div>
+      <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
       <h1 class="word">Iceland <em>Eclipse</em></h1>
       <div class="cover-sub">A Celestial Gathering in the Land of Fire &amp; Ice<br/>11 – 15 August 2026 · Hellissandur · Snæfellsnes Peninsula</div>
-      <div class="cover-tag">Event Recap · IMXP + Secret Solstice</div>
+      <div class="cover-tag">Event Recap</div>
+      <div class="cover-imxp"><img src="assets/imxp-logo.png" alt="IMXP"/></div>
     </div>
-    <div class="sfoot"><span>64.9578° N</span><span>23.9066° W</span></div>
   </section>
 
   <!-- 2 · THE MOMENT -->
@@ -249,7 +240,21 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>02</span></div>
   </section>
 
-  <!-- 3 · BY THE NUMBERS -->
+  <!-- 3 · THE SETTING -->
+  <section class="slide">
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">The Setting · Hellissandur</div>
+        <h2>"Iceland in <em>Miniature.</em>"</h2>
+        <p>Home to just 400 people and set at the westernmost edge of Iceland with minimal light pollution, Hellissandur put guests within reach of glaciers, black sand beaches, lava fields and ice caves, all inside one geologically dense peninsula.</p>
+        <p style="margin-top:1em">Icelandic and international artists brought local stories, landscapes and legends to life across the town in the Murals of Hellissandur, a living, community-driven canvas that guests could walk between programming blocks.</p>
+      </div>
+      <div class="accent"><img src="assets/setting.jpg" alt=""/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>03</span></div>
+  </section>
+
+  <!-- 4 · BY THE NUMBERS -->
   <section class="slide">
     <div class="pad"><div class="split" style="grid-template-columns:.75fr 1.25fr">
       <div class="accent"><img src="assets/numbers.jpg" alt=""/></div>
@@ -258,17 +263,17 @@
         <h2>Thank you, <em>Eclipse Seekers.</em></h2>
         <p>We came from more than 75 countries to gather at the edge of the Earth, beneath Snæfellsjökull, for total darkness that lasted just over two minutes.</p>
         <div class="tiles" style="margin-top:1.2em">
-          <div class="tile"><div class="n" data-count>3,333</div><div class="l">Guests</div></div>
+          <div class="tile"><div class="n" data-count>4,200</div><div class="l">Participants</div></div>
           <div class="tile"><div class="n">2:07</div><div class="l">Minutes of totality</div></div>
           <div class="tile"><div class="n" data-count>287</div><div class="l">Artists &amp; speakers</div></div>
           <div class="tile"><div class="n" data-count>5</div><div class="l">Days under the glacier</div></div>
         </div>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>03</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>04</span></div>
   </section>
 
-  <!-- 4 · DIGITAL REACH -->
+  <!-- 5 · DIGITAL REACH -->
   <section class="slide gslide">
     <div class="softphoto"><img src="assets/reach-bg.jpg" alt=""/></div>
     <div class="pad">
@@ -284,20 +289,6 @@
       </div>
       <p class="small" style="margin-top:1.1em">Guests spent an average of 2+ minutes on site before ever booking, well above a typical event campaign.</p>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>04</span></div>
-  </section>
-
-  <!-- 5 · THE SETTING -->
-  <section class="slide">
-    <div class="pad"><div class="split">
-      <div class="content">
-        <div class="eyebrow">The Setting · Hellissandur</div>
-        <h2>"Iceland in <em>Miniature.</em>"</h2>
-        <p>Home to just 400 people and set at the westernmost edge of Iceland with minimal light pollution, Hellissandur put guests within reach of glaciers, black sand beaches, lava fields and ice caves, all inside one geologically dense peninsula.</p>
-        <p style="margin-top:1em">Icelandic and international artists brought local stories, landscapes and legends to life across the town in the Murals of Hellissandur, a living, community-driven canvas that guests could walk between programming blocks.</p>
-      </div>
-      <div class="accent"><img src="assets/setting.jpg" alt=""/></div>
-    </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>05</span></div>
   </section>
 
@@ -371,8 +362,8 @@
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">Our Community</div>
-        <h2>Influential. Affluent. <em>Global.</em></h2>
-        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions and representation from 40+ countries. Over half of attendees were considered high net worth.</p>
+        <h2>Influential. Educated. <em>Global.</em></h2>
+        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions and representation from 40+ countries. Three in four held a higher-education degree.</p>
         <div class="tiles t3" style="margin-top:1.2em">
           <div class="tile"><div class="n" data-count>35</div><div class="l">Average age</div></div>
           <div class="tile"><div class="n" data-count>75%</div><div class="l">Hold a higher-education degree</div></div>
@@ -384,22 +375,16 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
-  <!-- 10 · THE PARTNERSHIP -->
-  <section class="slide gslide">
-    <div class="softphoto"><img src="assets/partnership-bg.jpg" alt=""/></div>
+  <!-- 10 · THE ECLIPSE TRILOGY -->
+  <section class="slide">
     <div class="pad">
-      <div class="eyebrow">The Partnership</div>
-      <h2>IMXP + Secret Solstice</h2>
-      <p>IMXP has built and grown the biggest events at the intersection of total solar eclipses, music and technology, producing Texas Eclipse Festival in 2024 before Iceland. Founded in 2014, Secret Solstice is one of Iceland's biggest and highest-rated international festivals: 18K attendees, 70+ global and Icelandic artists, 100% renewable geothermal power, ranked in the top 7% most digitally engaged festival audiences globally. Secret Solstice's team led local promotion, partnerships, production and operations for Iceland Eclipse.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3em;margin-top:1.5em;max-width:94%">
-        <div>
-          <div class="quote">"Secret Solstice is the summer festival to end all summer festivals."</div>
-          <div class="quote-src">- X</div>
-        </div>
-        <div>
-          <div class="quote">"There's truly nothing like Secret Solstice."</div>
-          <div class="quote-src">- Thump</div>
-        </div>
+      <div class="eyebrow">The Eclipse Trilogy</div>
+      <h2>Iceland Was the First Leg.</h2>
+      <p>Iceland Eclipse opens a three-part journey chasing totality across the globe, produced by IMXP: a rare window of three total solar eclipses in three years, on three continents.</p>
+      <div class="pillars" style="grid-template-columns:repeat(3,1fr);margin-top:1.4em">
+        <div class="pillar"><div class="t">2026 · Iceland</div><p>Snæfellsnes Peninsula. The first leg, complete.</p></div>
+        <div class="pillar"><div class="t">2027 · Egypt</div><p>Luxor &amp; Greater Egypt. The longest total solar eclipse of the century.</p></div>
+        <div class="pillar"><div class="t">2028 · Australasia</div><p>Location to be announced. The closing chapter.</p></div>
       </div>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
@@ -431,9 +416,9 @@
   <section class="slide">
     <div class="pad"><div class="split">
       <div class="content">
-        <div class="eyebrow">What's Next</div>
+        <div class="eyebrow">What's Next · Iceland</div>
         <h2>Midnight Sun<span class="h2sub">9 – 11 July 2027 · Secret Location, Iceland</span></h2>
-        <p>IMXP and Secret Solstice are back at it: same partnership, a new stage. Where Iceland Eclipse asked guests to travel to the edge of the world for two minutes, Midnight Sun moves the gathering into the heart of a city, at double the scale, for three days built around a sun that never sets.</p>
+        <p>IMXP is already building the next Icelandic gathering. Where Iceland Eclipse asked guests to travel to the edge of the world for two minutes, Midnight Sun moves into the heart of a city, at double the scale, for three days built around a sun that never sets.</p>
         <p class="small" style="margin-top:1em">The wilderness proved the demand. The city removes the cap.</p>
       </div>
       <div class="accent"><img src="assets/whatsnext.jpg" alt=""/></div>
@@ -445,12 +430,11 @@
   <section class="slide onphoto">
     <div class="coverbg" style="--o:.62"><img src="assets/thankyou.jpg" alt="" style="opacity:.62"/></div>
     <div class="coverwrap">
-      <div class="eclipse" aria-hidden="true" style="width:clamp(58px,8vh,92px);margin-bottom:1.3em"><div class="glow"></div><div class="sun"></div><div class="moon"></div></div>
+      <div class="cover-mark" style="margin-bottom:1.1em"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse" style="width:clamp(56px,8vh,88px)"/></div>
       <h1 class="word" style="font-size:clamp(1.4rem,4vw,3.2rem)">Thank <em>You</em></h1>
       <div class="cover-note">To the guests who made the dream real, to the people of Hellissandur and Snæfellsbær who welcomed us, to the volunteers and build crew, and to the glacier, for holding back the clouds when it mattered most.</div>
-      <div class="contacts">
-        <div class="contact"><div class="nm">Mitch Morales</div><div class="rl">Co-founder · IMXP</div><div class="em">mitch@im-xp.com</div></div>
-        <div class="contact"><div class="nm">Fred Olafsson</div><div class="rl">Co-founder · Secret Solstice</div><div class="em">fo@eclipse.is</div></div>
+      <div class="contacts" style="grid-template-columns:minmax(0,340px)">
+        <div class="contact" style="text-align:center"><div class="nm">Mitch Morales</div><div class="rl">Co-founder · IMXP</div><div class="em">mitch@im-xp.com</div></div>
       </div>
       <div class="cover-sub" style="margin-top:1.6em">Iceland Eclipse · 11 – 15 August 2026 · Hellissandur, Iceland</div>
     </div>

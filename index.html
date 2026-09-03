@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
   :root{
     --bg:#09090b; --bg2:#0e0e12; --panel:#141418; --panel-2:#17171d;
@@ -131,6 +132,12 @@
   .leg .lg-note{font-size:clamp(.5rem,.82vw,.72rem);color:var(--body);margin-top:.45em;line-height:1.5}
   .globe{display:flex;align-items:center;justify-content:center;min-width:0}
   .globe img{width:100%;max-width:560px;height:auto;display:block}
+  #globe3d{position:relative;width:100%;max-width:600px;aspect-ratio:1}
+  #globe3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .glabel{position:absolute;transform:translate(0,-50%);pointer-events:none;white-space:nowrap;transition:opacity .3s ease;z-index:3}
+  .glabel .gyr{font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.72vw,.62rem);letter-spacing:.14em;color:var(--teal);line-height:1}
+  .glabel .gnm{font-family:var(--display);font-size:clamp(.6rem,1.02vw,.92rem);color:#fff;letter-spacing:-.01em;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+  .glabel.right{transform:translate(-100%,-50%);text-align:right}
   /* five-day schedule */
   .sched{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.5rem,1.1vw,.95rem);margin-top:1.2em}
   .day{border-radius:10px;background:var(--panel);border:1px solid var(--line);padding:clamp(.6rem,1.1vw,.95rem);display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
@@ -465,7 +472,11 @@
           <div class="leg"><div class="lg-ph">Ascension · 2028</div><div class="lg-yr">Australasia</div><div class="lg-note">22 Jul. Across the outback to Sydney and New Zealand.</div></div>
         </div>
       </div>
-      <div class="globe"><img src="assets/trilogy-globe.png" alt="The eclipse trilogy across the globe: Iceland 2026, Egypt 2027, Australasia 2028"/></div>
+      <div class="globe"><div id="globe3d" aria-hidden="true">
+        <div class="glabel" data-k="iceland"><div class="gyr">2026</div><div class="gnm">Iceland</div></div>
+        <div class="glabel" data-k="egypt"><div class="gyr">2027</div><div class="gnm">Egypt</div></div>
+        <div class="glabel right" data-k="aus"><div class="gyr">2028</div><div class="gnm">Australasia</div></div>
+      </div></div>
     </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
   </section>
@@ -574,6 +585,7 @@
     const active=slides[i];
     brand.hidden = active.classList.contains('onphoto');
     active.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.textContent='0';countUp(el);});
+    if(window.__globe) window.__globe(!!active.querySelector('#globe3d'));
   }
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(i+1);
@@ -596,6 +608,102 @@
   document.addEventListener('wheel',e=>{const t=Date.now();if(t-wl<700)return;
     if(Math.abs(e.deltaY)>30||Math.abs(e.deltaX)>30){wl=t;go(i+((e.deltaY+e.deltaX)>0?1:-1));}},{passive:true});
   go(0);
+</script>
+<script>
+(function(){
+  var host=document.getElementById('globe3d');
+  if(!host||!window.THREE){ return; }
+  var THREE=window.THREE;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slideEl=host.closest('.slide');
+  function sz(){ return Math.max(80, Math.min(host.clientWidth||480, host.clientHeight||host.clientWidth||480)); }
+  var renderer=new THREE.WebGLRenderer({alpha:true, antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  renderer.setSize(sz(),sz());
+  host.appendChild(renderer.domElement);
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(32,1,0.1,100);
+  camera.position.set(0,0,4.05);
+  scene.add(new THREE.AmbientLight(0x5b7a99,0.72));
+  var sun=new THREE.DirectionalLight(0xfff2e0,1.02); sun.position.set(-1.6,1.05,1.05); scene.add(sun);
+  var group=new THREE.Group(); scene.add(group);
+  var tex=new THREE.TextureLoader().load('assets/earth-texture.jpg', function(){ renderOnce(); });
+  tex.encoding=THREE.sRGBEncoding;
+  var earth=new THREE.Mesh(new THREE.SphereGeometry(1,72,72),
+      new THREE.MeshPhongMaterial({map:tex, specular:0x0c141e, shininess:7}));
+  group.add(earth);
+  var atm=new THREE.Mesh(new THREE.SphereGeometry(1.16,48,48), new THREE.ShaderMaterial({
+    transparent:true, blending:THREE.AdditiveBlending, side:THREE.BackSide, depthWrite:false,
+    uniforms:{c:{value:new THREE.Color(0x0db4d8)}},
+    vertexShader:'varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+    fragmentShader:'varying vec3 vN; uniform vec3 c; void main(){ float g=pow(1.0-abs(vN.z),3.2); gl_FragColor=vec4(c,1.0)*g*1.1; }'
+  }));
+  scene.add(atm);
+  function llv(lat,lon,r){ var phi=(90-lat)*Math.PI/180, th=(lon+180)*Math.PI/180;
+    return new THREE.Vector3(-r*Math.sin(phi)*Math.cos(th), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(th)); }
+  function glowTex(){ var c=document.createElement('canvas'); c.width=c.height=64; var g=c.getContext('2d');
+    var rg=g.createRadialGradient(32,32,0,32,32,32); rg.addColorStop(0,'rgba(255,205,130,1)'); rg.addColorStop(0.32,'rgba(238,119,23,0.9)'); rg.addColorStop(1,'rgba(238,119,23,0)');
+    g.fillStyle=rg; g.fillRect(0,0,64,64); return new THREE.CanvasTexture(c); }
+  var gtex=glowTex();
+  var NODES=[
+    {k:'iceland',lat:64.9,lon:-19,el:host.querySelector('.glabel[data-k="iceland"]')},
+    {k:'egypt',lat:25.7,lon:32.6,el:host.querySelector('.glabel[data-k="egypt"]')},
+    {k:'aus',lat:-25,lon:134,el:host.querySelector('.glabel[data-k="aus"]')}
+  ];
+  NODES.forEach(function(nd){
+    nd.pos=llv(nd.lat,nd.lon,1.0);
+    var m=new THREE.Mesh(new THREE.SphereGeometry(0.02,14,14), new THREE.MeshBasicMaterial({color:0xffffff}));
+    m.position.copy(nd.pos.clone().multiplyScalar(1.012)); group.add(m); nd.marker=m;
+    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:gtex, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false}));
+    sp.scale.set(0.16,0.16,1); sp.position.copy(m.position); group.add(sp); nd.glow=sp;
+  });
+  var arcs=[];
+  [[0,1],[1,2]].forEach(function(pair){
+    var a=NODES[pair[0]].pos.clone(), b=NODES[pair[1]].pos.clone();
+    var mid=a.clone().add(b).multiplyScalar(0.5).normalize().multiplyScalar(1.32);
+    var curve=new THREE.QuadraticBezierCurve3(a.clone().multiplyScalar(1.01), mid, b.clone().multiplyScalar(1.01));
+    var tube=new THREE.Mesh(new THREE.TubeGeometry(curve,64,0.006,8,false), new THREE.MeshBasicMaterial({color:0xEE7717, transparent:true, opacity:0.85}));
+    group.add(tube);
+    var dot=new THREE.Sprite(new THREE.SpriteMaterial({map:gtex, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false}));
+    dot.scale.set(0.1,0.1,1); group.add(dot);
+    arcs.push({curve:curve, dot:dot, off:Math.random()});
+  });
+  var YAX=new THREE.Vector3(0,1,0);
+  var baseQuat=new THREE.Quaternion().setFromUnitVectors(llv(12,60,1).normalize(), new THREE.Vector3(0,0,1));
+  group.quaternion.copy(baseQuat);
+  var osc=new THREE.Quaternion();
+  function updateLabels(){
+    var W=host.clientWidth, H=host.clientHeight;
+    NODES.forEach(function(nd){
+      if(!nd.el) return;
+      var wp=nd.pos.clone().applyQuaternion(group.quaternion);
+      var vis=wp.z>0.02;
+      var p=wp.clone().project(camera);
+      var x=(p.x*0.5+0.5)*W, y=(-p.y*0.5+0.5)*H;
+      var dx=nd.el.classList.contains('right')? -13 : 13;
+      nd.el.style.left=(x+dx)+'px'; nd.el.style.top=y+'px'; nd.el.style.opacity=vis?'1':'0';
+    });
+  }
+  var t0=performance.now(), active=false, raf=null;
+  function tick(now){
+    if(!reduce){ var ang=Math.sin((now-t0)*0.00030)*0.095; osc.setFromAxisAngle(YAX,ang); group.quaternion.copy(baseQuat).premultiply(osc); }
+    for(var j=0;j<arcs.length;j++){ var u=((now*0.00007)+arcs[j].off)%1; arcs[j].dot.position.copy(arcs[j].curve.getPoint(u)); }
+    var pl=0.15+0.03*Math.sin(now*0.004); NODES.forEach(function(nd){ nd.glow.scale.setScalar(pl+0.02); });
+    renderer.render(scene,camera); updateLabels();
+    if(active && !reduce) raf=requestAnimationFrame(tick);
+  }
+  function renderOnce(){ renderer.render(scene,camera); updateLabels(); }
+  window.__globe=function(on){
+    if(on){ active=true; if(reduce){ renderOnce(); } else if(!raf){ t0=performance.now(); raf=requestAnimationFrame(tick); } }
+    else { active=false; if(raf){ cancelAnimationFrame(raf); raf=null; } }
+  };
+  function resize(){ var s=sz(); renderer.setSize(s,s); renderOnce(); }
+  if(window.ResizeObserver){ new ResizeObserver(resize).observe(host); }
+  window.addEventListener('resize',resize);
+  renderOnce();
+  if(slideEl && slideEl.classList.contains('active')) window.__globe(true);
+})();
 </script>
 </body>
 </html>

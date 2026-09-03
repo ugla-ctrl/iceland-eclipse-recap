@@ -7,100 +7,124 @@
 <link rel="icon" href="assets/iceland-eclipse-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --polar:#FFFDF6; --mist:#DDE6ED; --pearl:#F9E8D2; --glacial:#BCD3E4;
-    --lavender:#BFB4DC; --msun:#C9CDE4; --rose:#D9A9A2; --indigo:#3D55A8; --navy:#2C3763;
-    --serif:'Cormorant Garamond',Georgia,serif;
-    --sans:'Inter','Helvetica Neue',Arial,sans-serif;
-    --g1:linear-gradient(160deg,#E4DDF0 0%,#F3D9E2 100%);
-    --g2:linear-gradient(160deg,#8FA6DA 0%,#E5C1D8 100%);
-    --g3:linear-gradient(160deg,#BFD4E6 0%,#E9E4F2 100%);
-    --g4:linear-gradient(160deg,#F5C9A8 0%,#B9B4DC 100%);
-    --g5:linear-gradient(160deg,#9CA8DC 0%,#4E5FA8 100%);
+    --bg:#04060a; --panel:#0b1118; --line:#15222d;
+    --ink:#eef4f2; --dim:#8fa3ab;
+    --teal:#0DFCD3; --orange:#EE7717; --blue:#1C2BFF;
+    --display:'Unbounded',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --body:'Inter','Helvetica Neue',Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{height:100%;overflow:hidden;font-family:var(--sans);-webkit-font-smoothing:antialiased;
-    background:linear-gradient(170deg,#EEF1F6,#EDE7F0)}
-  #frame{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:3.2vh 2.4vw}
-  #stage{position:relative;aspect-ratio:16/9;width:min(94vw,calc(93vh*16/9));
-    border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(44,55,99,.28),0 4px 16px rgba(44,55,99,.12);
-    background:var(--polar)}
-  .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;background:var(--polar)}
+  html,body{height:100%;overflow:hidden;font-family:var(--body);-webkit-font-smoothing:antialiased;
+    background:radial-gradient(120% 90% at 50% -10%,#0a1420 0%,var(--bg) 55%)}
+  #frame{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:2.6vh 2vw}
+  #stage{position:relative;aspect-ratio:16/9;width:min(96vw,calc(94vh*16/9));
+    border-radius:10px;overflow:hidden;background:var(--bg);
+    border:1px solid var(--line);
+    box-shadow:0 0 90px rgba(13,252,211,.05),0 0 40px rgba(0,0,0,.6)}
+  .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;background:var(--bg)}
   .slide.active{opacity:1;visibility:visible}
   .pad{position:absolute;inset:0;padding:6.5% 7%;display:flex;flex-direction:column;justify-content:center}
   .split{display:grid;grid-template-columns:1.15fr .85fr;gap:5%;align-items:stretch;height:100%}
   .split .content{display:flex;flex-direction:column;justify-content:center;min-width:0}
-  .accent{border-radius:12px;overflow:hidden;position:relative;min-height:100%}
+  .accent{border-radius:8px;overflow:hidden;position:relative;min-height:100%;
+    border:1px solid var(--line);box-shadow:0 0 40px rgba(13,252,211,.06)}
   .accent img{width:100%;height:100%;object-fit:cover;display:block}
-  .accent::after{content:'';position:absolute;inset:0;background:linear-gradient(200deg,rgba(191,180,220,.18),rgba(249,232,210,.10))}
-  .eyebrow{font-size:clamp(.55rem,.95vw,.78rem);font-weight:500;letter-spacing:.32em;text-transform:uppercase;
-    color:var(--rose);margin-bottom:1.3em}
-  h1.word{font-family:var(--serif);font-weight:300;letter-spacing:.24em;line-height:1.05;
-    font-size:clamp(1.7rem,5.6vw,4.9rem);text-transform:uppercase;color:#fff;text-indent:.24em}
-  h2{font-family:var(--serif);font-weight:400;letter-spacing:.01em;line-height:1.08;
-    font-size:clamp(1.35rem,3.2vw,3rem);color:var(--navy);margin-bottom:.6em}
-  h2 em{font-style:italic;color:var(--indigo)}
-  p{font-weight:300;line-height:1.6;font-size:clamp(.74rem,1.25vw,1.08rem);color:#57608A;max-width:58ch}
-  .lead{font-family:var(--serif);font-weight:400;font-size:clamp(1.05rem,2.15vw,1.95rem);line-height:1.34;color:var(--navy);max-width:34ch}
-  .small{font-size:clamp(.6rem,.9vw,.8rem);color:#8A90AE;line-height:1.55}
+  .accent::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(200deg,rgba(4,6,10,0) 55%,rgba(4,6,10,.45));pointer-events:none}
+  .eyebrow{font-family:var(--mono);font-size:clamp(.5rem,.85vw,.72rem);font-weight:500;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:1.4em}
+  .eyebrow::before{content:'';display:inline-block;width:.55em;height:.55em;border-radius:50%;
+    background:var(--orange);margin-right:.9em;vertical-align:middle;
+    box-shadow:0 0 8px rgba(238,119,23,.8)}
+  h1.word{font-family:var(--display);font-weight:800;letter-spacing:.04em;line-height:1.04;
+    font-size:clamp(1.5rem,4.6vw,4rem);text-transform:uppercase;color:var(--ink)}
+  h1.word em{font-style:normal;color:var(--teal);text-shadow:0 0 26px rgba(13,252,211,.45)}
+  h2{font-family:var(--display);font-weight:500;letter-spacing:.02em;line-height:1.14;
+    text-transform:uppercase;font-size:clamp(1rem,2.15vw,1.95rem);color:var(--ink);margin-bottom:.8em}
+  h2 em{font-style:normal;color:var(--orange)}
+  .h2sub{display:block;font-family:var(--mono);font-weight:400;letter-spacing:.14em;
+    font-size:clamp(.55rem,1vw,.85rem);color:var(--teal);margin-top:.9em}
+  p{font-weight:300;line-height:1.65;font-size:clamp(.72rem,1.2vw,1.02rem);color:var(--dim);max-width:58ch}
+  p strong{color:var(--ink);font-weight:500}
+  .lead{font-weight:300;font-size:clamp(1rem,1.95vw,1.7rem);line-height:1.42;color:var(--ink);max-width:36ch}
+  .small{font-size:clamp(.58rem,.88vw,.78rem);color:var(--dim);line-height:1.6}
   /* cover */
   .coverbg{position:absolute;inset:0}
-  .coverbg img{width:100%;height:100%;object-fit:cover}
-  .coverbg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,85,168,.22),rgba(44,55,99,.10) 45%,rgba(44,55,99,.4))}
+  .coverbg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+  .coverbg::after{content:'';position:absolute;inset:0;
+    background:radial-gradient(90% 90% at 50% 42%,rgba(4,6,10,.15) 0%,rgba(4,6,10,.72) 78%,var(--bg) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
-  .mark{margin-bottom:1.6em;filter:drop-shadow(0 0 14px rgba(255,255,255,.9)) drop-shadow(0 0 34px rgba(255,255,255,.5))}
-  .mark img{width:clamp(46px,6vw,72px);height:auto;display:block}
-  .cover-sub{margin-top:1.8em;font-weight:400;letter-spacing:.3em;text-transform:uppercase;
-    font-size:clamp(.55rem,1vw,.85rem);line-height:2.1;color:rgba(255,255,255,.95)}
-  .cover-tag{margin-top:2em;font-size:clamp(.5rem,.8vw,.68rem);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-  /* soft background photo (for gslide-style slides) */
+  .mark{margin-bottom:2em;border-radius:50%;animation:breathe 7s ease-in-out infinite}
+  .mark img{width:clamp(52px,6.5vw,84px);height:auto;display:block;border-radius:50%}
+  @keyframes breathe{
+    0%,100%{box-shadow:0 0 0 2px rgba(13,252,211,.55),0 0 26px 4px rgba(13,252,211,.28),0 0 70px 16px rgba(238,119,23,.16)}
+    50%{box-shadow:0 0 0 2px rgba(13,252,211,.85),0 0 34px 8px rgba(13,252,211,.42),0 0 90px 24px rgba(238,119,23,.26)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .mark{animation:none;box-shadow:0 0 0 2px rgba(13,252,211,.6),0 0 30px 6px rgba(13,252,211,.3),0 0 80px 20px rgba(238,119,23,.2)}
+    .slide{transition:none}
+  }
+  .cover-sub{margin-top:2em;font-family:var(--mono);font-weight:400;letter-spacing:.22em;text-transform:uppercase;
+    font-size:clamp(.52rem,.92vw,.8rem);line-height:2.2;color:var(--ink)}
+  .cover-tag{margin-top:1.8em;font-family:var(--mono);font-size:clamp(.46rem,.74vw,.62rem);
+    letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+  .cover-note{margin-top:1.6em;font-weight:300;font-size:clamp(.68rem,1.1vw,.95rem);line-height:1.75;
+    color:rgba(238,244,242,.85);max-width:58ch}
+  /* soft background photo (dark wash slides) */
   .softphoto{position:absolute;inset:0}
-  .softphoto img{width:100%;height:100%;object-fit:cover;opacity:.22}
-  .softphoto::after{content:'';position:absolute;inset:0;background:linear-gradient(170deg,rgba(238,241,246,.9),rgba(237,231,240,.94))}
+  .softphoto img{width:100%;height:100%;object-fit:cover;opacity:.13}
+  .softphoto::after{content:'';position:absolute;inset:0;
+    background:radial-gradient(110% 110% at 50% 50%,rgba(4,6,10,.3) 0%,rgba(4,6,10,.92) 90%)}
   .gslide .pad{z-index:2}
-  /* tiles */
-  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.55rem,1.3vw,1.2rem);margin-top:.5em}
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,1.2vw,1.1rem);margin-top:.5em}
   .tiles.t3{grid-template-columns:repeat(3,1fr)}
-  .tile{border-radius:12px;padding:clamp(.7rem,1.6vw,1.45rem);background:var(--g3);border:1px solid rgba(61,85,168,.08)}
-  .tile:nth-child(2){background:var(--g1)}
-  .tile:nth-child(3){background:var(--g4)}
-  .tile:nth-child(4){background:var(--g2)}
-  .tile:nth-child(5){background:var(--g4)}
-  .tile:nth-child(6){background:var(--g2)}
-  .tile:nth-child(7){background:var(--g3)}
-  .tile:nth-child(8){background:var(--g1)}
-  .tile .n{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2.9vw,2.6rem);line-height:1;color:var(--navy)}
-  .tile .l{margin-top:.5em;font-size:clamp(.5rem,.78vw,.7rem);letter-spacing:.15em;text-transform:uppercase;color:#5A6390}
-  .tile p{font-size:clamp(.6rem,.95vw,.85rem);margin-top:.6em;max-width:none}
+  .tile{border-radius:8px;padding:clamp(.7rem,1.5vw,1.3rem);background:var(--panel);
+    border:1px solid var(--line);position:relative;overflow:hidden}
+  .tile::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);opacity:.85}
+  .tile:nth-child(2n)::before{background:var(--orange)}
+  .tile .n{font-family:var(--display);font-weight:500;font-size:clamp(1rem,2.1vw,1.9rem);line-height:1.15;color:var(--ink)}
+  .tile:nth-child(2n) .n{color:var(--ink)}
+  .tile .l{margin-top:.6em;font-family:var(--mono);font-size:clamp(.44rem,.72vw,.62rem);
+    letter-spacing:.16em;text-transform:uppercase;color:var(--dim);line-height:1.6}
   /* pillars */
-  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.55rem,1.2vw,1.1rem);margin-top:1em}
-  .pillar{border-radius:12px;padding:clamp(.7rem,1.4vw,1.2rem);background:#fff;border:1px solid rgba(61,85,168,.12)}
-  .pillar .t{font-family:var(--serif);font-size:clamp(.95rem,1.6vw,1.4rem);color:var(--indigo);letter-spacing:.06em}
-  .pillar p{font-size:clamp(.58rem,.92vw,.82rem);margin-top:.5em;max-width:none}
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,1.1vw,1rem);margin-top:1em}
+  .pillar{border-radius:8px;padding:clamp(.7rem,1.3vw,1.15rem);background:var(--panel);border:1px solid var(--line)}
+  .pillar .t{font-family:var(--display);font-weight:500;font-size:clamp(.62rem,1.05vw,.9rem);
+    letter-spacing:.05em;text-transform:uppercase;color:var(--teal)}
+  .pillar p{font-size:clamp(.55rem,.88vw,.78rem);margin-top:.6em;max-width:none;color:var(--dim)}
   /* timeline */
-  .timeline{display:flex;gap:clamp(.5rem,1.2vw,1rem);margin-top:1.1em;flex-wrap:wrap}
-  .tlyear{border-radius:12px;padding:clamp(.6rem,1.2vw,1rem) clamp(.7rem,1.4vw,1.2rem);background:var(--g3);border:1px solid rgba(61,85,168,.08);flex:1;min-width:110px}
-  .tlyear.now{background:var(--g5)}
-  .tlyear.now .y,.tlyear.now .p{color:#fff}
-  .tlyear .y{font-family:var(--serif);font-size:clamp(1rem,1.9vw,1.6rem);color:var(--navy)}
-  .tlyear .p{margin-top:.3em;font-size:clamp(.5rem,.78vw,.68rem);letter-spacing:.1em;text-transform:uppercase;color:#5A6390}
+  .timeline{display:flex;gap:clamp(.45rem,1vw,.9rem);margin-top:1.1em;flex-wrap:wrap}
+  .tlyear{border-radius:8px;padding:clamp(.55rem,1.1vw,.95rem) clamp(.65rem,1.3vw,1.1rem);
+    background:var(--panel);border:1px solid var(--line);flex:1;min-width:104px}
+  .tlyear .y{font-family:var(--display);font-weight:500;font-size:clamp(.85rem,1.6vw,1.35rem);color:var(--ink)}
+  .tlyear .p{margin-top:.4em;font-family:var(--mono);font-size:clamp(.42rem,.7vw,.6rem);
+    letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+  .tlyear.now{border-color:rgba(238,119,23,.7);box-shadow:0 0 24px rgba(238,119,23,.18)}
+  .tlyear.now .y{color:var(--orange)}
+  .tlyear.now .p{color:var(--ink)}
   /* quotes */
-  .quote{font-family:var(--serif);font-style:italic;font-weight:400;
-    font-size:clamp(.95rem,1.8vw,1.6rem);line-height:1.35;color:var(--navy)}
-  .quote-src{margin-top:.5em;font-size:clamp(.52rem,.82vw,.72rem);letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+  .quote{font-weight:300;font-style:italic;font-size:clamp(.9rem,1.65vw,1.45rem);line-height:1.45;
+    color:var(--ink);border-left:2px solid var(--teal);padding-left:1.1em;max-width:60ch}
+  .quote-src{margin-top:.7em;font-family:var(--mono);font-size:clamp(.46rem,.76vw,.66rem);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--orange);padding-left:1.6em}
   /* contacts */
   .contacts{display:grid;grid-template-columns:repeat(2,minmax(0,320px));gap:3em;justify-content:center;margin-top:2.2em;text-align:left}
-  .contact .nm{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.6rem);color:#fff}
-  .contact .rl{font-size:clamp(.55rem,.85vw,.75rem);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin:.3em 0 .5em}
-  .contact .em{font-size:clamp(.62rem,1vw,.9rem);color:rgba(255,255,255,.92)}
-  .sfoot{position:absolute;left:7%;right:7%;bottom:4.2%;display:flex;justify-content:space-between;z-index:5;
-    font-size:clamp(.44rem,.7vw,.6rem);letter-spacing:.3em;text-transform:uppercase;color:#9AA0BC;pointer-events:none}
-  .onphoto .sfoot{color:rgba(255,255,255,.7)}
-  #ctr{position:fixed;bottom:1.1vh;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:30}
-  #ctr button{width:6px;height:6px;border-radius:50%;border:none;background:rgba(61,85,168,.25);cursor:pointer;padding:0;transition:.3s}
-  #ctr button.on{background:var(--indigo);transform:scale(1.45)}
+  .contact .nm{font-family:var(--display);font-weight:500;font-size:clamp(.85rem,1.5vw,1.25rem);color:var(--ink)}
+  .contact .rl{font-family:var(--mono);font-size:clamp(.46rem,.74vw,.64rem);letter-spacing:.16em;
+    text-transform:uppercase;color:var(--teal);margin:.5em 0 .5em}
+  .contact .em{font-family:var(--mono);font-size:clamp(.54rem,.9vw,.8rem);color:var(--dim)}
+  .sfoot{position:absolute;left:7%;right:7%;bottom:4%;display:flex;justify-content:space-between;gap:2em;z-index:5;
+    font-family:var(--mono);font-size:clamp(.4rem,.64vw,.56rem);letter-spacing:.22em;
+    text-transform:uppercase;color:#3d5361;pointer-events:none}
+  .onphoto .sfoot{color:rgba(238,244,242,.45)}
+  #ctr{position:fixed;bottom:1vh;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:30}
+  #ctr button{width:6px;height:6px;border-radius:50%;border:none;background:rgba(13,252,211,.22);cursor:pointer;padding:0;transition:.3s}
+  #ctr button.on{background:var(--bg);box-shadow:0 0 0 1.5px var(--orange),0 0 10px rgba(238,119,23,.7);transform:scale(1.3)}
   @media(max-width:760px){
     .split{grid-template-columns:1fr}.accent{display:none}
     .tiles,.pillars{grid-template-columns:repeat(2,1fr)}
@@ -108,41 +132,44 @@
     .timeline{flex-direction:column}
   }
 
-  /* ---- mobile & tablet-portrait additions (desktop/landscape untouched) ---- */
+  /* ---- mobile & tablet-portrait (desktop/landscape untouched) ---- */
   @media (max-height:520px){
     .pad{overflow-y:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch}
   }
   @media (max-width:1024px) and (orientation:portrait){
-    #frame{padding:1.4vh 3vw}
-    #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.8vh - 30px);height:calc(100dvh - 2.8vh - 30px)}
-    .pad{overflow-y:auto;justify-content:flex-start;padding:8% 6.5%;-webkit-overflow-scrolling:touch}
+    #frame{padding:1.2vh 2.6vw}
+    #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.4vh - 30px);height:calc(100dvh - 2.4vh - 30px)}
+    .pad{overflow-y:auto;justify-content:flex-start;padding:9% 6.5%;-webkit-overflow-scrolling:touch}
     .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
-    .accent{display:block;order:-1;flex:none;width:100%;height:34vw;min-height:150px;max-height:240px}
+    .accent{display:block;order:-1;flex:none;width:100%;height:36vw;min-height:150px;max-height:240px}
     .coverwrap{padding:10% 7%}
-    h1.word{font-size:clamp(1.5rem,7.5vw,3.1rem)}
-    .cover-sub{font-size:.64rem}
-    .cover-tag{font-size:.56rem}
-    h2{font-size:1.5rem}
-    p{font-size:.94rem;max-width:none}
-    .lead{font-size:1.2rem;max-width:none}
-    .small{font-size:.78rem}
-    .eyebrow{font-size:.66rem;margin-bottom:1em}
-    .tiles{grid-template-columns:repeat(2,1fr);gap:.7rem}
+    h1.word{font-size:clamp(1.3rem,6.4vw,2.6rem)}
+    .cover-sub{font-size:.56rem;letter-spacing:.16em}
+    .cover-tag{font-size:.5rem}
+    .cover-note{font-size:.82rem}
+    h2{font-size:1.15rem}
+    .h2sub{font-size:.62rem}
+    p{font-size:.92rem;max-width:none}
+    .lead{font-size:1.12rem;max-width:none}
+    .small{font-size:.76rem}
+    .eyebrow{font-size:.6rem;margin-bottom:1em}
+    .tiles,.tiles.t3{grid-template-columns:repeat(2,1fr);gap:.65rem}
     .tile{padding:.85rem}
-    .tile .n{font-size:1.5rem}
-    .tile .l{font-size:.58rem}
-    .pillars{grid-template-columns:repeat(2,1fr);gap:.7rem}
+    .tile .n{font-size:1.25rem}
+    .tile .l{font-size:.52rem}
+    .pillars{grid-template-columns:repeat(2,1fr);gap:.65rem}
     .pillar{padding:.8rem}
-    .pillar .t{font-size:.98rem}
-    .pillar p{font-size:.74rem}
-    .timeline{flex-direction:column;gap:.6rem}
-    .quote{font-size:1.08rem}
-    .quote-src{font-size:.58rem}
+    .pillar .t{font-size:.72rem}
+    .pillar p{font-size:.72rem}
+    .timeline{flex-direction:column;gap:.55rem}
+    .tlyear{min-width:0}
+    .quote{font-size:1rem}
+    .quote-src{font-size:.54rem}
     .contacts{grid-template-columns:1fr;gap:1.2em;margin-top:1.4em}
-    .contact .nm{font-size:1.15rem}
-    .contact .em{font-size:.82rem}
+    .contact .nm{font-size:1rem}
+    .contact .em{font-size:.74rem}
     .sfoot{display:none}
-    #ctr{bottom:.7vh;gap:6px}
+    #ctr{bottom:.7vh;gap:7px}
   }
 </style>
 </head>
@@ -154,7 +181,7 @@
     <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
     <div class="coverwrap">
       <div class="mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
-      <h1 class="word">Iceland Eclipse</h1>
+      <h1 class="word">Iceland <em>Eclipse</em></h1>
       <div class="cover-sub">A Celestial Gathering in the Land of Fire &amp; Ice<br/>11 – 15 August 2026 · Hellissandur · Snæfellsnes Peninsula</div>
       <div class="cover-tag">Event Recap · IMXP + Secret Solstice</div>
     </div>
@@ -311,7 +338,7 @@
       <div class="eyebrow">The Partnership</div>
       <h2>IMXP + Secret Solstice</h2>
       <p>IMXP has built and grown the biggest events at the intersection of total solar eclipses, music and technology, producing Texas Eclipse Festival in 2024 before Iceland. Founded in 2014, Secret Solstice is one of Iceland's biggest and highest-rated international festivals: 18K attendees, 70+ global and Icelandic artists, 100% renewable geothermal power, ranked in the top 7% most digitally engaged festival audiences globally. Secret Solstice's team led local promotion, partnerships, production and operations for Iceland Eclipse.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3em;margin-top:1.6em;max-width:90%">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3em;margin-top:1.6em;max-width:94%">
         <div>
           <div class="quote">"Secret Solstice is the summer festival to end all summer festivals."</div>
           <div class="quote-src">- X</div>
@@ -352,7 +379,7 @@
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">What's Next</div>
-        <h2>Midnight Sun<br/><em>9 – 11 July 2027 · Secret Location, Iceland</em></h2>
+        <h2>Midnight Sun<span class="h2sub">9 – 11 July 2027 · Secret Location, Iceland</span></h2>
         <p>IMXP and Secret Solstice are back at it: same partnership, a new stage. Where Iceland Eclipse asked guests to travel to the edge of the world for two minutes, Midnight Sun moves the gathering into the heart of a city, at double the scale, for three days built around a sun that never sets.</p>
         <p class="small" style="margin-top:1em">The wilderness proved the demand. The city removes the cap.</p>
       </div>
@@ -366,13 +393,13 @@
     <div class="coverbg"><img src="assets/thankyou.jpg" alt=""/></div>
     <div class="coverwrap">
       <div class="mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
-      <h1 class="word" style="font-size:clamp(1.5rem,4.2vw,3.6rem)">Thank You</h1>
-      <div class="cover-sub" style="margin-top:1.4em;max-width:56ch">To the guests who made the dream real, to the people of Hellissandur and Snæfellsbær who welcomed us, to the volunteers and build crew, and to the glacier, for holding back the clouds when it mattered most.</div>
+      <h1 class="word" style="font-size:clamp(1.3rem,3.6vw,3rem)">Thank <em>You</em></h1>
+      <div class="cover-note">To the guests who made the dream real, to the people of Hellissandur and Snæfellsbær who welcomed us, to the volunteers and build crew, and to the glacier, for holding back the clouds when it mattered most.</div>
       <div class="contacts">
         <div class="contact"><div class="nm">Mitch Morales</div><div class="rl">Co-founder · IMXP</div><div class="em">mitch@im-xp.com</div></div>
         <div class="contact"><div class="nm">Fred Olafsson</div><div class="rl">Co-founder · Secret Solstice</div><div class="em">fo@eclipse.is</div></div>
       </div>
-      <div class="cover-sub" style="margin-top:2em">Iceland Eclipse · 11 – 15 August 2026 · Hellissandur, Iceland</div>
+      <div class="cover-sub" style="margin-top:1.8em">Iceland Eclipse · 11 – 15 August 2026 · Hellissandur, Iceland</div>
     </div>
     <div class="sfoot"><span>Photography · The Bailey Perspective · Andrianna Kaimis · James Cook · Monica Cazes · Shane Baby Billy Fowler · Daniel · Thad · Nanaka · Caitlin Guidry · Lauren Bruno · Kayla Pittman · Allison Powers</span><span></span></div>
   </section>

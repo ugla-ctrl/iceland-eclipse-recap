@@ -192,6 +192,9 @@
     .contact .em{font-size:.76rem}
     .sfoot{display:none}
     #ctr{bottom:.7vh;gap:7px}
+    /* stacked portrait content needs a vertical scrim, not the desktop left-right one */
+    .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.5) 0%,rgba(9,9,11,.72) 50%,rgba(9,9,11,.64) 100%)}
+    .gslide .eyebrow,.gslide h2,.gslide p,.gslide .small,.gslide .tile .n,.gslide .tile .l,.gslide .quote,.gslide .quote-src{text-shadow:0 1px 10px rgba(0,0,0,.92)}
   }
 </style>
 </head>

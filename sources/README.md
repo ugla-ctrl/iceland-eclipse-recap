@@ -36,7 +36,11 @@ Use these numbers, not the partnership deck's pre-event projections, wherever th
 
 ## Photo policy (important — read before adding any image)
 
-The first draft of this deck reused photos already published in `~/imxp-deck-v3` and `~/midnight-sun-deck`. **Every photo in this deck must be unique across the whole deck family.** Before adding any new image: pull it from the IEpress manifest (`curl -A "Mozilla/5.0" https://thebaileyperspective.com/IEpress/api/selects`, then `api/thumb/<id>?sz=2048`), then `md5sum` it against every file in `~/midnight-sun-deck/assets`, `~/imxp-deck*/media` or `/slides`, and this deck's own `assets/`, before using it.
+**Every photo must be unique AND a visually distinct SUBJECT from what the other decks use.** Mitch's explicit complaint (2026-09-03): the recap was reusing the same shots deck.imxp (imxp-deck-v3) and Midnight Sun lead with, so the decks looked interchangeable. Two rules:
+1. **Byte-unique:** pull from the IEpress manifest (`curl -A "Mozilla/5.0" https://thebaileyperspective.com/IEpress/api/selects`, then `api/thumb/<id>?sz=2048`) and `md5sum` against every file in `~/midnight-sun-deck/assets`, `~/imxp-deck*/media` or `/slides`, and this deck's own `assets/`. (This caught the eclipse-through-clouds shot = imxp-deck-v3's `eclipse-sky.jpg`, byte-identical.)
+2. **Subject-distinct:** avoid the "greatest hits" the other decks all grab — the aerial crowd, the eclipse-glasses crowd, the aurora borealis, the golden-hour hug, the diamond-ring eclipse. The IEpress gallery has 728 photos; use the characterful, less-obvious ones.
+
+**Current distinct set (all byte-verified unique, 2026-09-03):** cover = Snæfellsjökull glacier over farmstead landscape; the-moment = crescent-sun eclipse through clouds (Daniel, NOT the Bailey diamond-ring that imxp uses); numbers = sacred fire ceremony circle; reach-bg = blue-lit geodesic dome DJ stage; setting = Icelandic church-on-the-road (Hellissandur); programming-bg = Apashe performer, mic to sky; sidequests = glowing eclipse-ring "Push the Future" installation; community = antlered-crown costumed festival-goer portrait; partnership-bg = GusGus DJ in blue smoke; tradition = Temple of the Bird Tribes ceremony; whatsnext = festival grounds at golden-hour sunset (drone); thankyou = crowd jumping in front of the Iceland Eclipse banner; press = geodesic dome panel discussion.
 
 ## Deliberately NOT included
 

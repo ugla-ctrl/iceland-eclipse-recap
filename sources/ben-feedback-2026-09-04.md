@@ -116,3 +116,8 @@ Fixed; footer text now renders once per slide.
 - **Google Analytics attempt failed.** See O2 in `ben-punch-list.md`. The signed-in account
   has no Iceland Eclipse property.
 - **Blocked Instagram message request dropped** from the punch list at Lee's instruction.
+- **SETI Institute broadcast still added to In the Press** as a fourth card, after "From
+  the stratosphere". It is a 16:9 broadcast frame next to three portrait cards, so it
+  cannot be full height without cropping the lower-third that names Ari Eisenstat. Instead
+  it sits at its natural aspect, bottom-aligned with the other three, and the black pillar
+  bars from the original screen capture were trimmed off (1486x690 to 1309x690).

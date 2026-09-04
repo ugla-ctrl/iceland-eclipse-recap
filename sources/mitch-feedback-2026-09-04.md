@@ -70,10 +70,14 @@ DONE (2026-09-04):
 - Press: added Billboard, Space.com and SETI Institute to the chips; accent replaced with a 3-proof stack (NYT feature + SETI broadcast photo #2 + Dorothy stratosphere eclipse photo #6).
 - Our Community: kept the top image (Sian Proctor + astronaut Huie), replaced the duplicate-Proctor bottom with photo #5 (Android Jones + Chris Dyer).
 
-Still needs a decision or asset from Lee/Mitch:
-- Reach numbers: real GA / icelandeclipse.com figures, or just drop FB + X from the current line?
-- Schedule: which Instagram schedule graphics to pull.
-- Programming: a lineup image, or build one from the confirmed 2026 lineup.
-- Tradition -> Ceremonies: confirm the repurpose and whether a slide should be cut.
+Completed in the 2026-09-04 pass (all sourced from the IEpress gallery / Mitch's forwarded photos, no new input needed):
+- Programming: split into four pillars (left) + the 2026 lineup over the Above & Beyond eclipse-stage shot (right).
+- Schedule: rebuilt as a clean day-by-day timeline with the totality row emphasized (no IG schedule graphics exist in the gallery, so improved clarity instead); background dimmed.
+- Side Quests: added a lead line + clearer headline ("The Festival Was Only the Start") so the off-field experiences read clearly.
+- Tradition -> Ceremonies: per Lee, keep Trilogy; repurposed Tradition into The Ceremonies (opening sacred-fire blessing, meditation & sound baths, Cosmic Connection), keeping the ceremony picture.
+- Corner lockup: dropped the "Iceland Eclipse" wordmark, logo only (Mitch's "just use the logo" note).
+- Added a dedicated Testimonials slide (the six attendee quotes over the hillside-crowd photo).
+
+Still optional (not blocking): real Google Analytics figures for Digital Reach, if Lee wants to swap them in.
 
 Note: the cover-logo-bigger and press-rebuild items overlap with work already shipped 2026-09-03/04; this round pushes them further (kill the title, bigger still; add the two new outlets + photos).

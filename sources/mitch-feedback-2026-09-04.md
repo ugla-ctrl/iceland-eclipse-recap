@@ -1,0 +1,79 @@
+# Mitch's 2nd video feedback on the recap deck (2026-09-04)
+
+Source: screen-recording DM from Lee to Ugla, "Screenshare - 2026-09-03 8:32:49 PM.mp4" (3:52, 81 MB), sent to the Ugla DM 2026-09-04 10:31 CST. Audio transcribed (Whisper) and frames matched to slides. Reviewed the version that already had the 2D trilogy map but not yet the photographic under-layers.
+
+Overall verdict: "This is looking closer... it's getting really close, so make a couple of those changes, then let's get it out." Also wants deploy instructions for **recap.icelandeclipse.com** once the changes land.
+
+## Per-slide feedback
+
+### Cover
+- **Kill the "ICELAND ECLIPSE" title text.** Make the **logo much bigger**; the logo already contains the date, so the separate date line is redundant.
+- **Make "Event Recap" bigger.** Drop the extra subtitle / coordinate text. End state: big logo + big "Event Recap," little else.
+
+### The Moment
+- No change ("I think this is good").
+
+### The Setting
+- No specific change called out.
+
+### Digital Reach (he lingered longest here)
+- The follower stats are wrong, likely carried over from Texas Eclipse. **Remove the X number (12k+) and the Facebook number (82k+).** Keep **Instagram**. Collapse to **one line**.
+- If possible pull real figures from **Google Analytics / the Iceland Eclipse website** rather than the partnership-deck appendix.
+- Remove the faded caption at the bottom ("not very interesting and no one sees it because it's faded").
+
+### By the Numbers
+- No change ("This looks good"); stat already reads 4,200 participants.
+
+### Programming
+- Restructure: **four pillars (Dance / Learn / Connect / Explore) on the left**, a **lineup image on the right**. (Needs a lineup graphic.)
+
+### Schedule ("Five Days, One Totality")
+- "Doesn't make a ton of sense." Prefers **pulling the actual schedule graphics from Instagram** instead of the text schedule ("more powerful").
+
+### Side Quests
+- Reads as unclear ("hard to understand what it's really trying to get at"). Tighten the framing.
+
+### Press ("The Story Traveled the World")
+- "This is better, for sure." **Add space.com and Billboard** (and other high-profile outlets) to the coverage.
+
+### Our Community
+- The photo shows **the same person twice** ("a picture of the same person twice, feels unnecessary"). **Keep the top image; swap the other for a different notable speaker.**
+
+### Tradition / Trilogy (ambiguous, confirm before cutting)
+- "Make this one line, kind of just unnecessarily stands out. I think we can kill this one." Then: "we could have a **highlight about the ceremonies**, keep the picture, and talk about the **opening ceremony and the meditation**."
+- Best read: repurpose the Tradition slide into a **Ceremonies highlight** (keep the picture). Confirm whether "kill this one" meant cutting an entire slide.
+
+### What's Next (Midnight Sun)
+- Fine to keep ("what's next in Iceland is fine to keep too").
+
+### Deploy
+- Send Mitch step-by-step instructions to publish the deck at **recap.icelandeclipse.com** (GitHub Pages custom domain; note: the subdomain previously did not resolve, so it likely needs a DNS record added).
+
+## New photos forwarded for the testimonial slide (2026-09-04, from Mitch via WhatsApp)
+
+Seven photos, byte-check before use like all deck imagery:
+1. **Hillside crowd panorama** (sunlit, dome in back) - scale shot.
+2. **Ari Eisenstat on the SETI Institute broadcast**, lower-third "Program Director, Iceland Eclipse." Press-grade - use on Press slide.
+3. **Dr. Sian Proctor + packed tent** (Vulcan salute) - solves the Community "same person twice" swap.
+4. **DJ in the red geodesic dome** with lasers - Programming/Schedule imagery.
+5. **Android Jones + Chris Dyer** laughing with their paintings on stage - Community "notable speakers" or a ceremonies/art highlight.
+6. **The Dorothy Project stratosphere eclipse** (corona above the clouds, Earth's curvature). Press-grade - use on Press slide.
+7. **Hybrid/virtual speaker** on the big screen, crowd waving - Programming/Schedule.
+
+Placement plan: #2 and #6 to the Press/testimonial slide; #3 and #5 to Our Community; #1/#4/#7 as options for Programming/Schedule.
+
+## Status (all PENDING as of 2026-09-04)
+
+Ready to implement without more input:
+- Cover (logo big, Event Recap big, strip text)
+- Digital Reach (remove X + Facebook, Instagram one line, remove faded caption)
+- Press (add space.com + Billboard; work in photos #2 and #6)
+- Our Community (keep top image, replace duplicate with #3 or #5)
+
+Needs a decision or asset from Lee/Mitch:
+- Reach numbers: real GA / icelandeclipse.com figures, or just drop FB + X from the current line?
+- Schedule: which Instagram schedule graphics to pull.
+- Programming: a lineup image, or build one from the confirmed 2026 lineup.
+- Tradition -> Ceremonies: confirm the repurpose and whether a slide should be cut.
+
+Note: the cover-logo-bigger and press-rebuild items overlap with work already shipped 2026-09-03/04; this round pushes them further (kill the title, bigger still; add the two new outlets + photos).

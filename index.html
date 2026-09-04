@@ -39,6 +39,8 @@
     background:linear-gradient(200deg,rgba(9,9,11,0) 55%,rgba(9,9,11,.35));pointer-events:none}
   /* corner logo swaps sides (or hides) per slide instead of shrinking artwork */
   #brand.left{right:auto;left:6%}
+  .closer-mark{margin-top:clamp(1.4em,3.2vh,2.2em)}
+  .closer-mark img{width:clamp(150px,20vh,240px)}
   .eyebrow{font-family:var(--label);font-weight:700;font-size:clamp(.5rem,.86vw,.74rem);
     letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:1.3em}
   h1.word{font-family:var(--display);letter-spacing:-.01em;line-height:.98;
@@ -650,13 +652,13 @@
   <section class="slide onphoto">
     <div class="coverbg" style="--o:.62"><img src="assets/thankyou.jpg" alt="" style="opacity:.62"/></div>
     <div class="coverwrap">
-      <div class="cover-mark" style="margin-bottom:1.1em"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse" style="width:clamp(56px,8vh,88px)"/></div>
       <h1 class="word" style="font-size:clamp(1.4rem,4vw,3.2rem)">Thank <em>You</em></h1>
       <div class="cover-note">To the guests who made the dream real, to the people of Hellissandur and Snæfellsbær who welcomed us, to the volunteers and build crew, and to the glacier, for holding back the clouds when it mattered most.</div>
       <div class="contacts" style="grid-template-columns:minmax(0,340px)">
         <div class="contact" style="text-align:center"><div class="nm">Mitch Morales</div><div class="rl">Co-founder · IMXP</div><div class="em">mitch@im-xp.com</div></div>
       </div>
-      <div class="cover-sub" style="margin-top:1.6em">Iceland Eclipse · 11 – 15 August 2026 · Hellissandur, Iceland</div>
+      <div class="cover-sub" style="margin-top:1.4em">11 – 15 August 2026 · Hellissandur, Iceland</div>
+      <div class="cover-mark closer-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
     </div>
     <div class="sfoot"><span>Photography · The Bailey Perspective · Andrianna Kaimis · James Cook · Monica Cazes · Shane Baby Billy Fowler · Daniel · Thad · Nanaka · Caitlin Guidry · Lauren Bruno · Kayla Pittman · Allison Powers</span><span></span></div>
   </section>

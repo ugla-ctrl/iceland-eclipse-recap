@@ -115,3 +115,33 @@ Net: 5 testimonials, all guests/attendees. `@zen.meets.chaos` (crew) and
 
 Watch-outs for future additions: cross-check any handle against the IEpress
 photographer list and the lineup poster before quoting them as a guest.
+
+## @icelandeclipse comment scan (2026-09-04)
+
+Scanned the comments on all 7 post-event @icelandeclipse posts, checking each
+commenter against the IEpress credited-photographer list and performer names.
+
+**The two most substantial comments are crew, not guests:**
+- `@jamescook88` = **James Cook**, credited photographer (**96** photos in the gallery):
+  "I have no words to describe what this trip meant to me. Thank you @icelandeclipse
+  for creating this space for me to play and create art! I am filled with gratitude!"
+  Great quote, but crew. **Do not use.**
+- `@kaylaeditsthings` = **Kayla Pittman**, credited photographer (**32** photos):
+  "Such a gift to be a part of these moments." Crew. **Do not use.**
+- `@liam.bongo` is a credited performer (Afterglow DJ set). Crew. **Do not use.**
+
+**Genuine guest comments found (all verified as having zero event credits), but all thin:**
+- `@hippieonahiway` - "i love that you capture the beautiful moment we were all having"
+- `@anjaraven` - "Awesome photos! That's me & @skyfirearts in the group photo"
+- `@jmailme` - "Spectacular shots!! Love the one with those majestic terns!"
+- `@mikayla.mynx` - "Lovely lovely times"
+- (verified, handle redacted by the browser extension) - "Awww thank y'all for having me, I'll be back!!"
+- (verified, handle redacted) - "Missing all of you aliens. Love you forever. Iceland will & you all will always be in my heart."
+
+Conclusion: nothing in the public comments beats the five already on the slide.
+The comments skew short/emoji, and the articulate ones come from the people who
+worked the event. **Rule going forward: cross-check every candidate against the
+credited-photographer list and the lineup before quoting them as a guest.**
+
+Best remaining source of guest testimonials is the 15 unopened DM **message
+requests**, which need Mitch or Lee to accept before they can be read.

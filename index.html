@@ -175,23 +175,26 @@
   .vq p{font-size:clamp(.5rem,.84vw,.74rem);font-style:italic;color:var(--ink);line-height:1.4;max-width:none;margin:0}
   .vq span{display:block;margin-top:.35em;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.68vw,.58rem);letter-spacing:.06em;color:var(--orange)}
   @media(max-width:760px){ .voices{grid-template-columns:1fr} }
-  /* press: clean editorial relayout (header + hero image + featured quote) */
-  .press .softphoto img{opacity:.34}
+  /* press: header + clean image gallery + outlets */
+  .press .softphoto img{opacity:.32}
   .press .softphoto::after{background:linear-gradient(120deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.8) 55%,rgba(9,9,11,.9) 100%)}
-  .pressbody{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(1.4rem,3.4vw,3.2rem);width:100%;margin-top:clamp(1em,2.6vh,1.8em);align-items:stretch}
-  .presshero{position:relative;margin:0;border-radius:12px;overflow:hidden;box-shadow:0 16px 44px rgba(0,0,0,.5);min-height:clamp(230px,45vh,480px)}
-  .presshero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-  .presshero figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:1em 1.1em .85em;font-family:var(--label);font-weight:700;font-size:clamp(.44rem,.66vw,.56rem);letter-spacing:.16em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+  .pressbody{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(1.4rem,3.2vw,2.8rem);width:100%;margin-top:clamp(1em,2.4vh,1.7em);align-items:stretch}
+  .pressgallery{display:flex;flex-direction:column;gap:clamp(.45rem,1vw,.65rem);min-height:clamp(240px,46vh,480px)}
+  .pg{position:relative;margin:0;border-radius:11px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 10px 30px rgba(0,0,0,.45);background:#0b0b0e}
+  .pg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .pg-nyt{flex:0 0 auto;aspect-ratio:211/100}
+  .pg-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.45rem,1vw,.65rem);flex:1;min-height:clamp(150px,22vh,240px)}
+  .pg-seti img{object-position:center 46%}
+  .pg-dor img{object-position:center 40%}
+  .pg figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.65em .8em .55em;font-family:var(--label);font-weight:700;font-size:clamp(.38rem,.58vw,.5rem);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
   .presscol{display:flex;flex-direction:column;justify-content:center;gap:clamp(1em,2.6vh,1.7rem);min-width:0}
-  .nytq{margin:0;border-left:3px solid var(--teal);padding:.1em 0 .1em 1.05em}
-  .nytq p{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.02rem,1.9vw,1.72rem);line-height:1.26;color:#fff;margin:0;max-width:none}
-  .nytq cite{display:block;margin-top:.6em;font-family:var(--label);font-weight:700;font-style:normal;font-size:clamp(.52rem,.84vw,.72rem);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+  .presslead{font-size:clamp(.72rem,1.15vw,.98rem);line-height:1.6;color:var(--ink);margin:0;max-width:34ch}
+  .presslead em{font-style:italic;color:#fff}
   .pressoutlets .po-label{display:block;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.66vw,.56rem);letter-spacing:.2em;text-transform:uppercase;color:var(--body);margin-bottom:.7em}
   .pressoutlets .chips{margin-top:0}
-  .voices.vpress{grid-template-columns:1fr;gap:clamp(.7rem,1.5vh,1.05rem);margin-top:0}
   @media (max-width:1024px) and (orientation:portrait){
     .pressbody{grid-template-columns:1fr;gap:1.2rem}
-    .presshero{min-height:0;aspect-ratio:16/10}
+    .pg-row{min-height:150px}
   }
   /* timeline */
   .timeline{display:flex;gap:clamp(.45rem,1vw,.85rem);margin-top:1.1em;flex-wrap:wrap}
@@ -454,15 +457,15 @@
       <div class="eyebrow">In the Press</div>
       <h2 style="max-width:24ch">The Story Traveled the World.</h2>
       <div class="pressbody">
-        <figure class="presshero">
-          <img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/>
-          <figcaption>Totality, captured from the stratosphere</figcaption>
-        </figure>
+        <div class="pressgallery">
+          <figure class="pg pg-nyt"><img src="assets/press-nyt.jpg" alt="The New York Times feature on Iceland Eclipse"/></figure>
+          <div class="pg-row">
+            <figure class="pg pg-seti"><img src="assets/press-seti.jpg" alt="Iceland Eclipse on the SETI Institute broadcast"/><figcaption>SETI Institute · live</figcaption></figure>
+            <figure class="pg pg-dor"><img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/><figcaption>From the stratosphere</figcaption></figure>
+          </div>
+        </div>
         <div class="presscol">
-          <blockquote class="nytq">
-            <p>"We would love to be a part of bringing the best of humanity to the stars."</p>
-            <cite>The New York Times</cite>
-          </blockquote>
+          <p class="presslead">From <em>The New York Times</em> to a live SETI Institute broadcast, and totality captured from the edge of space, the story reached far beyond the glacier.</p>
           <div class="pressoutlets">
             <span class="po-label">Also featured in</span>
             <div class="chips">
@@ -470,15 +473,9 @@
               <div class="chip">Space.com</div>
               <div class="chip">Condé Nast Traveler</div>
               <div class="chip">Live Science</div>
-              <div class="chip">SETI Institute</div>
               <div class="chip">Dazed</div>
               <div class="chip">Schön! Magazine</div>
             </div>
-          </div>
-          <div class="voices vpress">
-            <div class="vq"><p>"Definitely one of the best moments of the decade: a total solar eclipse captured through a telescope in Iceland."</p><span>@iwona.fluda</span></div>
-            <div class="vq"><p>"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence."</p><span>@exologik</span></div>
-            <div class="vq"><p>"Thank you for creating such a masterpiece and time capsule."</p><span>@alli_empowers</span></div>
           </div>
         </div>
       </div>

@@ -175,6 +175,13 @@
   .vq p{font-size:clamp(.5rem,.84vw,.74rem);font-style:italic;color:var(--ink);line-height:1.4;max-width:none;margin:0}
   .vq span{display:block;margin-top:.35em;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.68vw,.58rem);letter-spacing:.06em;color:var(--orange)}
   @media(max-width:760px){ .voices{grid-template-columns:1fr} }
+  /* testimonials slide */
+  .voices.vgrid{grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem);margin-top:clamp(1.2em,3vh,2em)}
+  .voices.vgrid .vq p{font-size:clamp(.66rem,1.05vw,.92rem);line-height:1.5}
+  .voices.vgrid .vq span{font-size:clamp(.46rem,.74vw,.62rem)}
+  .voiceslide .softphoto img{opacity:.42}
+  .voiceslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.74) 0%,rgba(9,9,11,.58) 42%,rgba(9,9,11,.82) 100%)}
+  @media (max-width:1024px) and (orientation:portrait){ .voices.vgrid{grid-template-columns:1fr} }
   /* press: header + clean image gallery + outlets */
   .press .softphoto img{opacity:.32}
   .press .softphoto::after{background:linear-gradient(120deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.8) 55%,rgba(9,9,11,.9) 100%)}
@@ -483,7 +490,25 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
-  <!-- 9 · OUR COMMUNITY -->
+  <!-- 9 · IN THEIR WORDS -->
+  <section class="slide gslide underbg voiceslide">
+    <div class="softphoto"><img src="assets/voices-bg.jpg" alt=""/></div>
+    <div class="pad">
+      <div class="eyebrow">Testimonials</div>
+      <h2 style="max-width:22ch">What They Carried Home.</h2>
+      <div class="voices vgrid">
+        <div class="vq"><p>"Definitely one of the best moments of the decade: a total solar eclipse captured through a telescope in Iceland."</p><span>@iwona.fluda</span></div>
+        <div class="vq"><p>"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence."</p><span>@exologik</span></div>
+        <div class="vq"><p>"Such an epic experience."</p><span>@joshuabear.music</span></div>
+        <div class="vq"><p>"My favorite keepsake from Iceland."</p><span>@salenasalinas</span></div>
+        <div class="vq"><p>"Thank you for creating such a masterpiece and time capsule."</p><span>@alli_empowers</span></div>
+        <div class="vq"><p>"It was an honor to be part of your team."</p><span>@zen.meets.chaos</span></div>
+      </div>
+    </div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+  </section>
+
+  <!-- 10 · OUR COMMUNITY -->
   <section class="slide gslide underbg">
     <div class="softphoto"><img src="assets/community-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
@@ -499,7 +524,7 @@
       </div>
       <div class="accent"><img src="assets/community.jpg" alt=""/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
   </section>
 
   <!-- 10 · THE ECLIPSE TRILOGY -->
@@ -570,7 +595,7 @@
 </svg>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>12</span></div>
   </section>
 
   <!-- 11 · THE CEREMONIES -->
@@ -589,7 +614,7 @@
       </div>
       <div class="accent"><img src="assets/tradition.jpg" alt="Ceremony beneath the glacier"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>12</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>13</span></div>
   </section>
 
   <!-- 12 · WHAT'S NEXT -->
@@ -604,7 +629,7 @@
       </div>
       <div class="accent"><img src="assets/whatsnext.jpg" alt=""/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>13</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>14</span></div>
   </section>
 
   <!-- 13 · THANK YOU + CONTACT -->

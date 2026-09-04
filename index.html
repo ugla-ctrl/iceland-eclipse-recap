@@ -37,6 +37,8 @@
   @keyframes slowzoom{from{transform:scale(1.06)}to{transform:scale(1)}}
   .accent::after{content:'';position:absolute;inset:0;
     background:linear-gradient(200deg,rgba(9,9,11,0) 55%,rgba(9,9,11,.35));pointer-events:none}
+  /* right-column visuals start below the corner logo so nothing overlaps it */
+  .split>.accent:last-child,.split>.lineup:last-child,.split>.mapwrap:last-child{margin-top:clamp(50px,9vh,86px);min-height:0}
   .eyebrow{font-family:var(--label);font-weight:700;font-size:clamp(.5rem,.86vw,.74rem);
     letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:1.3em}
   h1.word{font-family:var(--display);letter-spacing:-.01em;line-height:.98;

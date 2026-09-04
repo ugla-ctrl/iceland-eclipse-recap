@@ -525,10 +525,9 @@
     <div class="softphoto"><img src="assets/voices-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split tsplit">
       <div class="pressvid">
-        <div class="eyebrow">In the Press</div>
         <figure class="vidframe">
           <video src="assets/cnn-eclipse.mp4" poster="assets/cnn-eclipse-poster.jpg"
-                 muted playsinline preload="metadata" controls
+                 playsinline preload="metadata" controls
                  aria-label="CNN coverage: Total Eclipse Passes Over Iceland"></video>
         </figure>
         <div class="vidcap">CNN &middot; Total Eclipse Passes Over Iceland</div>
@@ -743,8 +742,12 @@
     brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
     brand.classList.toggle('left', active.classList.contains('brandleft'));
     document.querySelectorAll('.slide video').forEach(v=>{
-      if(active.contains(v)){ try{ v.currentTime=0; }catch(e){} const p=v.play(); if(p&&p.catch) p.catch(()=>{}); }
-      else { v.pause(); }
+      if(active.contains(v)){
+        try{ v.currentTime=0; }catch(e){}
+        v.muted=false; v.volume=1;
+        const p=v.play();
+        if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
+      } else { v.pause(); }
     });
     active.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.textContent='0';countUp(el);});
   }

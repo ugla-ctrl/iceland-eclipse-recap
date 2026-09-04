@@ -62,15 +62,15 @@ Seven photos, byte-check before use like all deck imagery:
 
 Placement plan: #2 and #6 to the Press/testimonial slide; #3 and #5 to Our Community; #1/#4/#7 as options for Programming/Schedule.
 
-## Status (all PENDING as of 2026-09-04)
+## Status
 
-Ready to implement without more input:
-- Cover (logo big, Event Recap big, strip text)
-- Digital Reach (remove X + Facebook, Instagram one line, remove faded caption)
-- Press (add space.com + Billboard; work in photos #2 and #6)
-- Our Community (keep top image, replace duplicate with #3 or #5)
+DONE (2026-09-04):
+- Cover: killed the title + subtitle/date line, logo enlarged (it carries the name + date), "Event Recap" enlarged.
+- Digital Reach: removed Facebook (82k+) and X (12k+); one line of four (1.5M page views, 750k unique visitors, 100k+ email, 44k+ Instagram); faded caption removed.
+- Press: added Billboard, Space.com and SETI Institute to the chips; accent replaced with a 3-proof stack (NYT feature + SETI broadcast photo #2 + Dorothy stratosphere eclipse photo #6).
+- Our Community: kept the top image (Sian Proctor + astronaut Huie), replaced the duplicate-Proctor bottom with photo #5 (Android Jones + Chris Dyer).
 
-Needs a decision or asset from Lee/Mitch:
+Still needs a decision or asset from Lee/Mitch:
 - Reach numbers: real GA / icelandeclipse.com figures, or just drop FB + X from the current line?
 - Schedule: which Instagram schedule graphics to pull.
 - Programming: a lineup image, or build one from the confirmed 2026 lineup.

@@ -65,8 +65,8 @@
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,.2) 0%,rgba(9,9,11,.62) 68%,rgba(9,9,11,.88) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
   /* cover logo marks */
-  .cover-mark{margin-bottom:1.4em}
-  .cover-mark img{width:clamp(98px,14.5vh,168px);height:auto;display:block;filter:drop-shadow(0 0 26px rgba(0,0,0,.5))}
+  .cover-mark{margin-bottom:0}
+  .cover-mark img{width:clamp(210px,42vh,404px);height:auto;display:block;filter:drop-shadow(0 0 40px rgba(0,0,0,.45))}
   .cover-imxp{margin-top:1.5em}
   .cover-imxp img{width:clamp(84px,9vw,124px);height:auto;display:block;opacity:.92;filter:drop-shadow(0 0 14px rgba(0,0,0,.5))}
   @media (prefers-reduced-motion: reduce){
@@ -75,8 +75,8 @@
   }
   .cover-sub{margin-top:1.7em;font-family:var(--label);font-weight:600;letter-spacing:.18em;text-transform:uppercase;
     font-size:clamp(.52rem,.92vw,.78rem);line-height:2.1;color:var(--body)}
-  .cover-tag{margin-top:1.5em;font-family:var(--label);font-weight:700;font-size:clamp(.5rem,.82vw,.68rem);
-    letter-spacing:.24em;text-transform:uppercase;color:var(--orange)}
+  .cover-tag{margin-top:1.1em;font-family:var(--label);font-weight:700;font-size:clamp(1rem,2.5vw,1.9rem);
+    letter-spacing:.34em;text-transform:uppercase;color:var(--orange)}
   .cover-note{margin-top:1.5em;font-weight:400;font-size:clamp(.68rem,1.1vw,.92rem);line-height:1.72;
     color:var(--body);max-width:58ch}
   /* soft photo backdrop (section slides) */
@@ -270,9 +270,7 @@
   <section class="slide active onphoto">
     <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
     <div class="coverwrap">
-      <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
-      <h1 class="word">Iceland <em>Eclipse</em></h1>
-      <div class="cover-sub">A Celestial Gathering in the Land of Fire &amp; Ice<br/>11 – 15 August 2026 · Hellissandur · Snæfellsnes Peninsula</div>
+      <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse · 11-15 August 2026"/></div>
       <div class="cover-tag">Event Recap</div>
       <div class="cover-imxp"><img src="assets/imxp-logo.png" alt="IMXP"/></div>
     </div>
@@ -338,15 +336,12 @@
     <div class="pad">
       <div class="eyebrow">Digital Reach</div>
       <h2>50 Million Impressions, Before Anyone Landed in Iceland.</h2>
-      <div class="tiles">
+      <div class="tiles t4">
         <div class="tile"><div class="n" data-count>1.5M</div><div class="l">Page views</div></div>
         <div class="tile"><div class="n" data-count>750k</div><div class="l">Unique visitors</div></div>
         <div class="tile"><div class="n" data-count>100k+</div><div class="l">Email list</div></div>
-        <div class="tile"><div class="n" data-count>82k+</div><div class="l">Facebook fans</div></div>
         <div class="tile"><div class="n" data-count>44k+</div><div class="l">Instagram audience</div></div>
-        <div class="tile"><div class="n" data-count>12k+</div><div class="l">X (Twitter) followers</div></div>
       </div>
-      <p class="small" style="margin-top:1.1em">Guests spent an average of 2+ minutes on site before ever booking, well above a typical event campaign.</p>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>05</span></div>
   </section>
@@ -443,9 +438,12 @@
         <h2>The Story Traveled the World.</h2>
         <div class="chips">
           <div class="chip">The New York Times</div>
+          <div class="chip">Billboard</div>
+          <div class="chip">Space.com</div>
           <div class="chip">Condé Nast Traveler</div>
           <div class="chip">Dazed</div>
           <div class="chip">Live Science</div>
+          <div class="chip">SETI Institute</div>
           <div class="chip">Schön! Magazine</div>
         </div>
         <div class="voices">
@@ -457,7 +455,7 @@
           <div class="vq"><p>"It was an honor to be part of your team."</p><span>@zen.meets.chaos</span></div>
         </div>
       </div>
-      <div class="accent" style="background:#000"><img src="assets/nyt-feature.jpg" alt="The New York Times feature on Iceland Eclipse" style="object-fit:contain"/></div>
+      <div class="accent" style="background:#000"><img src="assets/press-collage.jpg" alt="Iceland Eclipse in The New York Times, on the SETI Institute broadcast, and the eclipse captured from the stratosphere" style="object-fit:contain"/></div>
     </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>

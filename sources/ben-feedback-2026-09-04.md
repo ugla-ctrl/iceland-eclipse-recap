@@ -64,7 +64,7 @@ Every author checked on IG and cross-checked against the event credits.
 | @hippieonahiway | 1.2k | "I love that you captured the beautiful moment we were all having." |
 
 **Excluded despite high follower counts (crew/talent, not guests):**
-- `@naturalsymphonylive` (9.0k) - "This was so epic! What a way to open a festival." Credited **performer** (Afterglow DJ set). Would have been the best high-follower quote available.
+- ~~`@naturalsymphonylive` (9.0k)~~ - **Included on Lee's instruction, 2026-09-04.** "This was so epic. What a way to open a festival." They are a credited Afterglow DJ, so this is talent rather than a guest, and it is the one place the guests-and-customers-only rule is knowingly broken. Lee was told and chose to include it.
 - `@liam.bongo`, `@jamescook88` (96 gallery credits), `@kaylaeditsthings` (32) - all crew.
 
 **Honest tradeoff to flag:** the >1k rule removes the four best-written quotes and leaves

@@ -95,3 +95,23 @@ Scanned for more, source by source:
 - **DM > Requests (15)**: gated behind an "Accept request" dialog. Accepting would notify the sender, so left untouched. Previews suggest at least one candidate (Adam Hoffman). Needs Mitch or Lee to accept before the text can be read.
 
 Still open: pull comments from the affluent/priority attendee list (see [[decision-affluent-handles-engagement-target]] — Sheet "Priority (BOTH)" tab) and mine those for higher-profile guest testimonials.
+
+## Testimonial author audit (2026-09-04)
+
+Every testimonial author checked against their IG profile and against the official
+IEpress gallery credits (photographer field + performer names in filenames).
+
+| Handle | Who | Verdict |
+|---|---|---|
+| `@tinabrummer_balance` | Tina Brummer, coach (Austria); travelled in, asked "Are you still in Iceland Mitch?" | **Guest** - keep |
+| `@iwona.fluda` | Iwona J. Fluda, digital creator; no event credit | **Guest** - keep |
+| `@salenasalinas` | Salena Salinas, CCO North Star Productions; Iceland highlight, no event credit | **Guest** - keep |
+| `@exologik` | Ritual DJ / transformational guide; **no credit in the gallery, not a named performer** | Attending artist, not talent - keep (flagged) |
+| `@joshuabear.music` | Joshua Bear/Draper, musician; **no credit in the gallery, not a named performer** | Attending artist, not talent - keep (flagged); quote is thin |
+| `@alli_empowers` | **Allison Powers - credited event photographer, 38 photos in the IEpress gallery and named in the deck's own photo credit line** | **Crew - REMOVED** |
+
+Net: 5 testimonials, all guests/attendees. `@zen.meets.chaos` (crew) and
+`@alli_empowers` (crew photographer) both removed.
+
+Watch-outs for future additions: cross-check any handle against the IEpress
+photographer list and the lineup poster before quoting them as a guest.

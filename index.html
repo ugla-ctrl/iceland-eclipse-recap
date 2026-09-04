@@ -248,19 +248,29 @@
   /* press: header + clean image gallery + outlets */
   .press .softphoto img{opacity:.32}
   .press .softphoto::after{background:linear-gradient(120deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.8) 55%,rgba(9,9,11,.9) 100%)}
-  .nytfeature{display:flex;align-items:center;justify-content:center;min-width:0}
-  .nytfeature img{max-width:100%;max-height:80vh;width:auto;height:auto;border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08);display:block}
-  .pressminis{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.5rem,1vw,.75rem);margin-top:1.15em}
-  .pressmini{position:relative;margin:0;border-radius:9px;overflow:hidden;aspect-ratio:16/10;border:1px solid rgba(255,255,255,.09)}
-  .pressmini img,.pressmini video{width:100%;height:100%;object-fit:cover;display:block}
-  .pressmini figcaption{position:absolute;left:0;right:0;bottom:0;padding:.55em .65em .5em;font-family:var(--label);font-weight:700;font-size:clamp(.36rem,.55vw,.48rem);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
-  .presslead{font-size:clamp(.72rem,1.15vw,.98rem);line-height:1.6;color:var(--ink);margin:1.1em 0 0;max-width:40ch}
+  .presspad{justify-content:flex-start;gap:clamp(.6rem,1.8vh,1.2rem);padding:4% 6% 4.6%}
+  .presspad h2{font-size:clamp(1.1rem,2.5vw,2.3rem)}
+  .presshead{display:grid;grid-template-columns:1.02fr 1fr;gap:5%;align-items:start;flex:none}
+  .presshead h2{margin-bottom:0}
+  .presshead .presslead{margin-top:0}
+  .presswall{flex:1 1 0;min-height:0;height:100%;display:flex;justify-content:center;align-items:stretch;
+    gap:clamp(.5rem,1.3vw,1rem)}
+  .pcard{position:relative;margin:0;height:100%;min-width:0;border-radius:10px;overflow:hidden;background:#000;
+    border:1px solid rgba(255,255,255,.11);box-shadow:0 16px 44px rgba(0,0,0,.55)}
+  .pcard img,.pcard video{display:block;height:100%;width:auto;max-width:100%;object-fit:contain}
+  .pcard figcaption{position:absolute;left:0;right:0;top:0;padding:.5em .7em .75em;
+    font-family:var(--label);font-weight:700;font-size:clamp(.34rem,.52vw,.46rem);letter-spacing:.13em;
+    text-transform:uppercase;color:#fff;background:linear-gradient(rgba(0,0,0,.72),transparent);pointer-events:none}
+  .presslead{font-size:clamp(.68rem,1.02vw,.88rem);line-height:1.55;color:var(--ink);margin:1.1em 0 0;max-width:44ch}
   .presslead em{font-style:italic;color:#fff}
-  .pressoutlets{margin-top:1.15em}
+  .pressoutlets{margin-top:.95em}
   .pressoutlets .po-label{display:block;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.66vw,.56rem);letter-spacing:.2em;text-transform:uppercase;color:var(--body);margin-bottom:.7em}
   .pressoutlets .chips{margin-top:0}
   @media (max-width:1024px) and (orientation:portrait){
-    .nytfeature img{max-height:none;width:100%}
+    .presshead{grid-template-columns:1fr;gap:1rem}
+    .presswall{flex-wrap:wrap;height:auto}
+    .pcard{height:auto;flex:1 1 44%}
+    .pcard img,.pcard video{height:auto;width:100%}
   }
   /* timeline */
   .timeline{display:flex;gap:clamp(.45rem,1vw,.85rem);margin-top:1.1em;flex-wrap:wrap}
@@ -529,29 +539,33 @@
   <!-- 10 · IN THE PRESS -->
   <section class="slide gslide underbg press">
     <div class="softphoto"><img src="assets/press-bg.jpg" alt=""/></div>
-    <div class="pad"><div class="split" style="grid-template-columns:.88fr 1.12fr;gap:4.5%">
-      <div class="nytfeature"><img src="assets/nyt-feature.jpg" alt="The New York Times feature: Ari Eisenstat and Mitch Morales pulled off an eclipse festival in Iceland"/></div>
-      <div class="content">
-        <div class="eyebrow">In the Press</div>
-        <h2>The Story Traveled the World.</h2>
-        <p class="presslead">From <em>The New York Times</em> to a live SETI Institute broadcast, and totality captured from the edge of space, the story reached far beyond the glacier.</p>
-        <div class="pressoutlets">
-          <span class="po-label">Also featured in</span>
-          <div class="chips">
-            <div class="chip">Billboard</div>
-            <div class="chip">Space.com</div>
-            <div class="chip">Condé Nast Traveler</div>
-            <div class="chip">Live Science</div>
-            <div class="chip">Dazed</div>
-            <div class="chip">Schön! Magazine</div>
+    <div class="pad presspad">
+      <div class="presshead">
+        <div class="ph-l">
+          <div class="eyebrow">In the Press</div>
+          <h2>The Story Traveled the World.</h2>
+        </div>
+        <div class="ph-r">
+          <p class="presslead">From <em>The New York Times</em> to a live SETI Institute broadcast, and totality captured from the edge of space, the story reached far beyond the glacier.</p>
+          <div class="pressoutlets">
+            <span class="po-label">Also featured in</span>
+            <div class="chips">
+              <div class="chip">Billboard</div>
+              <div class="chip">Space.com</div>
+              <div class="chip">Condé Nast Traveler</div>
+              <div class="chip">Live Science</div>
+              <div class="chip">Dazed</div>
+              <div class="chip">Schön! Magazine</div>
+            </div>
           </div>
         </div>
-        <div class="pressminis">
-          <figure class="pressmini"><video src="assets/cnn-eclipse.mp4" poster="assets/cnn-eclipse-poster.jpg" loop playsinline preload="metadata" controls aria-label="CNN coverage: Total Eclipse Passes Over Iceland"></video><figcaption>CNN · broadcast</figcaption></figure>
-          <figure class="pressmini"><img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/><figcaption>From the stratosphere</figcaption></figure>
-        </div>
       </div>
-    </div></div>
+      <div class="presswall">
+        <figure class="pcard"><img src="assets/nyt-feature.jpg" alt="The New York Times feature: Ari Eisenstat and Mitch Morales pulled off an eclipse festival in Iceland"/><figcaption>The New York Times</figcaption></figure>
+        <figure class="pcard"><video src="assets/cnn-eclipse.mp4" poster="assets/cnn-eclipse-poster.jpg" loop playsinline preload="metadata" controls aria-label="CNN coverage: Total Eclipse Passes Over Iceland"></video><figcaption>CNN · broadcast</figcaption></figure>
+        <figure class="pcard"><img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/><figcaption>From the stratosphere</figcaption></figure>
+      </div>
+    </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
   </section>
 

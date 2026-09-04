@@ -81,3 +81,17 @@ Completed in the 2026-09-04 pass (all sourced from the IEpress gallery / Mitch's
 Still optional (not blocking): real Google Analytics figures for Digital Reach, if Lee wants to swap them in.
 
 Note: the cover-logo-bigger and press-rebuild items overlap with work already shipped 2026-09-03/04; this round pushes them further (kill the title, bigger still; add the two new outlets + photos).
+
+## Testimonials sourcing (2026-09-04)
+
+Rule from Lee: testimonials must be **guests and customers**, not crew or team.
+
+- Removed `@zen.meets.chaos` ("It was an honor to be part of your team") — that is crew, not a guest.
+- Added `@tinabrummer_balance` (Tina Brummer, Austria, attendee): "Many thanks again for making this extraordinary experience possible." Source: @imxp_mitch IG DM, Primary, 18 Aug 2026.
+
+Scanned for more, source by source:
+- **DM > General**: this is where the existing testimonials came from (@iwona.fluda, @exologik, @joshuabear.music). Scanned to the bottom (6w, pre-event); no further usable guest text.
+- **DM > Primary**: mostly logistics, vendors and story reactions. Only Tina qualified. (@truejoshuadraper "It was amazing" is a guest but too thin to feature. Susan Leilieyoun's messages are a collaborator pitch for ATOMIKA, not a testimonial.)
+- **DM > Requests (15)**: gated behind an "Accept request" dialog. Accepting would notify the sender, so left untouched. Previews suggest at least one candidate (Adam Hoffman). Needs Mitch or Lee to accept before the text can be read.
+
+Still open: pull comments from the affluent/priority attendee list (see [[decision-affluent-handles-engagement-target]] — Sheet "Priority (BOTH)" tab) and mine those for higher-profile guest testimonials.

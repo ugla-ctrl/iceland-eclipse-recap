@@ -193,6 +193,22 @@
   .vq p{font-size:clamp(.5rem,.84vw,.74rem);font-style:italic;color:var(--ink);line-height:1.4;max-width:none;margin:0}
   .vq span{display:block;margin-top:.35em;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.68vw,.58rem);letter-spacing:.06em;color:var(--orange)}
   @media(max-width:760px){ .voices{grid-template-columns:1fr} }
+  /* slide 10: press video (left) + testimonials (right) */
+  .tsplit{grid-template-columns:minmax(0,.58fr) minmax(0,1.42fr);gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+  .pressvid{display:flex;flex-direction:column;min-width:0}
+  .vidframe{position:relative;margin:.9em 0 0;border-radius:14px;overflow:hidden;background:#000;
+    border:1px solid rgba(255,255,255,.14);box-shadow:0 22px 55px rgba(0,0,0,.6);aspect-ratio:9/16;max-height:64vh}
+  .vidframe video{width:100%;height:100%;object-fit:cover;display:block}
+  .vidcap{margin-top:.75em;font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.66vw,.56rem);
+    letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  .voices.vgrid2{grid-template-columns:1fr 1fr;gap:clamp(.8rem,1.8vw,1.4rem);margin-top:clamp(1em,2.4vh,1.5em)}
+  .voices.vgrid2 .vq p{font-size:clamp(.6rem,.95vw,.84rem);line-height:1.45}
+  .voices.vgrid2 .vq span{font-size:clamp(.44rem,.7vw,.58rem)}
+  @media (max-width:1024px) and (orientation:portrait){
+    .tsplit{display:flex;flex-direction:column;gap:1.4rem}
+    .vidframe{max-height:52vh;align-self:center;width:min(74%,320px)}
+    .voices.vgrid2{grid-template-columns:1fr}
+  }
   /* testimonials slide */
   .voices.vgrid{grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem);margin-top:clamp(1.2em,3vh,2em)}
   .voices.vgrid .vq p{font-size:clamp(.66rem,1.05vw,.92rem);line-height:1.5}
@@ -504,22 +520,33 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
-  <!-- 9 · IN THEIR WORDS -->
+  <!-- 9 · IN THE PRESS + TESTIMONIALS -->
   <section class="slide gslide underbg voiceslide">
     <div class="softphoto"><img src="assets/voices-bg.jpg" alt=""/></div>
-    <div class="pad">
-      <div class="eyebrow">Testimonials</div>
-      <h2 style="max-width:22ch">What They Carried Home.</h2>
-      <div class="voices vgrid">
-        <div class="vq"><p>"Definitely one of the best moments of the decade: a total solar eclipse captured through a telescope in Iceland."</p><span>@iwona.fluda</span></div>
-        <div class="vq"><p>"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence."</p><span>@exologik</span></div>
-        <div class="vq"><p>"Such an epic experience."</p><span>@joshuabear.music</span></div>
-        <div class="vq"><p>"My favorite keepsake from Iceland."</p><span>@salenasalinas</span></div>
-        <div class="vq"><p>"Thank you for creating such a masterpiece and time capsule."</p><span>@alli_empowers</span></div>
-        <div class="vq"><p>"It was an honor to be part of your team."</p><span>@zen.meets.chaos</span></div>
+    <div class="pad"><div class="split tsplit">
+      <div class="pressvid">
+        <div class="eyebrow">In the Press</div>
+        <figure class="vidframe">
+          <video src="assets/cnn-eclipse.mp4" poster="assets/cnn-eclipse-poster.jpg"
+                 muted loop playsinline preload="metadata" controls
+                 aria-label="CNN coverage: Total Eclipse Passes Over Iceland"></video>
+        </figure>
+        <div class="vidcap">CNN &middot; Total Eclipse Passes Over Iceland</div>
       </div>
-    </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+      <div class="content">
+        <div class="eyebrow">Testimonials</div>
+        <h2 style="max-width:20ch">What They Carried Home.</h2>
+        <div class="voices vgrid2">
+          <div class="vq"><p>"Definitely one of the best moments of the decade: a total solar eclipse captured through a telescope in Iceland."</p><span>@iwona.fluda</span></div>
+          <div class="vq"><p>"Thank you for bringing all of us together in Hellissandur, such a powerful portal of energy and convergence."</p><span>@exologik</span></div>
+          <div class="vq"><p>"Such an epic experience."</p><span>@joshuabear.music</span></div>
+          <div class="vq"><p>"My favorite keepsake from Iceland."</p><span>@salenasalinas</span></div>
+          <div class="vq"><p>"Thank you for creating such a masterpiece and time capsule."</p><span>@alli_empowers</span></div>
+          <div class="vq"><p>"It was an honor to be part of your team."</p><span>@zen.meets.chaos</span></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>10</span></div>
   </section>
 
   <!-- 10 · OUR COMMUNITY -->
@@ -715,6 +742,10 @@
     const active=slides[i];
     brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
     brand.classList.toggle('left', active.classList.contains('brandleft'));
+    document.querySelectorAll('.slide video').forEach(v=>{
+      if(active.contains(v)){ try{ v.currentTime=0; }catch(e){} const p=v.play(); if(p&&p.catch) p.catch(()=>{}); }
+      else { v.pause(); }
+    });
     active.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.textContent='0';countUp(el);});
   }
   document.addEventListener('keydown',e=>{

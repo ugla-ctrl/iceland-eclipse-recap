@@ -101,6 +101,15 @@
   .pillar .t{font-family:var(--display);font-size:clamp(.6rem,1.02vw,.9rem);
     letter-spacing:-.005em;text-transform:uppercase;color:var(--teal)}
   .pillar p{font-size:clamp(.55rem,.88vw,.76rem);margin-top:.55em;max-width:none;color:var(--body)}
+  /* programming lineup panel */
+  .programming .softphoto img{opacity:.28}
+  .programming .softphoto::after{background:linear-gradient(120deg,rgba(9,9,11,.88) 0%,rgba(9,9,11,.8) 60%,rgba(9,9,11,.9) 100%)}
+  .lineup{position:relative;border-radius:12px;overflow:hidden;min-height:clamp(260px,52vh,540px);box-shadow:0 16px 44px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.09)}
+  .lineup>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .lu-overlay{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(1.1rem,2.5vw,1.9rem);background:linear-gradient(transparent 28%,rgba(9,9,11,.5) 58%,rgba(9,9,11,.9) 100%)}
+  .lu-label{font-family:var(--label);font-weight:700;font-size:clamp(.48rem,.78vw,.66rem);letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.7em}
+  .lu-names{font-family:var(--display);font-size:clamp(.92rem,1.6vw,1.5rem);line-height:1.34;color:#fff;letter-spacing:-.01em}
+  .lu-talks{margin-top:.95em;font-size:clamp(.58rem,.92vw,.8rem);line-height:1.5;color:var(--body)}
   .pillar:hover{transform:translateY(-3px);border-color:rgba(13,252,211,.4);box-shadow:0 10px 30px rgba(0,0,0,.45)}
   /* side-quest image cards */
   .quests{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.6rem,1.3vw,1.1rem);margin-top:1.2em}
@@ -375,18 +384,27 @@
   </section>
 
   <!-- 6 · PROGRAMMING -->
-  <section class="slide gslide light-bg">
+  <section class="slide gslide underbg programming">
     <div class="softphoto"><img src="assets/programming-bg.jpg" alt=""/></div>
-    <div class="pad">
-      <div class="eyebrow">Programming · Fourth Contact</div>
-      <h2>Dance. Learn. Connect. Explore.</h2>
-      <div class="pillars">
-        <div class="pillar"><div class="t">DANCE</div><p>Global music, from Icelandic dreamscapes to electronic live performances</p></div>
-        <div class="pillar"><div class="t">LEARN</div><p>International leaders in science, technology and innovation</p></div>
-        <div class="pillar"><div class="t">CONNECT</div><p>Yoga, ceremony and story, guided by wellness visionaries</p></div>
-        <div class="pillar"><div class="t">EXPLORE</div><p>Iceland's iconic landmarks and elemental wilderness</p></div>
+    <div class="pad"><div class="split" style="grid-template-columns:1.04fr .96fr;gap:4.5%">
+      <div class="content">
+        <div class="eyebrow">Programming · Fourth Contact</div>
+        <h2>Dance. Learn. Connect. Explore.</h2>
+        <div class="pillars" style="grid-template-columns:1fr 1fr">
+          <div class="pillar"><div class="t">DANCE</div><p>Global music, from Icelandic dreamscapes to electronic live performances</p></div>
+          <div class="pillar"><div class="t">LEARN</div><p>International leaders in science, technology and innovation</p></div>
+          <div class="pillar"><div class="t">CONNECT</div><p>Yoga, ceremony and story, guided by wellness visionaries</p></div>
+          <div class="pillar"><div class="t">EXPLORE</div><p>Iceland's iconic landmarks and elemental wilderness</p></div>
+        </div>
       </div>
-      <p class="small" style="margin-top:1.2em">Five days of headliners and honest astronomy: Above &amp; Beyond, GusGus, Daði Freyr, Emilíana Torrini, CloZee and Zero 7 on the stages, alongside sessions from Dr. Sian Proctor, Ron Garan and Alex &amp; Allyson Grey on space, consciousness and creativity.</p>
+      <div class="lineup">
+        <img src="assets/lineup.jpg" alt="Iceland Eclipse 2026 lineup"/>
+        <div class="lu-overlay">
+          <span class="lu-label">The 2026 Lineup</span>
+          <div class="lu-names">Above &amp; Beyond · GusGus · Daði Freyr · Emilíana Torrini · CloZee · Zero 7 · Hjaltalín · Maribou State · Apashe</div>
+          <div class="lu-talks">In conversation · Dr. Sian Proctor · Ron Garan · Alex &amp; Allyson Grey</div>
+        </div>
+      </div>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>06</span></div>
   </section>

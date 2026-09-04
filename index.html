@@ -221,7 +221,8 @@
     .eclipse{width:clamp(94px,15vw,150px);margin-bottom:1.5em}
     .pad{overflow-y:auto;justify-content:safe center;padding:9% 6.5%;-webkit-overflow-scrolling:touch}
     .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
-    .accent{display:block;order:-1;flex:none;width:100%;height:36vw;min-height:150px;max-height:240px}
+    .accent{display:block;order:-1;flex:none;width:100%;height:auto;min-height:0;max-height:none}
+    .accent img{height:auto;object-fit:contain}
     .coverwrap{padding:10% 7%}
     h1.word{font-size:clamp(1.5rem,7.4vw,3rem)}
     .cover-sub{font-size:.56rem;letter-spacing:.14em}
@@ -255,6 +256,9 @@
     #ctr{bottom:.7vh;gap:7px}
     /* stacked portrait content needs a vertical scrim, not the desktop left-right one */
     .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.5) 0%,rgba(9,9,11,.72) 50%,rgba(9,9,11,.64) 100%)}
+    /* under-layers must recede on phones so text/stats stay clean */
+    .gslide.underbg .softphoto img,.gslide.trilogy .softphoto img{opacity:.3}
+    .gslide.underbg .softphoto::after,.gslide.underbg.numbg .softphoto::after,.gslide.trilogy .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.78) 0%,rgba(9,9,11,.86) 55%,rgba(9,9,11,.8) 100%)}
     .gslide .eyebrow,.gslide h2,.gslide p,.gslide .small,.gslide .tile .n,.gslide .tile .l,.gslide .quote,.gslide .quote-src{text-shadow:0 1px 10px rgba(0,0,0,.92)}
   }
 </style>

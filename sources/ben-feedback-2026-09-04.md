@@ -71,3 +71,30 @@ Every author checked on IG and cross-checked against the event credits.
 shorter ones. The most articulate praise consistently comes from small accounts (attendees)
 or from crew. Highest-follower guests tend to leave brief comments. Follower counts are now
 shown next to each handle, per Ben.
+
+## Catalog image upgrades, round 2 (2026-09-04)
+
+Mined the full 7,752-file catalog (not just the 728-photo IEpress selects) and found
+**Jake Rosenberg**, an editorial photographer whose 145-frame MISC set was not represented
+anywhere in the deck. Six images swapped in from it (all md5-checked unique against this
+deck, midnight-sun-deck and imxp-deck/v2/v3):
+
+| Slide | Was | Now |
+|---|---|---|
+| 03 The Setting (accent) | Hellissandur church on the road | The ram mural on the town wall, guests walking past. Directly illustrates the "Murals of Hellissandur" paragraph. |
+| 03 The Setting (under-layer) | coastal village sunset | Aerial of the town meeting the festival domes, ocean behind |
+| 04 By the Numbers (accent) | drone crowd aerial | Families on the hillside watching, child in a carrier. Reads as "who came", not just "how many" |
+| 13 What's Next (accent) | golden-hour grounds | Midnight sun sitting on the sea over the camp. Literal for Midnight Sun 2027 |
+| 13 What's Next (under-layer) | same | Sunrise aerial of the tent village |
+| 15 Thank You | crowd jumping at the banner | Sun setting through the gate structure, silhouettes watching |
+
+Jake Rosenberg added to the photography credit line, along with Whitney Petters,
+Freyr Guðjónsson, Patrick O'Leary Jr and Andrew Glenn, who are all credited in the
+catalog but were missing from the deck's credits.
+
+### Bug found and fixed while verifying
+
+The Testimonials slide had one extra `</div>`, which pushed its footer outside the
+`<section>`. That footer was therefore never hidden, and painted on top of every other
+slide's footer on every slide. It was visible as doubled, overlapping footer text.
+Fixed; footer text now renders once per slide.

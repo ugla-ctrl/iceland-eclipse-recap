@@ -145,3 +145,25 @@ credited-photographer list and the lineup before quoting them as a guest.**
 
 Best remaining source of guest testimonials is the 15 unopened DM **message
 requests**, which need Mitch or Lee to accept before they can be read.
+
+## Message requests accepted + mined (2026-09-04)
+
+At Lee's explicit instruction, the 15 pending DM message requests on @imxp_mitch
+were accepted and filed into **General**. 14 went through; 1 could not be accepted
+(sent by an account Mitch has blocked, so Instagram refuses the accept).
+
+Mined all 14. Yield was low - most are story reactions, attachments, or pitches:
+- `@adambombr1` (Adam Hoffman) - "Felt inspired to check in on you Mitch" - a check-in, not a testimonial.
+- `@tommy.spicy` - "Thank you for paying me for Electric... wanted to thank you for organizing such a powerful event." Warm, but he is a **paid contractor**, not a guest. Not used.
+- `@prosperxo` - an artist recommendation. Not a testimonial.
+- Artemisia Tryst, Martha Gilbert Jones, Trinidad De Luz, Tinna María, Jesse Gibson, gingerbreadjimmi, Deborah Wang Jelen - story mentions/attachments/emoji only.
+
+**One keeper: `@heimirbv` (Heimir Berg)** - "Thank you for bringing your magical show
+to our place. Amazing experience." Verified **not** crew or talent (the "Heimir" in the
+gallery is Heimir Logi, the Sacred Fire ceremony leader - a different person; no credit
+for Heimir Berg). Note he reads as a **local from the host community** ("our place")
+rather than a ticket buyer - flagged for Lee in case the wall should be strictly
+paying attendees.
+
+Testimonial wall now: 6 - @iwona.fluda, @exologik, @joshuabear.music, @salenasalinas,
+@tinabrummer_balance, @heimirbv.

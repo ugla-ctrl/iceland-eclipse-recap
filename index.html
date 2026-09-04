@@ -160,18 +160,23 @@
   .trmap .yr{font-family:var(--label);font-weight:700;font-size:52px;letter-spacing:5px;fill:var(--teal)}
   .trmap .nm{font-family:var(--display);font-size:74px;fill:#fff}
   @media (prefers-reduced-motion: reduce){ .trmap .arc.flow1,.trmap .arc.flow2,.trmap .glow{animation:none} }
-  /* five-day schedule */
-  .sched{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.5rem,1.1vw,.95rem);margin-top:1.2em}
-  .day{border-radius:10px;background:var(--panel);border:1px solid var(--line);padding:clamp(.6rem,1.1vw,.95rem);display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
-  .day:hover{transform:translateY(-3px);border-color:rgba(13,252,211,.4)}
-  .day .dh{border-bottom:1px solid var(--line);padding-bottom:.5em;margin-bottom:.55em}
-  .day .dd{font-family:var(--display);font-size:clamp(.66rem,1.1vw,.95rem);color:var(--ink)}
-  .day .dn{font-family:var(--label);font-weight:600;font-size:clamp(.42rem,.68vw,.58rem);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-top:.2em}
-  .day .acts{font-size:clamp(.48rem,.8vw,.7rem);color:var(--body);line-height:1.65}
-  .day .acts b{color:var(--ink);font-weight:600}
-  .day .talk{margin-top:.5em;font-size:clamp(.44rem,.72vw,.62rem);color:var(--dim);line-height:1.45;border-top:1px dashed var(--line);padding-top:.45em}
-  .day .talk .orange{color:var(--orange)}
-  @media(max-width:760px){ .legs{grid-template-columns:1fr} .sched{grid-template-columns:repeat(2,1fr)} }
+  /* five-day schedule (day-by-day timeline) */
+  .schedule{display:flex;flex-direction:column;gap:clamp(.4rem,.9vh,.6rem);margin-top:clamp(1em,2.4vh,1.6em)}
+  .srow{display:grid;grid-template-columns:clamp(96px,11vw,140px) 1fr minmax(0,auto);gap:clamp(.9rem,2.2vw,2rem);align-items:center;padding:clamp(.6rem,1.2vh,.9rem) clamp(.8rem,1.4vw,1.15rem);border-radius:9px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);transition:border-color .25s ease}
+  .srow:hover{border-color:rgba(13,252,211,.32)}
+  .srow.eclipse{background:rgba(13,252,211,.06);border-color:rgba(13,252,211,.34)}
+  .sday{display:flex;flex-direction:column;min-width:0}
+  .sdate{font-family:var(--display);font-size:clamp(.78rem,1.2vw,1.05rem);color:var(--ink);line-height:1}
+  .stheme{font-family:var(--label);font-weight:700;font-size:clamp(.4rem,.64vw,.54rem);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-top:.4em}
+  .sacts{font-size:clamp(.58rem,.92vw,.82rem);color:var(--body);line-height:1.4;min-width:0}
+  .sacts b{color:var(--ink);font-weight:700}
+  .shi{font-size:clamp(.5rem,.8vw,.68rem);color:var(--dim);line-height:1.4;text-align:right}
+  .shi .orange{color:var(--orange);font-weight:700}
+  .schedslide .softphoto img{opacity:.28}
+  .schedslide .srow{background:rgba(9,9,11,.52);border-color:rgba(255,255,255,.11)}
+  .schedslide .srow.eclipse{background:rgba(13,252,211,.12);border-color:rgba(13,252,211,.42)}
+  @media(max-width:760px){ .legs{grid-template-columns:1fr} }
+  @media (max-width:1024px) and (orientation:portrait){ .srow{grid-template-columns:1fr;gap:.25rem} .shi{text-align:left} }
   /* chips (press outlets — echoes site filter chips) */
   .chips{display:flex;flex-wrap:wrap;gap:.7em;margin-top:1.1em}
   .chip{font-family:var(--label);font-weight:600;font-size:clamp(.52rem,.9vw,.76rem);letter-spacing:.06em;
@@ -410,39 +415,38 @@
   </section>
 
   <!-- 7 · THE SCHEDULE -->
-  <section class="slide gslide">
+  <section class="slide gslide underbg schedslide">
     <div class="softphoto"><img src="assets/schedule-bg.jpg" alt=""/></div>
     <div class="pad">
       <div class="eyebrow">The Schedule · 11 – 15 August</div>
       <h2>Five Days, One Totality.</h2>
-      <div class="sched">
-        <div class="day">
-          <div class="dh"><div class="dd">Tue 11</div><div class="dn">Arrival</div></div>
-          <div class="acts"><b>Awarë</b></div>
-          <div class="talk"><span class="orange">Opening Ceremony</span></div>
+      <div class="schedule">
+        <div class="srow">
+          <div class="sday"><span class="sdate">Tue 11</span><span class="stheme">Arrival</span></div>
+          <div class="sacts"><b>Awarë</b></div>
+          <div class="shi"><span class="orange">Opening Ceremony</span></div>
         </div>
-        <div class="day">
-          <div class="dh"><div class="dd">Wed 12</div><div class="dn">Eclipse Day</div></div>
-          <div class="acts"><b>Maribou State</b>, Booka Shade, Emilíana Torrini, Ásgeir, Högni</div>
-          <div class="talk"><span class="orange">Totality · 17:47 UTC</span> · Eclipse Ceremony · Ron Garan · Dr. Sian Proctor</div>
+        <div class="srow eclipse">
+          <div class="sday"><span class="sdate">Wed 12</span><span class="stheme">Eclipse Day</span></div>
+          <div class="sacts"><b>Maribou State</b> · Booka Shade · Emilíana Torrini · Ásgeir · Högni</div>
+          <div class="shi"><span class="orange">Totality 17:47 UTC</span> · Eclipse Ceremony</div>
         </div>
-        <div class="day">
-          <div class="dh"><div class="dd">Thu 13</div><div class="dn">Cosmic Connection</div></div>
-          <div class="acts"><b>Kenny Dope</b>, Tiga, berlioz, Cici</div>
-          <div class="talk">Reggie Watts · Alex &amp; Allyson Grey</div>
+        <div class="srow">
+          <div class="sday"><span class="sdate">Thu 13</span><span class="stheme">Cosmic Connection</span></div>
+          <div class="sacts"><b>Kenny Dope</b> · Tiga · berlioz · Cici</div>
+          <div class="shi">Reggie Watts · Alex &amp; Allyson Grey</div>
         </div>
-        <div class="day">
-          <div class="dh"><div class="dd">Fri 14</div><div class="dn">Aurora</div></div>
-          <div class="acts"><b>Above &amp; Beyond</b>, CloZee, Apashe &amp; Brass Orchestra, ANNA, Zero 7</div>
-          <div class="talk">Desert Hearts · Visionary OGs Panel</div>
+        <div class="srow">
+          <div class="sday"><span class="sdate">Fri 14</span><span class="stheme">Aurora</span></div>
+          <div class="sacts"><b>Above &amp; Beyond</b> · CloZee · Apashe &amp; Brass Orchestra · ANNA · Zero 7</div>
+          <div class="shi">Desert Hearts · Visionary OGs Panel</div>
         </div>
-        <div class="day">
-          <div class="dh"><div class="dd">Sat 15</div><div class="dn">Afterglow</div></div>
-          <div class="acts"><b>GusGus</b>, Nightmares On Wax, Daði Freyr, Ida Engberg</div>
-          <div class="talk">The Overview Effect Panel</div>
+        <div class="srow">
+          <div class="sday"><span class="sdate">Sat 15</span><span class="stheme">Afterglow</span></div>
+          <div class="sacts"><b>GusGus</b> · Nightmares On Wax · Daði Freyr · Ida Engberg</div>
+          <div class="shi">The Overview Effect Panel</div>
         </div>
       </div>
-      <p class="small" style="margin-top:1.1em">287 artists and speakers across the Eclipse, Aurora, Afterglow and Cosmic Connection stages.</p>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>07</span></div>
   </section>
@@ -451,9 +455,10 @@
   <section class="slide gslide underbg">
     <div class="softphoto"><img src="assets/sidequests-bg.jpg" alt=""/></div>
     <div class="pad">
-      <div class="eyebrow">Side Quests</div>
-      <h2>Bucket-list Nights Beyond the Field.</h2>
-      <div class="quests">
+      <div class="eyebrow">Side Quests · Off the Field</div>
+      <h2>The Festival Was Only the Start.</h2>
+      <p class="small" style="max-width:60ch;margin-top:.6em">Five days on the field were only part of it. Guests could take the music underground and into the ice, move through geothermal ritual and ceremony, and range out across the island, before and after totality.</p>
+      <div class="quests" style="margin-top:1.1em">
         <div class="quest">
           <div class="qimg"><img src="assets/sq-glacier.jpg" alt=""/></div>
           <div class="qbody"><div class="qt">Into the Glacier</div><div class="qp">A concert inside Snæfellsjökull, one of the world's seven main energy centers, made famous by Jules Verne</div></div>

@@ -37,8 +37,8 @@
   @keyframes slowzoom{from{transform:scale(1.06)}to{transform:scale(1)}}
   .accent::after{content:'';position:absolute;inset:0;
     background:linear-gradient(200deg,rgba(9,9,11,0) 55%,rgba(9,9,11,.35));pointer-events:none}
-  /* right-column visuals start below the corner logo so nothing overlaps it */
-  .split>.accent:last-child,.split>.lineup:last-child,.split>.mapwrap:last-child,.split>.nytfeature:last-child{margin-top:clamp(50px,9vh,86px);min-height:0}
+  /* corner logo swaps sides (or hides) per slide instead of shrinking artwork */
+  #brand.left{right:auto;left:6%}
   .eyebrow{font-family:var(--label);font-weight:700;font-size:clamp(.5rem,.86vw,.74rem);
     letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:1.3em}
   h1.word{font-family:var(--display);letter-spacing:-.01em;line-height:.98;
@@ -317,7 +317,7 @@
   </section>
 
   <!-- 2 · THE MOMENT -->
-  <section class="slide gslide underbg">
+  <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/moment-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -336,7 +336,7 @@
   </section>
 
   <!-- 3 · THE SETTING -->
-  <section class="slide gslide underbg">
+  <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/setting-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -387,7 +387,7 @@
   </section>
 
   <!-- 6 · PROGRAMMING -->
-  <section class="slide gslide underbg programming">
+  <section class="slide gslide underbg programming nobrand">
     <div class="softphoto"><img src="assets/programming-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.04fr .96fr;gap:4.5%">
       <div class="content">
@@ -521,7 +521,7 @@
   </section>
 
   <!-- 10 · OUR COMMUNITY -->
-  <section class="slide gslide underbg">
+  <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/community-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -540,7 +540,7 @@
   </section>
 
   <!-- 10 · THE ECLIPSE TRILOGY -->
-  <section class="slide gslide underbg trilogy">
+  <section class="slide gslide underbg trilogy brandleft">
     <div class="softphoto"><img src="assets/trilogy-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.02fr .98fr;gap:4%">
       <div class="content">
@@ -613,7 +613,7 @@
   </section>
 
   <!-- 11 · THE CEREMONIES -->
-  <section class="slide gslide underbg">
+  <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/tradition-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -632,7 +632,7 @@
   </section>
 
   <!-- 12 · WHAT'S NEXT -->
-  <section class="slide gslide underbg">
+  <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/whatsnext-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -711,7 +711,8 @@
     slides.forEach((s,k)=>s.classList.toggle('active',k===i));
     [...ctr.children].forEach((d,k)=>d.classList.toggle('on',k===i));
     const active=slides[i];
-    brand.hidden = active.classList.contains('onphoto');
+    brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
+    brand.classList.toggle('left', active.classList.contains('brandleft'));
     active.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.textContent='0';countUp(el);});
   }
   document.addEventListener('keydown',e=>{

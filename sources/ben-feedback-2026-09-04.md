@@ -45,3 +45,29 @@ IEpress selects), all byte-checked unique:
 - `music-lasers.jpg` - ANNA's laser show, Aurora stage (Jake Rosenberg)
 - `music-stage-night.jpg` - Eclipse Stage at night (The Bailey Perspective)
 - `aurora-real.jpg` - the actual aurora borealis streak (Jake Rosenberg)
+
+## Testimonial replacement by follower count (2026-09-04)
+
+Lee's rule: replace any testimonial from an account with **under 1,000 followers**.
+Every author checked on IG and cross-checked against the event credits.
+
+**Removed (under 1k):** @iwona.fluda 671 · @exologik 662 · @joshuabear.music 581 · @heimirbv 444
+
+**Now live (all >1k, all verified guests with no event credit):**
+| Handle | Followers | Quote |
+|---|---|---|
+| @ascensionacres | 12.1k | "Amazing work." |
+| @cosmobiologist (Graham Lau, astrobiologist) | 6.1k | "A fantastic group of future makers." |
+| @salenasalinas | 4.6k | "My favorite keepsake from Iceland." |
+| @harley_xcx | 4.1k | "Such a cool experience." |
+| @tinabrummer_balance | 1.9k | "Many thanks again for making this extraordinary experience possible." |
+| @hippieonahiway | 1.2k | "I love that you captured the beautiful moment we were all having." |
+
+**Excluded despite high follower counts (crew/talent, not guests):**
+- `@naturalsymphonylive` (9.0k) - "This was so epic! What a way to open a festival." Credited **performer** (Afterglow DJ set). Would have been the best high-follower quote available.
+- `@liam.bongo`, `@jamescook88` (96 gallery credits), `@kaylaeditsthings` (32) - all crew.
+
+**Honest tradeoff to flag:** the >1k rule removes the four best-written quotes and leaves
+shorter ones. The most articulate praise consistently comes from small accounts (attendees)
+or from crew. Highest-follower guests tend to leave brief comments. Follower counts are now
+shown next to each handle, per Ben.

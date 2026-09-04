@@ -98,3 +98,21 @@ The Testimonials slide had one extra `</div>`, which pushed its footer outside t
 `<section>`. That footer was therefore never hidden, and painted on top of every other
 slide's footer on every slide. It was visible as doubled, overlapping footer text.
 Fixed; footer text now renders once per slide.
+
+## Lee's follow-ups, 2026-09-04 (later)
+
+- **Dropped @salenasalinas "My favorite keepsake from Iceland"** per Ben's B11, rather
+  than rewriting it. Testimonial wall is now five: @ascensionacres 12.1k,
+  @cosmobiologist 6.1k, @harley_xcx 4.1k, @tinabrummer_balance 1.9k, @hippieonahiway 1.2k.
+  The grid became `repeat(6,1fr)` with each quote spanning two columns and the fourth
+  offset by one, so the trailing row of two sits centred instead of hanging left.
+- **Our Community collage is now three layers.** Lee supplied the packed-Aurora-tent group
+  shot (Dr. Sian Proctor doing the Vulcan salute with astronauts at the barrier, several
+  hundred guests behind). It sits between the existing two panels: Sian Proctor with
+  astronaut Huie on top, Alex and Allyson Grey on stage below. Rebuilt as 1240x1800 with
+  no divider line. The accent slot for this slide switched from `object-fit:cover` to a
+  `contain` layout (`.accent.commcollage`) so a taller collage is shown whole rather than
+  centre-cropped.
+- **Google Analytics attempt failed.** See O2 in `ben-punch-list.md`. The signed-in account
+  has no Iceland Eclipse property.
+- **Blocked Instagram message request dropped** from the punch list at Lee's instruction.

@@ -28,9 +28,9 @@ Status is one of **Done**, **Done, differs**, or **Open**.
 | B8 | p8 Side Quests: like it | Done | Kept, and three of its four images upgraded to real side-quest photography: Emiliana Torrini in the lava cave, sunrise yoga, the grand piano at the waterfall. |
 | B9 | p9: very cool | Done | Digital Reach kept. |
 | B10 | p10: CNN and testimonials are different things, move CNN to the press slide | Done | CNN clip is now on In the Press; Testimonials is standalone and full width. |
-| B11 | p10: change "My favorite keepsake from Iceland" | Done, differs | It was replaced, then came back. @salenasalinas at 4.6k is one of the few guest quotes clearing the 1,000-follower bar Lee set afterwards. Flagging the conflict rather than picking silently. |
-| B12 | p10: add more testimonials | Done | Six on the slide. |
-| B13 | p10: show follower counts "if they have a lot of them" | Done | All six now exceed 1,000 and each count is printed next to the handle. |
+| B11 | p10: change "My favorite keepsake from Iceland" | Done | Dropped entirely on Lee's instruction (2026-09-04). Testimonials now number five, with the last row centred. |
+| B12 | p10: add more testimonials | Done, differs | Five on the slide after B11 was dropped. |
+| B13 | p10: show follower counts "if they have a lot of them" | Done | All five exceed 1,000 and each count is printed next to the handle. |
 | B14 | p11 Our Community: very good | Done | Unchanged. |
 | B15 | p12 Trilogy: looks great | Done | Unchanged, moved after Midnight Sun. |
 | B16 | p13 Ceremonies: move back to the end of the festival section | Done | Now slide 8, last in that section. |
@@ -40,6 +40,5 @@ Status is one of **Done**, **Done, differs**, or **Open**.
 | # | Item | Detail |
 |---|---|---|
 | O1 | **4,200 participants vs 3,333 guests** | The deck says 4,200. imxp.org/iceland-eclipse, IMXP's own published recap, says 3,333 Guests. Mitch reviewed the 4,200 figure on video and did not object, so it was left. These cannot both be right and the deck is public. Needs Mitch to say which number is the real one. |
-| O2 | **Digital Reach figures are not from Google Analytics** | 1.5M page views, 750k unique visitors, 100k+ email, 44k+ Instagram all come from the partnership deck appendix. Mitch asked for real GA numbers off the Iceland Eclipse site. Not yet pulled; needs GA access. |
-| O3 | **Testimonial quality vs follower count** | The >1,000 rule removed the four best-written quotes. What clears the bar is thinner: "Amazing work.", "Such a cool experience." The single best high-follower quote available, @naturalsymphonylive at 9k, is a credited Afterglow performer and so is excluded as talent. If Ben's goal was social proof, the current six deliver it; if it was warmth, the deck got weaker. Lee's call. |
-| O4 | **One Instagram message request unread** | 14 of 15 requests on @imxp_mitch were accepted and mined. The 15th is from an account Mitch has blocked, so Instagram refuses the accept. Unblocking is Mitch's call. |
+| O2 | **Digital Reach figures are not from Google Analytics** | 1.5M page views, 750k unique visitors, 100k+ email, 44k+ Instagram all come from the partnership deck appendix. **Attempted 2026-09-04 via Chrome (Browser 1).** Google Analytics opened already signed in, but that Google account can see exactly one GA account, "Cloon LLC", holding one property (505390702, measurement ID G-82NMBR4YTN) which reports "No data received from your website yet". There is no Iceland Eclipse or icelandeclipse.com property visible from this account, so no real figures could be pulled. Needs either the Google account that owns the Iceland Eclipse property, or someone to grant that account access. |
+| O3 | **Testimonial quality vs follower count** | The >1,000 rule removed the four best-written quotes, and B11 removed a fifth. What clears the bar is thinner: "Amazing work.", "Such a cool experience." The single best high-follower quote available, @naturalsymphonylive at 9k, is a credited Afterglow performer and so is excluded as talent. Five quotes now stand where six did. Live with it, or relax one of the two rules. |

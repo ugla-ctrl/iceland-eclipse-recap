@@ -264,8 +264,6 @@
   .pcard{position:relative;margin:0;height:100%;min-width:0;border-radius:10px;overflow:hidden;background:#000;
     border:1px solid rgba(255,255,255,.11);box-shadow:0 16px 44px rgba(0,0,0,.55)}
   .pcard img,.pcard video{display:block;height:100%;width:auto;max-width:100%;object-fit:contain}
-  .pcard.wide{height:auto;align-self:flex-end;flex:0 1 clamp(190px,28%,420px)}
-  .pcard.wide img{width:100%;height:auto}
   .pcard figcaption{position:absolute;left:0;right:0;top:0;padding:.5em .7em .75em;
     font-family:var(--label);font-weight:700;font-size:clamp(.34rem,.52vw,.46rem);letter-spacing:.13em;
     text-transform:uppercase;color:#fff;background:linear-gradient(rgba(0,0,0,.72),transparent);pointer-events:none}
@@ -277,7 +275,7 @@
   @media (max-width:1024px) and (orientation:portrait){
     .presshead{grid-template-columns:1fr;gap:1rem}
     .presswall{flex-wrap:wrap;height:auto}
-    .pcard,.pcard.wide{height:auto;flex:1 1 44%}
+    .pcard{height:auto;flex:1 1 44%}
     .pcard img,.pcard video{height:auto;width:100%}
   }
   /* timeline */
@@ -573,7 +571,6 @@
         <figure class="pcard"><img src="assets/nyt-feature.jpg" alt="The New York Times feature: Ari Eisenstat and Mitch Morales pulled off an eclipse festival in Iceland"/><figcaption>The New York Times</figcaption></figure>
         <figure class="pcard"><video src="assets/cnn-eclipse.mp4" poster="assets/cnn-eclipse-poster.jpg" loop playsinline preload="metadata" controls aria-label="CNN coverage: Total Eclipse Passes Over Iceland"></video><figcaption>CNN · broadcast</figcaption></figure>
         <figure class="pcard"><img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/><figcaption>From the stratosphere</figcaption></figure>
-        <figure class="pcard wide"><img src="assets/press-seti.jpg" alt="Ari Eisenstat, Program Director of Iceland Eclipse, on the live SETI Institute broadcast"/><figcaption>SETI Institute &middot; live broadcast</figcaption></figure>
       </div>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>

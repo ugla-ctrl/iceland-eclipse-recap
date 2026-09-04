@@ -120,6 +120,9 @@
   /* subtle under-layer (keeps split + accent, replaces plain black) */
   .gslide.underbg .softphoto img{opacity:.5}
   .gslide.underbg .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.6) 55%,rgba(9,9,11,.74) 100%)}
+  /* trilogy: soft-focus Iceland site under-layer so the map stays crisp */
+  .gslide.trilogy .softphoto img{opacity:.5;filter:blur(3.5px);transform:scale(1.05)}
+  .gslide.trilogy .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.66) 48%,rgba(9,9,11,.82) 100%)}
   /* eclipse trilogy map + legs */
   .trilomap{width:100%;margin:.9em 0 1em;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4)}
   .trilomap img{width:100%;display:block}
@@ -468,7 +471,8 @@
   </section>
 
   <!-- 10 · THE ECLIPSE TRILOGY -->
-  <section class="slide">
+  <section class="slide gslide underbg trilogy">
+    <div class="softphoto"><img src="assets/trilogy-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.02fr .98fr;gap:4%">
       <div class="content">
         <div class="eyebrow">The Eclipse Trilogy</div>

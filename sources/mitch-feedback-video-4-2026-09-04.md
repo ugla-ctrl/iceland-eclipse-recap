@@ -42,13 +42,13 @@ Lee DM 2026-09-05 12:06. His newest recording. Transcribed and frame-matched 202
 |---|---|
 | Second page should be the drone video | Done before this video was found. |
 | More video and sound, "weird that the CNN clip is the first time you hear somebody talking" | **Done.** This is his own answer to the question Lee raised: backgrounds carry their audio. The drone reel on The Moment plays with its music. |
-| Slide 5 (The Music) is too narrow in content | **Open.** |
-| "This over here doesn't do us any favors" (on The Music) | **Open** - he is pointing at the three-image grid. |
-| Replace a picture on The Music with the video he sent | **Open** - see the Instagram link below. |
-| Video background on Digital Reach | **Open.** |
-| Video background on Testimonials | **Open.** |
-| Thank You: logo on TOP, move the rest down | **Open, and it CONTRADICTS Lee.** Lee asked for the logo at the bottom and bigger; Mitch has now asked twice for it at the top with the content moved down. Needs one of them to decide. |
-| Find the map and the lineup on Instagram | **Map found**, see below. The lineup poster is already on slide 6. |
+| Slide 5 (The Music) is too narrow in content | **Done.** The lineup reel replaces the photo grid and carries the full bill. |
+| "This over here doesn't do us any favors" (on The Music) | **Done.** The three-image grid is gone. |
+| Replace a picture on The Music with the video he sent | **Done.** |
+| Video background on Digital Reach | **Done.** Aerial of the crowd at coastal sunset. |
+| Video background on Testimonials | **Done.** The sound-bath circle, dimmed hard. |
+| Thank You: logo on TOP, move the rest down | **Done 2026-09-05.** Lee resolved the conflict in Mitch's favour. The logo opens the slide; the thanks, contact and date follow beneath it. |
+| Find the map and the lineup on Instagram | **Done.** The map has its own slide, The Grounds. The lineup reel is on The Music. |
 
 ## The three links he sent, 2026-09-05
 

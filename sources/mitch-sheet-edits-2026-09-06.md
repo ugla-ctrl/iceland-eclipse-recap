@@ -58,3 +58,22 @@ He numbers Thank You **18** while listing only 16 slides, so a slide is unaccoun
 | Row 8, The Music | "remove this slide..." | He also blanked that row's slide number, so it reads as deliberate. But it holds the six stages, the 287 artists, the night-by-night bill and the lineup audio, and it is the slide he told us two days ago to put the Instagram reel on. Removing it drops the entire music programme from a music festival recap. |
 | Row 9, Programming | "put a muted video behind this slide?" | Doable. Programming is one of the five slides deliberately left as a still, because the only matching clip in the catalog runs 1.5 seconds. Another can be found. |
 | Row 10, The Aurora | "static image of Above & Beyond set as background and then the video inlaid" | **This is the exact arrangement Lee reversed.** Lee: "revert change to aurora slide! Image should be there... the video should be converted to a BACKGROUND OF THE SLIDE focusing on the Aurora." Mitch is asking for it back the other way round. Needs one of them to settle it. |
+
+## The missing slide: Partners (2026-09-06, 01:00)
+
+The gap at 17 in his numbering was deliberate. In Slack he wrote "I think we're missing 1
+slide", then named it and its contents in five short messages:
+
+> partners / Icelandic Glacial / 66 North / Interplanetary Records / Make Soil
+
+Built as a Partners slide: eyebrow "Partners", headline "Built With Us.", a line about what
+the partners actually did, and the four names as a two-by-two list with alternating teal and
+orange rules, matching the stat tiles.
+
+No partner logo files exist anywhere in the deck or the catalog, so the names are set as
+typography in the deck's own label face rather than as borrowed marks. That is also safer:
+a wrong or stale logo is worse than a clean wordmark.
+
+Photo: `partners.jpg`, from the catalog as "Kayla Pittman - ICELANDIC GLACIAL BRANDED STAGE",
+the Icelandic Glacial viewing platform at dusk with the Eclipse Stage lit behind it. It is the
+only partner activation the catalog covers; the other three have no photography.

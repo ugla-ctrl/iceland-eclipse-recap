@@ -235,6 +235,11 @@
   .mg figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.6em .7em .5em;font-family:var(--label);font-weight:700;
     font-size:clamp(.36rem,.56vw,.48rem);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
   .auroraslide .softphoto img,.auroraslide .softphoto video{opacity:.42}
+  .partnerlist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.9rem,2.2vw,1.6rem);margin-top:clamp(1.2em,3vh,2em)}
+  .partnerlist .pn{font-family:var(--label);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    font-size:clamp(.66rem,1.15vw,1rem);color:#fff;padding-top:.7em;border-top:2px solid var(--teal)}
+  .partnerlist .pn:nth-child(2n){border-top-color:var(--orange)}
+  @media (max-width:1024px) and (orientation:portrait){ .partnerlist{grid-template-columns:1fr} }
   .statementslide .pad{justify-content:center}
   .statement{max-width:19ch;font-size:clamp(1.5rem,4.4vw,3.6rem);line-height:1.06;margin:0}
   .statement em{font-style:normal;color:var(--orange)}
@@ -785,7 +790,27 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>17</span></div>
   </section>
 
-  <!-- 18 · THANK YOU + CONTACT -->
+  <!-- 18 · PARTNERS -->
+  <section class="slide gslide underbg brandleft">
+    <div class="softphoto"><img src="assets/programming-bg.jpg" alt=""/></div>
+    <div class="pad"><div class="split">
+      <div class="content">
+        <div class="eyebrow">Partners</div>
+        <h2>Built <em>With Us.</em></h2>
+        <p>Brands who did more than put a logo on a banner. They built platforms, poured water, dressed the crew and put roots back in the ground.</p>
+        <div class="partnerlist">
+          <div class="pn">Icelandic Glacial</div>
+          <div class="pn">66&deg;NORTH</div>
+          <div class="pn">Interplanetary Records</div>
+          <div class="pn">Make Soil</div>
+        </div>
+      </div>
+      <div class="accent"><img src="assets/partners.jpg" alt="The Icelandic Glacial viewing platform beside the Eclipse Stage"/></div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>18</span></div>
+  </section>
+
+  <!-- 19 · THANK YOU + CONTACT -->
   <section class="slide onphoto">
     <div class="coverbg" style="--o:.8"><img src="assets/thankyou.jpg" alt="" style="opacity:.8"/></div>
     <div class="coverwrap">

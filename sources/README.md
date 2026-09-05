@@ -92,7 +92,13 @@ handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays so
 |---|---|---|---|
 | 2 The Moment | `drone-site.mp4` | `ECLIPSE_DAY2.mp4`, 302 MB 4K, trimmed 6s-45s and re-encoded to 1600x900 | Background, muted, looping. Mitch: "maybe this second page with something overlaid." |
 | 5 The Music | `music-live.mp4` | 17s 1080p HEVC clip Lee sent 5 Sep, re-encoded to H.264 | Background, muted, looping |
-| 7 The Aurora | `aurora-live.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | In the accent frame, looping, **silent** (`.mutedbg`, Lee's call). The frame is 9:16 so the vertical clip is not cropped, and the night footage is lifted with `brightness(1.5)`. |
+| 7 The Aurora | `aurora-bg.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | **Slide background**, looping, silent (`.mutedbg`). The accent frame keeps the still photo. |
+
+The aurora clip was briefly put in the accent frame instead; Lee reversed that. It is cut to
+the 13.0s-19.4s stretch where the ribbon is strongest, cropped from the portrait source to a
+16:9 window centred on the ribbon (`crop=464:261:0:520`), upscaled to 1600x900 and lifted with
+`eq=brightness=0.04:saturation=1.15`. Because the source is only 464px wide, the background is
+soft; under the slide's scrim that reads as atmosphere rather than as a defect.
 | 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
 
 Slides with a video background also get a lighter treatment than the photo under-layers:

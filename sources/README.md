@@ -70,3 +70,18 @@ Open thread: Lee remembers a moss- or grass-covered miniature village somewhere 
 not it. Roughly 1,050 photos of the 7,752-file organize catalog were also reviewed by eye
 without finding it. Note the organize catalog carries no descriptive filenames; the IEpress
 selects do, so search those names first.
+
+## Cover background video (2026-09-05)
+
+Mitch, in the Lee DM 2026-09-04 22:12: "Ok have you seen the drone video?" then
+"It would be cool to get that in there" and "As a background". He did not say which slide.
+It is now the **cover** background, which is the only slide that was already a full-bleed
+background plate.
+
+Source: `ECLIPSE_DAY2.mp4`, Slack file `F0BV0P380DB`, 302 MB, 3840x2160, 51s.
+Prepared for web as `assets/cover-drone.mp4`: trimmed to 6s-45s to drop the branded title
+card at the head and the Eclipse Festival logo card at the tail, since the cover carries
+its own logo; scaled to 1600x900, 24fps, no audio, H.264 main, CRF 31, faststart. 8.9 MB.
+Muted, looping, autoplaying, with `cover.jpg` as the poster so a blocked or failed video
+falls back to the previous still. Paused under prefers-reduced-motion. The slide-change
+handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays sound.

@@ -67,7 +67,7 @@
   @media(max-width:760px){ #brand span{display:none} }
   /* cover / photo slides */
   .coverbg{position:absolute;inset:0}
-  .coverbg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+  .coverbg img,.coverbg video{width:100%;height:100%;object-fit:cover;opacity:.55;display:block}
   .coverbg::after{content:'';position:absolute;inset:0;
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,.2) 0%,rgba(9,9,11,.62) 68%,rgba(9,9,11,.88) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
@@ -372,7 +372,7 @@
 
   <!-- 1 · COVER -->
   <section class="slide active onphoto">
-    <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
+    <div class="coverbg"><video class="bgvid" src="assets/cover-drone.mp4" poster="assets/cover.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
     <div class="coverwrap">
       <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse · 11-15 August 2026"/></div>
       <div class="cover-tag">Event Recap</div>
@@ -768,6 +768,12 @@
     brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
     brand.classList.toggle('left', active.classList.contains('brandleft'));
     document.querySelectorAll('.slide video').forEach(v=>{
+      if(v.classList.contains('bgvid')){
+        v.muted=true;
+        if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){ v.pause(); return; }
+        if(active.contains(v)){ const b=v.play(); if(b&&b.catch) b.catch(()=>{}); } else { v.pause(); }
+        return;
+      }
       if(active.contains(v)){
         try{ v.currentTime=0; }catch(e){}
         v.muted=false; v.volume=1;

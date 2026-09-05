@@ -22,6 +22,34 @@ the most powerful", was garbled; it keeps his meaning in house style.
 His "6 content areas" also quietly settles the stage-count argument. The deck no longer states
 a stage count anywhere, so the four-versus-six contradiction cannot recur.
 
+## Second pass, read in the browser (the API text misses formatting)
+
+He highlighted every changed cell yellow and struck through one whole row. Reading the sheet
+visually turned up a set of changes the plain-text read did not show. Now also applied:
+
+| Slide | Change |
+|---|---|
+| 3 | Section becomes **"The Moment · Totality"** |
+| 8 | Section becomes **"Diverse, Intentional Programming"** |
+| 10 | Section becomes **"Unique Icelandic Experiences"**, headline becomes "The Festival Was **Just** the Start." |
+| 10 | All four side-quest cards rewritten to his copy: Langjökull not Snæfellsjökull, "100 lucky guests", "5,000-year-old cave", "a special music performance" not "a grand piano carried" |
+| 11 | Headline becomes **"Holding the Energy of the Land."** |
+
+Note he corrects a fact of ours: the glacier concert was inside **Langjökull**, not Snæfellsjökull.
+
+## Structural changes he wants, NOT applied, they need Lee
+
+His numbering describes a different running order from the live deck:
+
+| His order | Change from live |
+|---|---|
+| 7 Our Community | **moved up from 15** |
+| — The Music | **struck through, slide number blanked: delete** |
+| 12 In the Press, 13 Digital Reach | **swapped** |
+| 15 The Eclipse Trilogy, 16 What's Next | **swapped** |
+
+He numbers Thank You **18** while listing only 16 slides, so a slide is unaccounted for.
+
 ## His four comments, NOT applied, all need a decision
 
 | Anchored at | Comment | Why it is not actioned |

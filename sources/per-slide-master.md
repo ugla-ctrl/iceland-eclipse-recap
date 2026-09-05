@@ -14,8 +14,9 @@ including changes Mitch asks for, until she says it is unlocked.
 
 ## Locked slides
 
-Lee locked **1 Title, 2 Overview and 3 The Moment** on 2026-09-06. Nothing on those three slides
-is to be touched, by anyone, until she unlocks them.
+Lee locked **1 Title, 2 Overview, 3 The Moment and 5 The Grounds** on 2026-09-06. Nothing on
+those slides is to be touched, by anyone, until she unlocks them. **4 The Setting is not locked**,
+though it has no outstanding changes.
 
 ---
 
@@ -66,7 +67,7 @@ three tiles as they stand.
 
 ---
 
-## 5 · The Grounds
+## 5 · The Grounds — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the festival map and the headline "A Gathering at the Edge of the World", which is his
 own wording from the sheet. Keep the background video that was moved here from Digital Reach at

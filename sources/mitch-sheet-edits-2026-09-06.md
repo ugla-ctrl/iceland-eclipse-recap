@@ -102,3 +102,33 @@ never photographed, and two partners that were photographed are not on his list.
 The slide keeps the Icelandic Glacial platform photo and sets all four names as typography.
 Adding activation photos for one partner and not the others would read as favouritism, and
 there is nothing to balance it with.
+
+## The Portal slide (2026-09-06, 01:14)
+
+"oh shoot / we also need a Portal page", plus "we can just grab some simple content from the
+portal deck" and the link. Built as slide 18, ahead of Partners.
+
+Copy is drawn from his own **Patron Deck**, Canva `DAHBzVOg8Fw`, 44 pages, resolved from the
+shortlink he sent. Facts used: 19 July to 15 August, about fifty artists and innovators, based
+at **The Freezer** in Rif on Snæfellsnes, run as an "analog space mission", and his own
+three-phase structure, **The Lab / The Offering / The Archive**, with the archive digitised
+into a LifeShip time capsule. Written in past tense for a recap; the source deck is a
+fundraising document written in future tense.
+
+Photo: `portal.jpg`, from the catalog's own THE PORTAL zone (Andrew Glenn), the community
+gathered inside The Freezer with the venue's sign on the wall.
+
+### Telegram: not reachable from here
+
+"are you still in that telegram? there is a good photo channel." The channel is **PHOTO DUMPS**,
+220 messages, from Lee's screenshot. There is no Telegram tool in this setup, so those photos
+cannot be pulled. Anything wanted from there has to be exported by hand.
+
+The catalog's own THE PORTAL zone holds **54 files** and covered this slide without it.
+
+### Incidental find: the moss-covered miniature village
+
+`THE PORTAL/Videos/Andrianna Kaimis - HIDDEN FOLK HOUSES.mp4` is a row of tiny turf-roofed
+elf houses on a mound at sunset. **This is the "miniature village covered with moss or grass"
+Lee searched for earlier and we gave up on.** "Hidden folk" is huldufólk, the Icelandic elves,
+which is why every search for "elf" and "village" missed it. Not used anywhere yet.

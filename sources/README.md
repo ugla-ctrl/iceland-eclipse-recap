@@ -130,6 +130,25 @@ overlap anything at any scroll position. Desktop keeps the top-corner placement.
 photo is dimmed further on mobile and its logo capped, because the sun flare in that shot
 was washing out the gratitude copy and the contact block.
 
+## The Moment's stat tiles (2026-09-05)
+
+Mitch sent a screenshot of the 1954 / 2196 tiles with "Find new stats", and in his fourth
+video said of that slide "try to leave out the things that I haven't already said, just the
+numbers right there". He is right: the copy directly above already says 1954 and 2196, so the
+tiles repeated the prose. 75 countries also reappears on By the Numbers.
+
+Replaced with three eclipse facts that appear nowhere else in the deck, all externally sourced:
+
+| Tile | Fact | Source |
+|---|---|---|
+| 27 | Years since totality last crossed mainland Europe (11 Aug 1999) | Time, BBC Sky at Night, severe-weather.eu |
+| 290 | Kilometres wide, the path of totality (about 180 miles) | nationaleclipse.com, Exploratorium |
+| 2:18 | Longest totality anywhere on Earth that day | timeanddate.com |
+
+2:18 is deliberate: it sets the deck's own 2:07 against the planetary maximum, so the number
+earns its place instead of restating the lead. 1954 and 2196 stay in the prose where they were
+already stated once.
+
 ## Collage treatment (2026-09-05)
 
 Lee: no borders inside a collage, and the seams should not read as hard cuts.

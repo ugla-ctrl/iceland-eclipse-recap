@@ -103,7 +103,10 @@ the 13.0s-19.4s stretch where the ribbon is strongest, cropped from the portrait
 background be bright enough to read as an aurora while the copy over it stays legible. The
 mobile scrim is kept heavier, since the text sits over the middle of the frame there.
 | 12 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
-| 6 The Music | `lineup-reel.mp4` | @icelandeclipse Instagram reel, 8 Jun, pulled from the CDN as separate DASH video and audio tracks and muxed | In a 9:16 frame, replacing the three-photo grid Mitch said "doesn't do us any favors". Trimmed 1.4s-10.6s so it ends on "Totality Awaits" and drops the "Join us / icelandeclipse.com" and "Passes now on sale" cards, which are sales copy on a recap deck. |
+| 7 The Music | ~~`lineup-reel.mp4`~~ `lineup-audio.m4a` | @icelandeclipse Instagram reel, 8 Jun, pulled from the CDN as separate DASH video and audio tracks and muxed | **Audio only.** The reel's picture carried a "Passes now on sale" card that my trim did not
+remove, and live sales copy has no place on a recap of a finished event. Lee's call: keep the
+sound, drop the picture. The slide now shows a single Above & Beyond photograph and the reel's
+music plays over it from a hidden `<audio class="bgaud">`, 110 KB. |
 | 11 Digital Reach | `reach-bg.mp4` | Catalog: "Daniel - CROWD AT COASTAL SUNSET", 1080x1920 | Background. Cropped to a 16:9 window on the crowd. |
 | 13 Testimonials | `voices-bg.mp4` | Catalog: "Caitlin Guidry - GROUP RESTING OUTDOORS", 4K | Background, dimmed and blurred hard because six quotes sit across the whole slide. |
 

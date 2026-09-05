@@ -222,8 +222,9 @@
   .na{font-size:clamp(.56rem,.9vw,.78rem);color:var(--body);line-height:1.4}
   .na b{color:var(--ink);font-weight:700}
   .reelframe{position:relative;margin:0 auto;border-radius:12px;overflow:hidden;background:#05060a;
-    box-shadow:0 16px 44px rgba(0,0,0,.55);aspect-ratio:9/16;height:64vh;max-height:64vh;width:auto;max-width:100%;align-self:center}
-  .reelframe video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    box-shadow:0 16px 44px rgba(0,0,0,.55);aspect-ratio:4/5;height:58vh;max-height:58vh;width:auto;max-width:100%;align-self:center}
+  .reelframe img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .reelframe audio{display:none}
   .reelframe figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.85em 1em .75em;
     font-family:var(--label);font-weight:700;font-size:clamp(.4rem,.62vw,.54rem);letter-spacing:.16em;
     text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
@@ -514,8 +515,9 @@
           </div>
         </div>
         <figure class="reelframe">
-          <video class="bgvid" src="assets/lineup-reel.mp4" poster="assets/music-ab-duo.jpg" loop playsinline autoplay preload="none" aria-label="The Iceland Eclipse 2026 lineup"></video>
-          <figcaption>The 2026 lineup announce</figcaption>
+          <img src="assets/music-ab-duo.jpg" alt="Above &amp; Beyond on the Eclipse Stage"/>
+          <figcaption>Above &amp; Beyond &middot; Eclipse Stage, Friday 23:30</figcaption>
+          <audio class="bgaud" src="assets/lineup-audio.m4a" loop preload="none"></audio>
         </figure>
       </div>
     </div>
@@ -837,8 +839,8 @@
     const inflow = window.matchMedia && matchMedia('(max-width:1024px) and (orientation:portrait)').matches;
     const host = inflow ? (active.querySelector('.pad') || brandHome) : brandHome;
     if(brand.parentNode !== host) host.appendChild(brand);
-    document.querySelectorAll('.slide video').forEach(v=>{
-      if(v.classList.contains('bgvid') && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.slide video, .slide audio').forEach(v=>{
+      if((v.classList.contains('bgvid')||v.classList.contains('bgaud')) && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){
         v.pause(); return;
       }
       if(v.classList.contains('mutedbg')){
@@ -856,7 +858,7 @@
     // warm the neighbouring slides' videos so arriving on one is not a cold start
     [n-1,n+1].forEach(k=>{
       const sl=slides[k]; if(!sl) return;
-      sl.querySelectorAll('video').forEach(v=>{
+      sl.querySelectorAll('video, audio').forEach(v=>{
         if(v.preload!=='auto'){ v.preload='auto'; try{ v.load(); }catch(e){} }
       });
     });

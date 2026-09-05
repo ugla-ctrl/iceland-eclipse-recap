@@ -139,11 +139,15 @@ tiles repeated the prose. 75 countries also reappears on By the Numbers.
 
 Replaced with three eclipse facts that appear nowhere else in the deck, all externally sourced:
 
-| Tile | Fact | Source |
+| Tile | Label | Source |
 |---|---|---|
-| 27 | Years since totality last crossed mainland Europe (11 Aug 1999) | Time, BBC Sky at Night, severe-weather.eu |
-| 290 | Kilometres wide, the path of totality (about 180 miles) | nationaleclipse.com, Exploratorium |
-| 2:18 | Longest totality anywhere on Earth that day | timeanddate.com |
+| 27 years | Since Europe last saw totality (11 Aug 1999) | Time, BBC Sky at Night, severe-weather.eu |
+| 290 km | Width of the shadow's path (about 180 miles) | nationaleclipse.com, Exploratorium |
+| 2:18 | The longest totality on Earth that day | timeanddate.com |
+
+The unit sits **inside** the big number, not in the caption. A bare "290" over the words
+"kilometres wide" makes the reader assemble the fact themselves; "290 km" lands on sight.
+Same for "27 years". Lee's note: numbers on their own do not mean anything to the audience.
 
 2:18 is deliberate: it sets the deck's own 2:07 against the planetary maximum, so the number
 earns its place instead of restating the lead. 1954 and 2196 stay in the prose where they were

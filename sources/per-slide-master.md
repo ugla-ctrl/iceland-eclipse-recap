@@ -26,8 +26,12 @@ form: 4,200 participants, 75 countries represented, 287 artists & speakers, 300 
 their families, 5 days under the glacier, all five in one row. That restored 287, which Mitch's
 sheet had dropped, and kept the 300 children stat he asked for in Slack.
 
-Because of that move, the locked slides now sit at positions **1, 2, 3, 4, 5 and 6**. Open work
-starts at 7 Our Community.
+**Our Community is locked** as of 2026-09-06, with both halves of Mitch's 05:16 instruction built:
+the astronaut group photo is the background at full resolution, and the art studio group portrait
+took the collage panel it vacated.
+
+Because of the By the Numbers move, the locked slides now sit at positions **1 through 7**. Open
+work starts at 8 Programming.
 
 ---
 
@@ -101,17 +105,18 @@ Lee's, and the number animation was removed.
 
 ---
 
-## 7 · Community
+## 7 · Community — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the headline "Influential. Educated. Global." and the three stats.
 
-**Changes:**
-- **To do** - the astronaut group photo he sent becomes the **background**, in high resolution
-  (Slack, 05:16). This answers "I don't really love this background" from the fifth video.
-- **To do** - because that photo moves to the background, the inlaid collage needs **a different
-  picture** in that slot. He said "replace the inlayed photo with another" without naming one.
-- **Move** - stays at 7. Already in the right place; his "move this up behind the numbers" was
-  applied.
+**Changes:** none outstanding.
+- **Done** - the astronaut group photo is the background, sourced at full resolution from the
+  press selects (Lauren Bruno, Ron Garan large crowd group photo) rather than upscaling his
+  screenshot, cropped 16:9 above the barrier rail. This answers "I don't really love this
+  background" from the fifth video.
+- **Done** - the collage panel it vacated now holds the Bailey Perspective art studio group
+  portrait, chosen by Lee. Brightness pulled partway toward its neighbours so the seams stay soft.
+- **Move** - stays at 7, which is where his own running order puts it.
 
 ---
 

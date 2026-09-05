@@ -65,6 +65,13 @@
     letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
   #brand[hidden]{display:none}
   @media(max-width:760px){ #brand span{display:none} }
+  @media (max-width:1024px) and (orientation:portrait){
+    #brand{top:auto;bottom:1.7rem;right:6.5%}
+    #brand::before{content:'';position:absolute;inset:-16px -20px;border-radius:50%;z-index:-1;
+      background:radial-gradient(closest-side,rgba(9,9,11,.92),rgba(9,9,11,.55) 62%,rgba(9,9,11,0))}
+    #brand.left{right:6.5%;left:auto}
+    #brand img{width:42px}
+  }
   /* cover / photo slides */
   .coverbg{position:absolute;inset:0}
   .coverbg img,.coverbg video{width:100%;height:100%;object-fit:cover;opacity:.55;display:block}
@@ -326,7 +333,7 @@
     #frame{padding:1.2vh 2.6vw}
     #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.4vh - 30px);height:calc(100dvh - 2.4vh - 30px)}
     .eclipse{width:clamp(94px,15vw,150px);margin-bottom:1.5em}
-    .pad{overflow-y:auto;justify-content:safe center;padding:9% 6.5%;-webkit-overflow-scrolling:touch}
+    .pad{overflow-y:auto;justify-content:safe center;padding:9% 6.5% 5.2rem;-webkit-overflow-scrolling:touch}
     .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
     .accent{display:block;order:-1;flex:none;width:100%;height:auto;min-height:0;max-height:none}
     .accent.commcollage img{height:auto;width:100%}

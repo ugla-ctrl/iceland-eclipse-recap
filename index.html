@@ -38,6 +38,9 @@
   .accent.commcollage{background:none;min-height:0;align-self:stretch;display:flex;justify-content:center;align-items:center}
   .accent.commcollage img{height:100%;width:auto;max-width:100%;object-fit:contain}
   .accent.commcollage::after{display:none}
+  .accent.isgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:8px;background:none;border-radius:0;overflow:hidden;height:100%;min-height:0;align-self:stretch}
+  .accent.isgrid img{width:100%;height:100%;min-height:0;min-width:0;object-fit:cover;border-radius:7px;animation:none}
+  .accent.isgrid::after{display:none}
   .accent::after{content:'';position:absolute;inset:0;
     background:linear-gradient(200deg,rgba(9,9,11,0) 55%,rgba(9,9,11,.35));pointer-events:none}
   /* corner logo swaps sides (or hides) per slide instead of shrinking artwork */
@@ -326,6 +329,8 @@
     .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
     .accent{display:block;order:-1;flex:none;width:100%;height:auto;min-height:0;max-height:none}
     .accent.commcollage img{height:auto;width:100%}
+    .accent.isgrid{grid-template-rows:none;grid-auto-rows:1fr}
+    .accent.isgrid img{aspect-ratio:4/3;height:auto}
     .accent img{height:auto;object-fit:contain}
     .coverwrap{padding:10% 7%}
     h1.word{font-size:clamp(1.5rem,7.4vw,3rem)}
@@ -409,7 +414,14 @@
         <p>Home to just 400 people and set at the westernmost edge of Iceland with minimal light pollution, Hellissandur put guests within reach of glaciers, black sand beaches, lava fields and ice caves, all inside one geologically dense peninsula.</p>
         <p style="margin-top:1em">Icelandic and international artists brought local stories, landscapes and legends to life across the town in the Murals of Hellissandur, a living, community-driven canvas that guests could walk between programming blocks.</p>
       </div>
-      <div class="accent"><img src="assets/setting.jpg" alt=""/></div>
+      <div class="accent isgrid">
+        <img src="assets/set-waterfall.jpg" alt="Svodufoss waterfall over basalt columns"/>
+        <img src="assets/set-glacier.jpg" alt="Glacier ice from the air"/>
+        <img src="assets/set-blacksand.jpg" alt="Black sand tidal flats under the mountains"/>
+        <img src="assets/set-lava.jpg" alt="Lava rock under clear water"/>
+        <img src="assets/set-coast.jpg" alt="Guests on the coastal cliffs"/>
+        <img src="assets/set-murals.jpg" alt="A mural on the turf hillside in Hellissandur"/>
+      </div>
     </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>03</span></div>
   </section>

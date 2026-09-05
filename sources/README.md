@@ -57,3 +57,23 @@ Use these numbers, not the partnership deck's pre-event projections, wherever th
 4. **Keep guest-facing copy positive.** Any caveat, gap, or sourcing uncertainty belongs in this file, never in the deck itself.
 5. **Design language (final, 2026-09-03): match icelandeclipse.com exactly.** After iterating (dark totality -> light glass -> Texas-inspired), Mitch specified the definitive reference: the official site https://icelandeclipse.com/. Scraped its real styling and matched it: near-black ground `#09090b`, heavy uppercase display headings (site uses "Agrandir Grand Heavy"/Arial Black; deck uses **Archivo Black** from Google Fonts as the closest free stand-in), **Montserrat** (600/700) teal eyebrow labels, **Inter** body in soft light-grey `#c4c7cd` for contrast, teal `#0DFCD3` primary accent + orange `#EE7717` secondary. Stats are minimal/borderless with thin teal/orange top rules (matches the site's stat row, NOT boxed glass tiles). Press outlets are teal-outline pill **chips** echoing the site's gallery filter chips. Small corner brand lockup on interior slides. **Interactivity:** animated CSS eclipse on cover + closer (moon crosses sun to totality on a loop, teal corona bloom at totality; frozen near-total under prefers-reduced-motion); count-up animation on all stat numbers when a slide activates (handles k/M/%/+ suffixes and thousands separators, skips non-numeric like 2:07 and 53/47); hover lift/glow on pillars/chips/timeline; slow ken-burns zoom on photos per slide. Only the slide-engine JS is shared with the other decks. Do NOT revert to the Midnight Sun pastel look OR the earlier light-glass version; icelandeclipse.com is the reference. Prior rejected directions, in order: pure MSF clone (too similar), muddy dark v3 (too dark/low-contrast), light pastel glass (too light), Texas-cosmic. If re-styling, re-scrape icelandeclipse.com first.
 6. Mitch's real Gmail inbox (not this session's Gmail connector, which is bound to a different account) is reachable via stored OAuth tokens: see `~/.claude/projects/-home-clawd/memory/reference_gmail_credentials.md` for the credential paths and working pattern.
+
+## The Setting collage (2026-09-05)
+
+Mitch asked for the Hellissandur ram-mural photo to be changed ("that one isn't great"),
+and Lee asked for a collage of Iceland spots instead of a single hero image. Slide 3's
+accent is now a six-tile CSS grid, each tile a separate photo, mapped to what the copy
+actually claims:
+
+| Tile | Photo | Serves |
+|---|---|---|
+| 1 | Svöðufoss over basalt columns | waterfalls |
+| 2 | Glacier ice from the air | "glaciers" |
+| 3 | Black sand tidal flats under the mountains | "black sand beaches" |
+| 4 | Lava rock under clear water | "lava fields" |
+| 5 | Guests on the coastal cliffs | the peninsula |
+| 6 | Mural on the turf hillside | "Murals of Hellissandur" |
+
+All six from Jake Rosenberg's MISC set, md5-checked unique against this deck,
+midnight-sun-deck and imxp-deck/v2/v3. The single `setting.jpg` was removed.
+The mural tile is a **different** mural shot from the one Mitch rejected.

@@ -77,3 +77,28 @@ a wrong or stale logo is worse than a clean wordmark.
 Photo: `partners.jpg`, from the catalog as "Kayla Pittman - ICELANDIC GLACIAL BRANDED STAGE",
 the Icelandic Glacial viewing platform at dusk with the Eclipse Stage lit behind it. It is the
 only partner activation the catalog covers; the other three have no photography.
+
+## Slack follow-ups, 01:04 to 01:07
+
+**By the Numbers.** "let's replace 6 Stages with 300 / Children Joined their Families".
+Applied. That tile had already become "6 content areas" from his sheet edit; it is now
+**300 · Children joined their families**. The deck no longer states a stage or venue count
+anywhere, which also closes the four-versus-six thread for good.
+
+**"we should be able to find some pics of all in that repository".** Searched both libraries
+for all four partners, by brand name and by category:
+
+| Partner | Photography found |
+|---|---|
+| Icelandic Glacial | **Yes**, five frames: branded stage, branded platform, activation, branded backdrop, branded booth |
+| 66°NORTH | None. The only hits are files literally numbered 066.jpg |
+| Interplanetary Records | None. The nearest is a BUILD clip titled "MAN CUTTING VINYL", which is signage vinyl, not records |
+| Make Soil | None |
+
+The repository does hold sponsor photography for **Maya Cosmos Cacao** and **HLJODX**, neither
+of which Mitch named. So the gap is real, not a search failure: three of his four partners were
+never photographed, and two partners that were photographed are not on his list.
+
+The slide keeps the Icelandic Glacial platform photo and sets all four names as typography.
+Adding activation photos for one partner and not the others would read as favouritism, and
+there is nothing to balance it with.

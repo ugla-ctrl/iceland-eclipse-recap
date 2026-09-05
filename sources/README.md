@@ -92,7 +92,7 @@ handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays so
 |---|---|---|---|
 | 2 The Moment | `drone-site.mp4` | `ECLIPSE_DAY2.mp4`, 302 MB 4K, trimmed 6s-45s and re-encoded to 1600x900 | Background, muted, looping. Mitch: "maybe this second page with something overlaid." |
 | 5 The Music | `music-live.mp4` | 17s 1080p HEVC clip Lee sent 5 Sep, re-encoded to H.264 | Background, muted, looping |
-| 7 The Aurora | `aurora-live.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | In the accent frame, muted, looping. The frame is 9:16 so the vertical clip is not cropped. |
+| 7 The Aurora | `aurora-live.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | In the accent frame, looping, **silent** (`.mutedbg`, Lee's call). The frame is 9:16 so the vertical clip is not cropped, and the night footage is lifted with `brightness(1.5)`. |
 | 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
 
 Slides with a video background also get a lighter treatment than the photo under-layers:

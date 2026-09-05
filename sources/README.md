@@ -85,3 +85,24 @@ its own logo; scaled to 1600x900, 24fps, no audio, H.264 main, CRF 31, faststart
 Muted, looping, autoplaying, with `cover.jpg` as the poster so a blocked or failed video
 falls back to the previous still. Paused under prefers-reduced-motion. The slide-change
 handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays sound.
+
+## Videos in the deck (2026-09-05)
+
+| Slide | File | Source | Behaviour |
+|---|---|---|---|
+| 2 The Moment | `drone-site.mp4` | `ECLIPSE_DAY2.mp4`, 302 MB 4K, trimmed 6s-45s and re-encoded to 1600x900 | Background, muted, looping. Mitch: "maybe this second page with something overlaid." |
+| 5 The Music | `music-live.mp4` | 17s 1080p HEVC clip Lee sent 5 Sep, re-encoded to H.264 | Background, muted, looping |
+| 7 The Aurora | `aurora-live.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | In the accent frame, muted, looping. The frame is 9:16 so the vertical clip is not cropped. |
+| 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
+
+All background videos carry class `bgvid`: the slide-change handler forces them muted, plays
+them on the active slide and pauses them elsewhere, and skips them under prefers-reduced-motion.
+Each has a poster so a blocked video falls back to a still.
+
+## Mobile
+
+The per-slide corner lockup moves into the active slide's scroll flow as its last element,
+right-aligned, so on a phone it sits at the bottom of that slide's own content and cannot
+overlap anything at any scroll position. Desktop keeps the top-corner placement. The closer
+photo is dimmed further on mobile and its logo capped, because the sun flare in that shot
+was washing out the gratitude copy and the contact block.

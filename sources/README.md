@@ -97,8 +97,11 @@ handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays so
 The aurora clip was briefly put in the accent frame instead; Lee reversed that. It is cut to
 the 13.0s-19.4s stretch where the ribbon is strongest, cropped from the portrait source to a
 16:9 window centred on the ribbon (`crop=464:261:0:520`), upscaled to 1600x900 and lifted with
-`eq=brightness=0.04:saturation=1.15`. Because the source is only 464px wide, the background is
-soft; under the slide's scrim that reads as atmosphere rather than as a defect.
+`eq=brightness=0.04:saturation=1.15`. Because the source is only 464px wide, the background is soft, so it is deliberately blurred
+(`blur(7px)` with a 1.06 scale to hide the blurred edges) and lifted hard
+(`brightness(2.05) saturate(1.3)`) under a much lighter scrim. The blur is what lets the
+background be bright enough to read as an aurora while the copy over it stays legible. The
+mobile scrim is kept heavier, since the text sits over the middle of the frame there.
 | 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
 
 Slides with a video background also get a lighter treatment than the photo under-layers:

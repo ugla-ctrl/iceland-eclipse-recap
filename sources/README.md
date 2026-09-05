@@ -91,7 +91,7 @@ handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays so
 | Slide | File | Source | Behaviour |
 |---|---|---|---|
 | 2 The Moment | `drone-site.mp4` | `ECLIPSE_DAY2.mp4`, 302 MB 4K, trimmed 6s-45s and re-encoded to 1600x900 | Background, muted, looping. Mitch: "maybe this second page with something overlaid." |
-| 9 The Ceremonies | `ceremony-live.mp4` | 17s 1080p clip Lee sent 5 Sep, re-encoded to H.264 | Background, silent (`.mutedbg`), looping, `blur(4px)` with `brightness(1.28)` under a light gradient. The Music went back to its still. |
+| 10 The Ceremonies | `ceremony-live.mp4` | 17s 1080p clip Lee sent 5 Sep, re-encoded to H.264 | Background, silent (`.mutedbg`), looping, `blur(4px)` with `brightness(1.28)` under a light gradient. The Music went back to its still. |
 | 7 The Aurora | `aurora-bg.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | **Slide background**, looping, silent (`.mutedbg`). The accent frame keeps the still photo. |
 
 The aurora clip was briefly put in the accent frame instead; Lee reversed that. It is cut to
@@ -102,7 +102,10 @@ the 13.0s-19.4s stretch where the ribbon is strongest, cropped from the portrait
 (`brightness(2.05) saturate(1.3)`) under a much lighter scrim. The blur is what lets the
 background be bright enough to read as an aurora while the copy over it stays legible. The
 mobile scrim is kept heavier, since the text sits over the middle of the frame there.
-| 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
+| 12 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
+| 6 The Music | `lineup-reel.mp4` | @icelandeclipse Instagram reel, 8 Jun, pulled from the CDN as separate DASH video and audio tracks and muxed | In a 9:16 frame, replacing the three-photo grid Mitch said "doesn't do us any favors". Trimmed 1.4s-10.6s so it ends on "Totality Awaits" and drops the "Join us / icelandeclipse.com" and "Passes now on sale" cards, which are sales copy on a recap deck. |
+| 11 Digital Reach | `reach-bg.mp4` | Catalog: "Daniel - CROWD AT COASTAL SUNSET", 1080x1920 | Background. Cropped to a 16:9 window on the crowd. |
+| 13 Testimonials | `voices-bg.mp4` | Catalog: "Caitlin Guidry - GROUP RESTING OUTDOORS", 4K | Background, dimmed and blurred hard because six quotes sit across the whole slide. |
 
 Slides with a video background also get a lighter treatment than the photo under-layers:
 the video sits at 0.8 opacity under a gradient that stays dark on the text side and clears

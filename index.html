@@ -213,7 +213,7 @@
   /* festival: music + aurora */
   .music .softphoto img{opacity:.26}
   .music .softphoto::after{background:linear-gradient(120deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.82) 55%,rgba(9,9,11,.9) 100%)}
-  .musicbody{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(1.3rem,3vw,2.6rem);width:100%;margin-top:clamp(.9em,2.2vh,1.5em);align-items:center}
+  .musicbody{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.3rem,3vw,2.6rem);width:100%;margin-top:clamp(.9em,2.2vh,1.5em);align-items:center}
   .musiccol{min-width:0}
   .nights{margin-top:clamp(.9em,2vh,1.3em);display:flex;flex-direction:column;gap:.5rem}
   .nrow{display:grid;grid-template-columns:clamp(58px,6vw,80px) 1fr;gap:.9rem;align-items:baseline;
@@ -221,6 +221,12 @@
   .nd{font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.66vw,.56rem);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
   .na{font-size:clamp(.56rem,.9vw,.78rem);color:var(--body);line-height:1.4}
   .na b{color:var(--ink);font-weight:700}
+  .reelframe{position:relative;margin:0 auto;border-radius:12px;overflow:hidden;background:#05060a;
+    box-shadow:0 16px 44px rgba(0,0,0,.55);aspect-ratio:9/16;height:64vh;max-height:64vh;width:auto;max-width:100%;align-self:center}
+  .reelframe video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .reelframe figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.85em 1em .75em;
+    font-family:var(--label);font-weight:700;font-size:clamp(.4rem,.62vw,.54rem);letter-spacing:.16em;
+    text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8))}
   .musicgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(.4rem,.9vw,.6rem);min-height:clamp(230px,44vh,440px)}
   .mg{position:relative;margin:0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 10px 28px rgba(0,0,0,.45);min-height:0}
   .mg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -240,6 +246,7 @@
   @media (max-width:1024px) and (orientation:portrait){
     .musicbody{grid-template-columns:1fr;gap:1.2rem}
     .musicgrid{min-height:0;grid-template-rows:auto auto;aspect-ratio:4/3}
+    .reelframe{height:auto;max-height:none;width:100%;max-width:300px}
     .auroraframe{min-height:0;aspect-ratio:4/5}
   }
   /* slide 10: press video (left) + testimonials (right) */
@@ -264,6 +271,8 @@
   .voices.vgrid .vq p{font-size:clamp(.66rem,1.05vw,.92rem);line-height:1.5}
   .voices.vgrid .vq span{font-size:clamp(.46rem,.74vw,.62rem)}
   .voiceslide .softphoto img{opacity:.42}
+  .gslide.underbg.voiceslide .softphoto video{opacity:.85;filter:brightness(.82) saturate(.95) blur(3px);transform:scale(1.04)}
+  .gslide.underbg.voiceslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.82) 45%,rgba(9,9,11,.88) 100%)}
   .voiceslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.74) 0%,rgba(9,9,11,.58) 42%,rgba(9,9,11,.82) 100%)}
   @media (max-width:1024px) and (orientation:portrait){ .voices.vgrid{grid-template-columns:1fr}
     .voices.vgrid .vq,.voices.vgrid .vq:nth-child(4){grid-column:auto} }
@@ -437,7 +446,24 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>03</span></div>
   </section>
 
-  <!-- 4 · BY THE NUMBERS -->
+  <!-- 4 · THE GROUNDS -->
+  <section class="slide gslide underbg brandleft groundsslide">
+    <div class="softphoto"><img src="assets/setting-bg.jpg" alt=""/></div>
+    <div class="pad"><div class="split" style="grid-template-columns:1fr 1fr;gap:4.5%">
+      <div class="content">
+        <div class="eyebrow">The Grounds</div>
+        <h2>Six Stages, One Field.</h2>
+        <p>The site ran from the road down to the lava edge: Aurora and Polaris at the top, Sacred Fire and Afterglow through the middle, the Eclipse Stage at the far end, and the Ceremony Garden and Cosmic Connection held apart in their own quiet corner.</p>
+        <p style="margin-top:1em">Everything was walkable. Guests moved between a laser set, a sound bath and a sacred fire in the time it takes to cross a field.</p>
+      </div>
+      <div class="lineupframe">
+        <img src="assets/festival-map.jpg" alt="The official Iceland Eclipse festival map of the Snaefellsnes site"/>
+      </div>
+    </div></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>04</span></div>
+  </section>
+
+  <!-- 5 · BY THE NUMBERS -->
   <section class="slide gslide underbg numbg">
     <div class="softphoto"><img src="assets/numbers-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:.75fr 1.25fr">
@@ -454,10 +480,10 @@
         </div>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>04</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>05</span></div>
   </section>
 
-  <!-- 5 · THE MUSIC -->
+  <!-- 6 · THE MUSIC -->
   <section class="slide gslide underbg music">
     <div class="softphoto"><img src="assets/music-stage-night.jpg" alt=""/></div>
     <div class="pad">
@@ -473,17 +499,16 @@
             <div class="nrow"><span class="nd">Sat 15</span><span class="na"><b>GusGus</b> &middot; Nightmares On Wax &middot; Da&eth;i Freyr</span></div>
           </div>
         </div>
-        <div class="musicgrid">
-          <figure class="mg mg-tall"><img src="assets/music-ab-duo.jpg" alt="Above &amp; Beyond performing"/><figcaption>Above &amp; Beyond</figcaption></figure>
-          <figure class="mg"><img src="assets/music-ab-crowd.jpg" alt="Crowd at the barrier"/></figure>
-          <figure class="mg"><img src="assets/music-lasers.jpg" alt="Laser show at the Aurora stage"/></figure>
-        </div>
+        <figure class="reelframe">
+          <video class="bgvid" src="assets/lineup-reel.mp4" poster="assets/music-ab-duo.jpg" loop playsinline autoplay preload="auto" aria-label="The Iceland Eclipse 2026 lineup"></video>
+          <figcaption>The 2026 lineup announce</figcaption>
+        </figure>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>05</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>06</span></div>
   </section>
 
-  <!-- 6 · PROGRAMMING -->
+  <!-- 7 · PROGRAMMING -->
   <section class="slide gslide underbg programming nobrand">
     <div class="softphoto"><img src="assets/programming-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.04fr .96fr;gap:4.5%">
@@ -501,10 +526,10 @@
         <img src="assets/lineup-poster.jpg" alt="The official Iceland Eclipse 2026 lineup poster"/>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>06</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>07</span></div>
   </section>
 
-  <!-- 7 · THE AURORA -->
+  <!-- 8 · THE AURORA -->
   <section class="slide gslide underbg auroraslide brandleft">
     <div class="softphoto"><video class="bgvid mutedbg" src="assets/aurora-bg.mp4" poster="assets/music-lasers.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.05fr .95fr;gap:5%">
@@ -519,10 +544,10 @@
         <figcaption>Aurora borealis over the site &middot; 14 August</figcaption>
       </figure>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>07</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>08</span></div>
   </section>
 
-  <!-- 8 · SIDE QUESTS -->
+  <!-- 9 · SIDE QUESTS -->
   <section class="slide gslide underbg">
     <div class="softphoto"><img src="assets/sidequests-bg.jpg" alt=""/></div>
     <div class="pad">
@@ -548,10 +573,10 @@
         </div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>08</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
-  <!-- 9 · THE CEREMONIES -->
+  <!-- 10 · THE CEREMONIES -->
   <section class="slide gslide underbg brandleft ceremonyslide">
     <div class="softphoto"><video class="bgvid mutedbg" src="assets/ceremony-live.mp4" poster="assets/tradition-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
     <div class="pad"><div class="split">
@@ -567,12 +592,12 @@
       </div>
       <div class="accent"><img src="assets/tradition.jpg" alt="Ceremony beneath the glacier"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
   </section>
 
-  <!-- 10 · DIGITAL REACH -->
+  <!-- 11 · DIGITAL REACH -->
   <section class="slide gslide">
-    <div class="softphoto"><img src="assets/reach-bg.jpg" alt=""/></div>
+    <div class="softphoto"><video class="bgvid" src="assets/reach-bg.mp4" poster="assets/reach-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Digital Reach</div>
       <h2>50 Million Impressions, Before Anyone Landed in Iceland.</h2>
@@ -583,10 +608,10 @@
         <div class="tile"><div class="n" data-count>44k+</div><div class="l">Instagram audience</div></div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
   </section>
 
-  <!-- 11 · IN THE PRESS -->
+  <!-- 12 · IN THE PRESS -->
   <section class="slide gslide underbg press">
     <div class="softphoto"><img src="assets/press-bg.jpg" alt=""/></div>
     <div class="pad presspad">
@@ -616,12 +641,12 @@
         <figure class="pcard"><img src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere"/><figcaption>From the stratosphere</figcaption></figure>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>12</span></div>
   </section>
 
-  <!-- 12 · TESTIMONIALS -->
+  <!-- 13 · TESTIMONIALS -->
   <section class="slide gslide underbg voiceslide">
-    <div class="softphoto"><img src="assets/voices-bg.jpg" alt=""/></div>
+    <div class="softphoto"><video class="bgvid" src="assets/voices-bg.mp4" poster="assets/voices-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
@@ -634,10 +659,10 @@
         <div class="vq"><p>"This was so epic. What a way to open a festival."</p><span>@naturalsymphonylive &middot; 9k</span></div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>12</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>13</span></div>
   </section>
 
-  <!-- 13 · OUR COMMUNITY -->
+  <!-- 14 · OUR COMMUNITY -->
   <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/community-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
@@ -653,10 +678,10 @@
       </div>
       <div class="accent commcollage"><img src="assets/community.jpg" alt="Iceland Eclipse community: Dr. Sian Proctor with astronaut Huie, the packed Aurora tent, and Alex and Allyson Grey on stage"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>13</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>14</span></div>
   </section>
 
-  <!-- 14 · WHAT'S NEXT -->
+  <!-- 15 · WHAT'S NEXT -->
   <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img src="assets/whatsnext-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
@@ -668,10 +693,10 @@
       </div>
       <div class="accent"><img src="assets/whatsnext.jpg" alt=""/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>14</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>15</span></div>
   </section>
 
-  <!-- 15 · THE ECLIPSE TRILOGY -->
+  <!-- 16 · THE ECLIPSE TRILOGY -->
   <section class="slide gslide underbg trilogy brandleft">
     <div class="softphoto"><img src="assets/trilogy-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.02fr .98fr;gap:4%">
@@ -741,10 +766,10 @@
 </svg>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>15</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>16</span></div>
   </section>
 
-  <!-- 16 · THANK YOU + CONTACT -->
+  <!-- 17 · THANK YOU + CONTACT -->
   <section class="slide onphoto">
     <div class="coverbg" style="--o:.8"><img src="assets/thankyou.jpg" alt="" style="opacity:.8"/></div>
     <div class="coverwrap">

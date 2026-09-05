@@ -145,6 +145,8 @@
   .gslide.light-bg .small{color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.85)}
   /* subtle under-layer (keeps split + accent, replaces plain black) */
   .gslide.underbg .softphoto img,.gslide.underbg .softphoto video{opacity:.5}
+  .gslide.underbg .softphoto:has(video) video{opacity:.8}
+  .gslide.underbg .softphoto:has(video)::after{background:linear-gradient(105deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.74) 26%,rgba(9,9,11,.3) 62%,rgba(9,9,11,.5) 100%)}
   .gslide.underbg .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.6) 55%,rgba(9,9,11,.74) 100%)}
   /* numbers: stats sit on the right, so darken that side more */
   .gslide.underbg.numbg .softphoto::after{background:linear-gradient(245deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.58) 55%,rgba(9,9,11,.72) 100%)}
@@ -791,9 +793,11 @@
     const host = inflow ? (active.querySelector('.pad') || brandHome) : brandHome;
     if(brand.parentNode !== host) host.appendChild(brand);
     document.querySelectorAll('.slide video').forEach(v=>{
-      if(v.classList.contains('bgvid')){
+      if(v.classList.contains('bgvid') && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){
+        v.pause(); return;
+      }
+      if(v.classList.contains('mutedbg')){
         v.muted=true;
-        if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){ v.pause(); return; }
         if(active.contains(v)){ const b=v.play(); if(b&&b.catch) b.catch(()=>{}); } else { v.pause(); }
         return;
       }

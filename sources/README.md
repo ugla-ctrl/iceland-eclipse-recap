@@ -95,9 +95,20 @@ handler that unmutes deck videos explicitly skips `.bgvid`, so it never plays so
 | 7 The Aurora | `aurora-live.mp4` | Mitch's 19s phone clip, Slack `F0BV45BJFU6`, 464x832 | In the accent frame, muted, looping. The frame is 9:16 so the vertical clip is not cropped. |
 | 11 In the Press | `cnn-eclipse.mp4` | CNN TikTok | Plays with sound when the slide activates |
 
-All background videos carry class `bgvid`: the slide-change handler forces them muted, plays
-them on the active slide and pauses them elsewhere, and skips them under prefers-reduced-motion.
-Each has a poster so a blocked video falls back to a still.
+Slides with a video background also get a lighter treatment than the photo under-layers:
+the video sits at 0.8 opacity under a gradient that stays dark on the text side and clears
+to 0.3 over the footage, so the video reads as footage rather than a dark wash.
+
+All background videos carry class `bgvid`: the slide-change handler plays them on the active
+slide, pauses them elsewhere, and skips them under prefers-reduced-motion. Each has a poster
+so a blocked video falls back to a still.
+
+**Sound.** They were silent at first, which was my assumption and not anyone's instruction.
+Lee pushed back ("who says it should be silent background?"), so all three were re-encoded
+keeping their original audio (AAC 96k) and now play with sound, using the same
+unmute-with-muted-fallback path as the CNN clip. Only one slide is active at a time and the
+others are paused, so audio never overlaps. A background that should stay silent gets the
+extra class `mutedbg`.
 
 ## Mobile
 

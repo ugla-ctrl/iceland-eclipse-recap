@@ -72,14 +72,14 @@ actually claims:
 | 3 | Black sand tidal flats under the mountains | "black sand beaches" |
 | 4 | Lava rock under clear water | "lava fields" |
 | 5 | Ingjaldsholl church on the road, Snaefellsjokull behind | the original Setting photo Mitch said he liked; kept in the collage at Lee's request |
-| 6 | The moss-fronted lodges in a row, "GREEN TEXTURED MODULAR PODS" (Thad, 12 Aug, IEpress selects) | the miniature moss-covered village Lee was looking for |
+| 6 | Mural on the turf hillside | "Murals of Hellissandur" |
 
 All six from Jake Rosenberg's MISC set, md5-checked unique against this deck,
 midnight-sun-deck and imxp-deck/v2/v3. The single `setting.jpg` was removed.
-No mural tile remains, so the second paragraph about the Murals of Hellissandur is
-currently unillustrated. Left as is unless someone asks.
-
-**Finding the moss village:** it is not in the 7,752-file organize catalog under any
+**The moss village hunt (unresolved):** Lee remembered a moss- or grass-covered miniature
+village in the 728-photo IEpress selects. "GREEN TEXTURED MODULAR PODS" (Thad, 12 Aug) was
+tried and rejected as not it. Lee then asked to put the previous mural tile back, which is
+what tile 6 is now. it is not in the 7,752-file organize catalog under any
 searchable name, and roughly 1,050 of that catalog's photos were reviewed by eye without
 finding it. It is in the **728-photo IEpress selects**, whose filenames are descriptive
 where the catalog's are not. Search those names first next time.

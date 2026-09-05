@@ -14,9 +14,9 @@ including changes Mitch asks for, until she says it is unlocked.
 
 ## Locked slides
 
-Lee locked **1 Title, 2 Overview, 3 The Moment and 5 The Grounds** on 2026-09-06. Nothing on
-those slides is to be touched, by anyone, until she unlocks them. **4 The Setting is not locked**,
-though it has no outstanding changes.
+Lee locked **1 Title, 2 Overview, 3 The Moment, 4 The Setting and 5 The Grounds** on 2026-09-06.
+Nothing on those slides is to be touched, by anyone, until she unlocks them. The deck's first five
+slides are therefore closed; open work starts at 6 By the Numbers.
 
 ---
 
@@ -59,7 +59,7 @@ three tiles as they stand.
 
 ---
 
-## 4 · The Setting
+## 4 · The Setting — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** everything. "This is great."
 

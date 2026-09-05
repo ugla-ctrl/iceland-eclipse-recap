@@ -139,3 +139,6 @@ Lee: no borders inside a collage, and the seams should not read as hard cuts.
   dips to 50% at the line, so the joins read as soft folds rather than cuts. The panels are
   separate photographs, so a true cross-fade would ghost two scenes together; feathering is
   the treatment that actually works here.
+- The `.accent` card's own 1px outline is gone, and the Community collage no longer sits in
+  a card at all: it was letterboxed inside one, so dark card showed at its left and right
+  edges and read as a frame. The rounded corner and shadow now live on the image itself.

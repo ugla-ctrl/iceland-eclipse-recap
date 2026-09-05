@@ -9,11 +9,17 @@ Slides are listed in **the order he asked for on 06 Sep at 05:21**, which is not
 deck is in yet. "Move" lines under each slide are that reorder.
 
 Legend: **Done** is live now. **To do** is decided and unbuilt. **Needs a call** is waiting on
-Lee or Mitch.
+Lee or Mitch. **LOCKED** means Lee has approved the slide and no change is to be made to it,
+including changes Mitch asks for, until she says it is unlocked.
+
+## Locked slides
+
+Lee locked **1 Title, 2 Overview and 3 The Moment** on 2026-09-06. Nothing on those three slides
+is to be touched, by anyone, until she unlocks them.
 
 ---
 
-## 1 · Title / Cover
+## 1 · Title / Cover — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the big logo and "Event Recap". He has approved this twice, most recently "this page
 turned out really well".
@@ -24,7 +30,7 @@ added, "Event Recap" centred and enlarged per his sheet edit.
 
 ---
 
-## 2 · Overview / What It Was
+## 2 · Overview / What It Was — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the statement layout and the drone background with sound. He asked for more video and
 sound early in the deck precisely so the first voice does not arrive late.
@@ -34,7 +40,7 @@ at the Intersection of Music, Space and Spirit".
 
 ---
 
-## 3 · The Moment · Totality
+## 3 · The Moment · Totality — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the audio. He is unambiguous: "I love the audio." Also keep the corona photo and the
 three tiles as they stand.
@@ -45,9 +51,10 @@ three tiles as they stand.
   ask at 0:29 in the fifth video.
 - **Done** - recut so the picture is the crowd in silhouette at totality, not the flat grey sky he
   called underwhelming.
-- **To do** - "Slide 3: video not playing / need the sound" (Slack, 05:31). This is a fault on his
-  machine, not a design note. Needs reproducing and fixing.
-- **Open offer** - he said he is happy to source a different clip if this one still reads as weak.
+- **Held by the lock** - "Slide 3: video not playing / need the sound" (Slack, 05:31). This is a
+  playback fault on his machine rather than a design note, but the slide is locked, so it stays
+  unfixed until Lee unlocks it. Flagged to her.
+- **Held by the lock** - his open offer to source a different clip if this one still reads weak.
 
 ---
 

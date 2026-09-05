@@ -108,6 +108,9 @@
   /* stat blocks — minimal, site-style */
   .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.55rem,1.4vw,1.3rem);margin-top:.6em}
   .tiles.t3{grid-template-columns:repeat(3,1fr)}
+  .tiles.t5{grid-template-columns:repeat(5,1fr);gap:clamp(.4rem,1vw,.95rem)}
+  .tiles.t5 .n{font-size:clamp(1rem,2.05vw,1.95rem)}
+  .tiles.t5 .l{font-size:clamp(.4rem,.62vw,.55rem)}
   .tile{padding:clamp(.7rem,1.4vw,1.15rem) 0 0;position:relative;border-top:2px solid var(--orange)}
   .tile:nth-child(2n){border-top-color:var(--teal)}
   .tile .n{font-family:var(--display);font-size:clamp(1.15rem,2.5vw,2.35rem);line-height:1.02;color:var(--ink);letter-spacing:-.01em}
@@ -382,6 +385,9 @@
     .tiles,.tiles.t3{grid-template-columns:repeat(2,1fr);gap:1rem 1.2rem}
     .tile .n{font-size:1.5rem}
     .tile .l{font-size:.54rem}
+    .tiles.t5{grid-template-columns:repeat(2,1fr);gap:1rem 1.2rem}
+    .tiles.t5 .n{font-size:1.5rem}
+    .tiles.t5 .l{font-size:.54rem}
     .pillars{grid-template-columns:repeat(2,1fr);gap:.65rem}
     .pillar{padding:.8rem}
     .pillar .t{font-size:.74rem}
@@ -432,10 +438,11 @@
         <div class="eyebrow">By the Numbers</div>
         <h2>Thank you, <em>Eclipse Seekers.</em></h2>
         <p>The Eclipse Seeker community came from all around the world to gather at the edge of the Earth. It was a group that included astronauts, scientists, artists, healers and many others exploring the borders of our shared reality.</p>
-        <div class="tiles" style="margin-top:1.2em">
+        <div class="tiles t5" style="margin-top:1.2em">
           <div class="tile"><div class="n" data-count>4,200</div><div class="l">Participants</div></div>
           <div class="tile"><div class="n">75</div><div class="l">Countries represented</div></div>
           <div class="tile"><div class="n">287</div><div class="l">Artists &amp; speakers</div></div>
+          <div class="tile"><div class="n">300</div><div class="l">Children joined their families</div></div>
           <div class="tile"><div class="n" data-count>5</div><div class="l">Days under the glacier</div></div>
         </div>
       </div>

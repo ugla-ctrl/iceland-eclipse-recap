@@ -66,9 +66,9 @@
   #brand[hidden]{display:none}
   @media(max-width:760px){ #brand span{display:none} }
   @media (max-width:1024px) and (orientation:portrait){
-    #brand{position:fixed;top:auto;bottom:24px;right:8%;z-index:31}
-    #brand.left{right:8%;left:auto}
-    #brand img{width:38px}
+    #brand{position:static;align-self:flex-end;flex:none;margin:1.9rem 0 0;z-index:20}
+    #brand.left{align-self:flex-end}
+    #brand img{width:40px}
   }
   /* cover / photo slides */
   .coverbg{position:absolute;inset:0}
@@ -329,7 +329,7 @@
   }
   @media (max-width:1024px) and (orientation:portrait){
     #frame{padding:1.2vh 2.6vw}
-    #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.4vh - 30px - 78px);height:calc(100dvh - 2.4vh - 30px - 78px)}
+    #stage{aspect-ratio:auto;width:100%;height:calc(100vh - 2.4vh - 30px);height:calc(100dvh - 2.4vh - 30px)}
     .eclipse{width:clamp(94px,15vw,150px);margin-bottom:1.5em}
     .pad{overflow-y:auto;justify-content:safe center;padding:9% 6.5%;-webkit-overflow-scrolling:touch}
     .split{display:flex;flex-direction:column;gap:1.1rem;height:auto}
@@ -755,6 +755,7 @@
   const slides=[...document.querySelectorAll('.slide')];
   const ctr=document.getElementById('ctr');
   const brand=document.getElementById('brand');
+  const brandHome=brand.parentNode;
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let i=0;
   slides.forEach((_,n)=>{const b=document.createElement('button');b.setAttribute('aria-label','Slide '+(n+1));b.onclick=()=>go(n);ctr.appendChild(b);});
@@ -780,6 +781,9 @@
     const active=slides[i];
     brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
     brand.classList.toggle('left', active.classList.contains('brandleft'));
+    const inflow = window.matchMedia && matchMedia('(max-width:1024px) and (orientation:portrait)').matches;
+    const host = inflow ? (active.querySelector('.pad') || brandHome) : brandHome;
+    if(brand.parentNode !== host) host.appendChild(brand);
     document.querySelectorAll('.slide video').forEach(v=>{
       if(v.classList.contains('bgvid')){
         v.muted=true;

@@ -7,9 +7,9 @@ Transcribed with Whisper; frames pulled at 17 timestamps to map each comment to 
 
 | # | Slide | Mitch said | Status |
 |---|---|---|---|
-| 1 | The Moment | "I love the audio. The actual video itself is a little underwhelming." Wants the centre moved behind the picture, or the audio laid over something else. | Open - needs a better clip or a layout change |
+| 1 | The Moment | "I love the audio. The actual video itself is a little underwhelming." Wants the centre moved behind the picture, or the audio laid over something else. | Done - recut from the same source, keeping the audio he likes. The old cut was the flat grey sky before totality; the new one is the crowd in silhouette with arms up against the dark totality sky |
 | 2 | The Music | "I want to remove this page, just five nights to 283 artists." | Done earlier |
-| 3 | Programming | "I'm fine with having a video behind this one." | Open - no suitable clip found yet (best match was 1.5s) |
+| 3 | Programming | "I'm fine with having a video behind this one." | Done - the Ceremony Garden opening ceremony, a wide daylight shot of the seated crowd in front of the stage. Silent, so it does not fight the lineup audio already on that slide |
 | 4 | Testimonials | "This video is sideways." | Fixed - voices-bg was portrait behind a rotation flag, recut to 16:9 |
 | 5 | The Aurora | "I want the background to be above and beyond crowdshot. And then this right here is the video playing." | Done - background is now the A&B crowd photo, the aurora clip plays inside the frame |
 | 6 | Digital Reach | "This video I'm hoping can go to the grounds." (decodes his old sheet comment "Move background video from slide 12?") | Done - reach-bg.mp4 is now The Grounds background |
@@ -19,7 +19,5 @@ Transcribed with Whisper; frames pulled at 17 timestamps to map each comment to 
 
 ## Still open after this pass
 
-- The Moment: he likes the audio, not the video. Needs a replacement clip or the audio moved over a different visual.
-- Programming: he is fine with a video behind it, but nothing in the catalog fits yet.
 - Two backgrounds he flagged in the sheet: "the background isn't really that helpful" and "I don't really love this background" (Our Community).
 - Digital Reach figures still come from the partnership deck, not GA.

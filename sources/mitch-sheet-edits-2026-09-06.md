@@ -132,3 +132,40 @@ The catalog's own THE PORTAL zone holds **54 files** and covered this slide with
 elf houses on a mound at sunset. **This is the "miniature village covered with moss or grass"
 Lee searched for earlier and we gave up on.** "Hidden folk" is huldufólk, the Icelandic elves,
 which is why every search for "elf" and "village" missed it. Not used anywhere yet.
+
+## Full sheet applied, including the structure (2026-09-06, 03:00)
+
+Mitch: "please make sure you're referencing this doc!" Lee: apply it. Everything in the sheet
+is now in the deck, text and structure both.
+
+**Text, this pass**
+
+| Slide | Change |
+|---|---|
+| Digital Reach | Headline becomes "An Estimated 50 Million Impressions Before, During and After the Event." |
+| The Eclipse Trilogy | Headline becomes "Iceland Eclipse Was Just the Beginning." |
+| What's Next | Section becomes "What's Next In Iceland", headline becomes "Midnight Sun Festival" |
+| Thank You | Body rewritten to his wording, "participants" not "guests", and "for everything that played a role in parting the clouds". The date subheadline is deleted, per his "Remove" comment on that cell. |
+
+Two renames from the previous pass, **The Moment · Totality** and **Diverse, Intentional
+Programming**, were reported as applied but never actually saved: the script that made them
+died on a later assertion before writing the file. Both are now really in.
+
+**Structure**, all four changes he marked:
+
+- **The Music deleted.** Struck through in the sheet with its slide number blanked, and a
+  comment reading "remove this slide...". Its lineup audio was **moved to Programming**, which
+  already carries the lineup poster, so the sound and the bill survive the cut. `music-bg.mp4`
+  and two now-unused photos are deleted.
+- **Our Community moved from 15 to 7**, per "making sure you see shifting this page forward!"
+- **In the Press and Digital Reach swapped**
+- **The Eclipse Trilogy and What's Next swapped**, per "change in order with next iceland"
+
+Final order, 19 slides: Cover, Overview, The Moment · Totality, The Setting, The Grounds,
+By the Numbers, Our Community, Programming, The Aurora, Unique Icelandic Experiences,
+The Ceremonies, In the Press, Digital Reach, Testimonials, The Eclipse Trilogy, What's Next,
+The Portal, Partners, Thank You.
+
+**Still not applied, and still needing a decision:** his three older comments. A muted video
+behind Programming, the aurora layout that reverses Lee's instruction, and "Move background
+video from slide 12?", which still does not resolve to anything.

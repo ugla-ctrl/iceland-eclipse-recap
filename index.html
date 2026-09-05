@@ -419,7 +419,7 @@
 
   <!-- 2 · WHAT IT WAS -->
   <section class="slide gslide underbg statementslide nobrand">
-    <div class="softphoto"><video class="bgvid" src="assets/drone-site.mp4" poster="assets/moment-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid" src="assets/drone-site.mp4" poster="assets/moment-bg.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video></div>
     <div class="pad">
       <h2 class="statement">Iceland Eclipse was a five-day destination festival where visionaries and artists gather at the intersection of <em>music, space and spirit.</em></h2>
     </div>
@@ -514,7 +514,7 @@
           </div>
         </div>
         <figure class="reelframe">
-          <video class="bgvid" src="assets/lineup-reel.mp4" poster="assets/music-ab-duo.jpg" loop playsinline autoplay preload="auto" aria-label="The Iceland Eclipse 2026 lineup"></video>
+          <video class="bgvid" src="assets/lineup-reel.mp4" poster="assets/music-ab-duo.jpg" loop playsinline autoplay preload="none" aria-label="The Iceland Eclipse 2026 lineup"></video>
           <figcaption>The 2026 lineup announce</figcaption>
         </figure>
       </div>
@@ -545,7 +545,7 @@
 
   <!-- 9 · THE AURORA -->
   <section class="slide gslide underbg auroraslide brandleft">
-    <div class="softphoto"><video class="bgvid" src="assets/aurora-bg.mp4" poster="assets/music-lasers.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid" src="assets/aurora-bg.mp4" poster="assets/music-lasers.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.05fr .95fr;gap:5%">
       <div class="content">
         <div class="eyebrow">The Night the Sky Joined In</div>
@@ -592,7 +592,7 @@
 
   <!-- 11 · THE CEREMONIES -->
   <section class="slide gslide underbg brandleft ceremonyslide">
-    <div class="softphoto"><video class="bgvid" src="assets/ceremony-live.mp4" poster="assets/tradition-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid" src="assets/ceremony-live.mp4" poster="assets/tradition-bg.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video></div>
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">The Ceremonies</div>
@@ -611,7 +611,7 @@
 
   <!-- 12 · DIGITAL REACH -->
   <section class="slide gslide">
-    <div class="softphoto"><video class="bgvid" src="assets/reach-bg.mp4" poster="assets/reach-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid" src="assets/reach-bg.mp4" poster="assets/reach-bg.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Digital Reach</div>
       <h2>50 Million Impressions, Before Anyone Landed in Iceland.</h2>
@@ -660,7 +660,7 @@
 
   <!-- 14 · TESTIMONIALS -->
   <section class="slide gslide underbg voiceslide">
-    <div class="softphoto"><video class="bgvid" src="assets/voices-bg.mp4" poster="assets/voices-bg.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid" src="assets/voices-bg.mp4" poster="assets/voices-bg.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
@@ -852,6 +852,13 @@
         const p=v.play();
         if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
       } else { v.pause(); }
+    });
+    // warm the neighbouring slides' videos so arriving on one is not a cold start
+    [n-1,n+1].forEach(k=>{
+      const sl=slides[k]; if(!sl) return;
+      sl.querySelectorAll('video').forEach(v=>{
+        if(v.preload!=='auto'){ v.preload='auto'; try{ v.load(); }catch(e){} }
+      });
     });
   }
   document.addEventListener('keydown',e=>{

@@ -194,3 +194,18 @@ how it is actually used rather than to a single blanket setting:
 Video total 32.3 MB to 10.9 MB; `assets/` 48 MB to 26 MB. Audio kept on all seven, at 64k.
 Rule of thumb: a background under a blur does not need more than 480p, and no video needs
 more pixels than the box it is displayed in.
+
+### Second pass, images and loading (2026-09-05)
+
+Once the video came down, the **images were the heavier half**. Backgrounds were 2048px JPEGs
+at high quality sitting under scrims at 0.3 to 0.5 opacity, some blurred as well.
+
+- Background plates capped at 1500px, quality 76. Images shown sharp capped at 1600px,
+  quality 82. All progressive and optimised. JPEG total 12.7 MB to 6.5 MB.
+- Six orphaned files deleted: `music-ab-crowd.jpg`, `partnership-bg.jpg`, `press-seti.jpg`,
+  `press.jpg`, `schedule-bg.jpg`, `trilogy-globe.png`. 1.6 MB of assets nothing referenced.
+- Videos switched from `preload="auto"` to `preload="none"`, so a background is only fetched
+  when its slide is reached rather than all seven downloading at once. `go()` now also warms
+  the videos on the slides either side of the active one, so arriving is not a cold start.
+
+`assets/` 48 MB to 17 MB across the two passes, with no visible change to any slide.

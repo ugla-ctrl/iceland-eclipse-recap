@@ -150,6 +150,9 @@
   .gslide.light-bg .small{color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.85)}
   /* subtle under-layer (keeps split + accent, replaces plain black) */
   .gslide.underbg .softphoto img,.gslide.underbg .softphoto video{opacity:.5}
+  /* reach: bright tent photo, so weight the scrim to the lower left where the copy sits */
+  .gslide.underbg.reachslide .softphoto img{opacity:.72}
+  .gslide.underbg.reachslide .softphoto::after{background:linear-gradient(160deg,rgba(9,9,11,.5) 0%,rgba(9,9,11,.58) 32%,rgba(9,9,11,.84) 74%,rgba(9,9,11,.92) 100%)}
   .gslide.underbg .softphoto:has(video) video{opacity:.8}
   .gslide.underbg .softphoto:has(video)::after{background:linear-gradient(105deg,rgba(9,9,11,.9) 0%,rgba(9,9,11,.74) 26%,rgba(9,9,11,.3) 62%,rgba(9,9,11,.5) 100%)}
   .gslide.underbg .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.6) 55%,rgba(9,9,11,.74) 100%)}
@@ -531,7 +534,7 @@
 
   <!-- 8 · PROGRAMMING -->
   <section class="slide gslide underbg programming nobrand">
-    <div class="softphoto"><video class="bgvid mutedbg" src="assets/programming-bg.mp4" poster="assets/programming-bg-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid mutedbg" src="assets/numbers-bg.mp4" poster="assets/numbers-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.04fr .96fr;gap:4.5%">
       <div class="content">
         <div class="eyebrow">Diverse, Intentional Programming</div>
@@ -651,8 +654,8 @@
   </section>
 
   <!-- 13 · DIGITAL REACH -->
-  <section class="slide gslide">
-    <div class="softphoto"><video class="bgvid" src="assets/numbers-bg.mp4" poster="assets/reach-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+  <section class="slide gslide underbg reachslide">
+    <div class="softphoto"><img src="assets/reach-crowd-screen.jpg" alt=""/></div>
     <div class="pad">
       <div class="eyebrow">Digital Reach</div>
       <h2>An Estimated 50 Million Impressions Before, During and After the Event.</h2>

@@ -126,3 +126,16 @@ right-aligned, so on a phone it sits at the bottom of that slide's own content a
 overlap anything at any scroll position. Desktop keeps the top-corner placement. The closer
 photo is dimmed further on mobile and its logo capped, because the sun flare in that shot
 was washing out the gratitude copy and the contact block.
+
+## Collage treatment (2026-09-05)
+
+Lee: no borders inside a collage, and the seams should not read as hard cuts.
+
+- `the-moment.jpg` had a 10px white border and 10px gutters baked into the file. Recut with
+  the three panels butted: 1240x1560 becomes 1210x1540.
+- `community.jpg` had three panels of very different exposure meeting at hard lines (a bright
+  indoor portrait, a bright grey crowd, a dark stage). Each panel is now pulled partway toward
+  a common mean so they read as one piece, and each seam is feathered over a 58px band that
+  dips to 50% at the line, so the joins read as soft folds rather than cuts. The panels are
+  separate photographs, so a true cross-fade would ghost two scenes together; feathering is
+  the treatment that actually works here.

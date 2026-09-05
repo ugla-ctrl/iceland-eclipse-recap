@@ -115,12 +115,18 @@ All background videos carry class `bgvid`: the slide-change handler plays them o
 slide, pauses them elsewhere, and skips them under prefers-reduced-motion. Each has a poster
 so a blocked video falls back to a still.
 
-**Sound.** They were silent at first, which was my assumption and not anyone's instruction.
+**Sound.** All six background videos play with their own audio. They were silent at first, which was my assumption and not anyone's instruction.
 Lee pushed back ("who says it should be silent background?"), so all three were re-encoded
 keeping their original audio (AAC 96k) and now play with sound, using the same
 unmute-with-muted-fallback path as the CNN clip. Only one slide is active at a time and the
 others are paused, so audio never overlaps. A background that should stay silent gets the
 extra class `mutedbg`.
+
+The Aurora and Ceremonies backgrounds were muted for a while at Lee's request, then unmuted
+again on 2026-09-05 when she said she liked the sound. Note for next time: muting them the
+first time, I also re-encoded both with `-an`, which stripped the audio out of the files, so
+restoring the sound needed a re-encode from source rather than just dropping the class. Use
+`mutedbg` alone to silence a background; never strip the track.
 
 ## Mobile
 

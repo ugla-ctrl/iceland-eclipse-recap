@@ -6,11 +6,15 @@ through 2026-09-06 05:57. Where two instructions conflict, the later one wins an
 named so the reasoning is visible.
 
 Slides are listed in **the order he asked for on 06 Sep at 05:21**, which is not the order the
-deck is in yet. "Move" lines under each slide are that reorder.
+deck is in yet. **The reorder is on hold at Lee's instruction** until she has finished reviewing
+the deck, so that slide numbers do not shift under her mid-review. "Move" lines under each slide are that reorder.
 
 Legend: **Done** is live now. **To do** is decided and unbuilt. **Needs a call** is waiting on
-Lee or Mitch. **LOCKED** means Lee has approved the slide and no change is to be made to it,
-including changes Mitch asks for, until she says it is unlocked.
+Lee or Mitch. **LOCKED** means Lee has approved the slide's **content** and no change is to be
+made to it, including changes Mitch asks for, until she says it is unlocked.
+
+**A lock covers the slide, not its position.** Locked slides can still be moved in the running
+order. What is frozen is what is on the slide: copy, photos, video, layout.
 
 ## Locked slides
 

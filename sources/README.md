@@ -174,3 +174,23 @@ Lee: no borders inside a collage, and the seams should not read as hard cuts.
 - The `.accent` card's own 1px outline is gone, and the Community collage no longer sits in
   a card at all: it was letterboxed inside one, so dark card showed at its left and right
   edges and read as a frame. The rounded corner and shadow now live on the image itself.
+
+## Video weight (2026-09-05)
+
+Lee: the deck got too heavy, and the backgrounds are blurred anyway so there is no point
+holding them at high resolution. Re-encoded every video from its original source, sized to
+how it is actually used rather than to a single blanket setting:
+
+| File | Was | Now | Why |
+|---|---|---|---|
+| `drone-site.mp4` | 1600x900, 9.0 MB | 1280x720, 4.9 MB | Slide 2's background, shown sharp, so it keeps the most resolution |
+| `ceremony-live.mp4` | 1600x900, 7.6 MB | 854x480, 1.7 MB | `blur(4px)` |
+| `voices-bg.mp4` | 1600x2844, 8.4 MB | 854x480, 1.8 MB | `blur(3px)`, and it was portrait: the source carries a -90 rotation flag, so most of those pixels were being cropped away unseen. Now cropped to 16:9 at source. |
+| `aurora-bg.mp4` | 1600x900, 0.7 MB | 854x480, 0.2 MB | `blur(7px)` |
+| `reach-bg.mp4` | 1600x900, 2.0 MB | 1280x720, 1.0 MB | Not blurred |
+| `lineup-reel.mp4` | 1280 tall, 1.0 MB | 960 tall, 0.5 MB | Displayed about 360px wide |
+| `cnn-eclipse.mp4` | 720x1280, 3.6 MB | 540x960, 1.6 MB | Displayed about 250px wide |
+
+Video total 32.3 MB to 10.9 MB; `assets/` 48 MB to 26 MB. Audio kept on all seven, at 64k.
+Rule of thumb: a background under a blur does not need more than 480p, and no video needs
+more pixels than the box it is displayed in.

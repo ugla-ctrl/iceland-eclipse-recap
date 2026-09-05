@@ -246,3 +246,27 @@ The background videos carried the `autoplay` attribute *and* the neighbour-warmi
 off-screen backgrounds were quietly playing behind the active slide, burning CPU. Removed
 `autoplay` from every video: `go()` already calls `play()` on activation, so nothing is lost.
 **Never put `autoplay` on these; the handler owns playback.**
+
+## Stage count (2026-09-05)
+
+Lee spotted the deck contradicting itself: The Grounds said "six stages, one field" while
+By the Numbers and The Music both said four. **Six is correct.** Verified against the catalog,
+which shows seven programmed venues at the festival:
+
+| Venue | Distinct acts |
+|---|---|
+| Afterglow | 37 |
+| Polaris | 35 |
+| Aurora | 34 |
+| Eclipse Stage | 30 |
+| Cosmic Connection | 17 |
+| Sacred Fire | 8 |
+| Ceremony Garden | 3 |
+
+The official festival map labels six of those as stages; the Ceremony Garden is labelled as a
+garden, not a stage, which is where six comes from. "Four" was inherited from older copy and
+silently dropped Polaris and Sacred Fire, two of the three busiest venues on site.
+
+Fixed: the By the Numbers tile now reads 6, and The Music's body names all six. The Music's
+headline lost its stage count entirely, becoming "Five Nights, 287 Artists", so the number is
+not asserted three times in three slides. Nothing else in the deck states a stage count.

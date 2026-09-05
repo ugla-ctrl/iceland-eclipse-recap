@@ -212,3 +212,37 @@ at high quality sitting under scrims at 0.3 to 0.5 opacity, some blurred as well
   the videos on the slides either side of the active one, so arriving is not a cold start.
 
 `assets/` 48 MB to 17 MB across the two passes, with no visible change to any slide.
+
+## Video backgrounds everywhere (2026-09-05)
+
+Lee: more video backgrounds with sound on the slides that were still stills, excluding the
+press slide with the NYT and CNN material. Eight more pulled from the catalog's 655 videos and
+cut to 480p loops:
+
+| Slide | File | Catalog source |
+|---|---|---|
+| 3 The Moment | `moment-bg.mp4` | CROWD WATCHING ECLIPSE |
+| 4 The Setting | `setting-bg.mp4` | ICELANDIC GREEN LANDSCAPE MOUNTAINS |
+| 6 By the Numbers | `numbers-bg.mp4` | FESTIVAL CROWD AT SUNSET |
+| 7 The Music | `music-bg.mp4` | CONCERT STAGE LASER LIGHTS. **Silent** (`mutedbg`): the lineup audio owns this slide. |
+| 10 Side Quests | `sidequests-bg.mp4` | MISTY GLACIER CLIFF WATERFALL |
+| 15 Our Community | `community-bg.mp4` | COSTUMED GROUP GATHERING |
+| 16 What's Next | `whatsnext-bg.mp4` | WHITE TENTS AT SUNSET |
+| 17 The Eclipse Trilogy | `trilogy-bg.mp4` | RIF CLOUDS |
+
+All eight together are **2.8 MB**, because a background at 480p under a scrim compresses to
+almost nothing. Every slide-specific `.softphoto img` opacity and blur rule was mirrored onto
+`.softphoto video` so each keeps its existing treatment.
+
+Left as stills on purpose: **1 Cover** (first paint, no reason to make the first impression
+wait on a download), **5 The Grounds** (the map wants a calm plate), **8 Programming** (the
+only matching clip in the catalog runs 1.5s, too short to loop), **13 In the Press** (Lee's
+exclusion) and **18 Thank You**.
+
+### Bug found while wiring these up
+
+The background videos carried the `autoplay` attribute *and* the neighbour-warming code calls
+`load()` on adjacent slides. On a video with `autoplay`, `load()` starts playback, so
+off-screen backgrounds were quietly playing behind the active slide, burning CPU. Removed
+`autoplay` from every video: `go()` already calls `play()` on activation, so nothing is lost.
+**Never put `autoplay` on these; the handler owns playback.**

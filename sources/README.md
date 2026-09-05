@@ -71,7 +71,7 @@ actually claims:
 | 2 | Glacier ice from the air | "glaciers" |
 | 3 | Black sand tidal flats under the mountains | "black sand beaches" |
 | 4 | Lava rock under clear water | "lava fields" |
-| 5 | Guests on the coastal cliffs | the peninsula |
+| 5 | Ingjaldsholl church on the road, Snaefellsjokull behind | the original Setting photo Mitch said he liked; kept in the collage at Lee's request |
 | 6 | Mural on the turf hillside | "Murals of Hellissandur" |
 
 All six from Jake Rosenberg's MISC set, md5-checked unique against this deck,

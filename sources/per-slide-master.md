@@ -18,9 +18,16 @@ order. What is frozen is what is on the slide: copy, photos, video, layout.
 
 ## Locked slides
 
-Lee locked **1 Title, 2 Overview, 3 The Moment, 4 The Setting and 5 The Grounds** on 2026-09-06.
-Nothing on those slides is to be touched, by anyone, until she unlocks them. The deck's first five
-slides are therefore closed; open work starts at 6 By the Numbers.
+Lee has locked **Title, By the Numbers, Overview, The Moment, The Setting and The Grounds** as of
+2026-09-06. Nothing on those slides is to be touched, by anyone, until she unlocks them.
+
+**By the Numbers moved to position 2** at her instruction and is now locked there in its final
+form: 4,200 participants, 75 countries represented, 287 artists & speakers, 300 children joined
+their families, 5 days under the glacier, all five in one row. That restored 287, which Mitch's
+sheet had dropped, and kept the 300 children stat he asked for in Slack.
+
+Because of that move, the locked slides now sit at positions **1, 2, 3, 4, 5 and 6**. Open work
+starts at 7 Our Community.
 
 ---
 
@@ -82,14 +89,15 @@ carries one.
 
 ---
 
-## 6 · By the Numbers
+## 6 · By the Numbers — **LOCKED** (Lee, 2026-09-06), now at position 2
 
-**Keep:** the four stats as they now read - 4,200 participants, 75 countries, 300 children joined
-their families, 5 days under the glacier - and his own body copy about the Eclipse Seeker
-community.
+**Keep:** the five stats as they now read - 4,200 participants, 75 countries represented, 287
+artists & speakers, 300 children joined their families, 5 days under the glacier - and his own
+body copy about the Eclipse Seeker community.
 
-**Changes:** none outstanding. "3,333 guests" is long gone, "6 stages" was replaced by the
-children stat at his instruction, and the number animation was removed.
+**Changes:** none outstanding. Final state is the five-stat row above. "3,333 guests" is long
+gone, the venue count was replaced by the children stat at his instruction, 287 was restored at
+Lee's, and the number animation was removed.
 
 ---
 

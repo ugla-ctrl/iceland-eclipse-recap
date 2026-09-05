@@ -742,23 +742,6 @@
     if(orig.indexOf(',')>-1){ s=Number(s).toLocaleString('en-US'); }
     return s+suffix;
   }
-  function countUp(el){
-    const orig=el.dataset.final;
-    const m=orig.match(/^([\d.,]+)(.*)$/);
-    if(!m){ el.textContent=orig; return; }
-    const target=parseFloat(m[1].replace(/,/g,''));
-    if(!isFinite(target)){ el.textContent=orig; return; }
-    if(reduce){ el.textContent=orig; return; }
-    const dur=900, t0=performance.now();
-    function step(now){
-      const p=Math.min(1,(now-t0)/dur);
-      el.textContent=fmt(target*easeOut(p),orig);
-      if(p<1) requestAnimationFrame(step); else el.textContent=orig;
-    }
-    requestAnimationFrame(step);
-  }
-  // stash finals once
-  document.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.dataset.final=el.textContent.trim();});
 
   function go(n){
     i=Math.max(0,Math.min(slides.length-1,n));
@@ -781,7 +764,6 @@
         if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
       } else { v.pause(); }
     });
-    active.querySelectorAll('.tile .n[data-count]').forEach(el=>{el.textContent='0';countUp(el);});
   }
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(i+1);

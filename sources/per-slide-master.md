@@ -44,7 +44,12 @@ sound reverses Lee's earlier instruction to mute it; she chose to follow him.
 request: he asked three times for a different backdrop and never sent one, so the slide keeps the
 one it has.
 
-Locked so far: **1 through 9, and 12**. Open work is 10, 11, 13 and 14 onward.
+**The Ceremonies is locked** as of 2026-09-06, at position 11. Its whole sheet row is in
+verbatim: the headline, the body about the blessing rather than a countdown, and all three rows,
+Opening / Stillness / Totality. Ben's note to move it to the end of the festival section is
+satisfied by Mitch's reorder, which puts Ceremony at 14.
+
+Locked so far: **1 through 9, 11 and 12**. Open work is 10, then 13 onward.
 
 ---
 
@@ -218,7 +223,7 @@ morning's pass, which fixed "it's really hard to read".
 
 ---
 
-## 14 · Ceremony
+## 14 · Ceremony — **LOCKED** (Lee, 2026-09-06), currently at position 11
 
 **Keep:** the ceremony copy and the headline "Holding the Energy of the Land", which is his.
 

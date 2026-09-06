@@ -404,7 +404,17 @@
     font-family:var(--label);font-weight:600;font-size:clamp(.4rem,.62vw,.54rem);letter-spacing:.16em;
     text-transform:uppercase;color:#5a5d66;pointer-events:none;line-height:1.9;align-items:flex-end}
   .onphoto .sfoot{color:rgba(255,255,255,.5)}
-  .sfoot .credits{line-height:2.1;isolation:isolate}
+  /* closer: give the blocks room to breathe */
+  .slide.onphoto .coverwrap{padding-bottom:clamp(4.5rem,11vh,7rem);justify-content:center}
+  .slide.onphoto .closer-mark{margin-bottom:clamp(1em,2.4vh,1.6em)}
+  .slide.onphoto .closer-mark img{width:clamp(150px,19vh,225px)}
+  .slide.onphoto .cover-note{margin-top:clamp(1.3em,2.8vh,2em);line-height:1.85;max-width:52ch}
+  .slide.onphoto .contacts{margin-top:clamp(1.6em,3.4vh,2.6em)}
+  .slide.onphoto .contact .rl{margin-top:.55em}
+  .slide.onphoto .contact .em{margin-top:.5em}
+  .slide.onphoto .sfoot{padding-bottom:clamp(.6rem,1.6vh,1.2rem)}
+  .sfoot .credits{line-height:2.35;letter-spacing:.09em;max-width:none}
+
   #ctr{position:fixed;bottom:1vh;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:30}
   #ctr button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(20,26,38,.24);cursor:pointer;padding:0;transition:.3s}
   #ctr button:hover{background:rgba(20,26,38,.48)}
@@ -720,7 +730,7 @@
 
   <!-- 13 · TESTIMONIALS -->
   <section class="slide gslide underbg voiceslide">
-    <div class="softphoto"><video class="bgvid" src="assets/voices-bg.mp4" poster="assets/voices-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+    <div class="softphoto"><video class="bgvid mutedbg" src="assets/whatsnext-bg.mp4" poster="assets/whatsnext-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
@@ -757,7 +767,7 @@
 
   <!-- 15 · THE PORTAL -->
   <section class="slide gslide underbg portalslide brandleft">
-    <div class="softphoto"><video class="bgvid mutedbg" src="assets/portal-bg.mp4" poster="assets/portal-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+    <div class="softphoto"><img src="assets/portal-dusk.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
         <div class="portalmark">

@@ -308,11 +308,15 @@ concert was inside **Langjökull**. He approved the slide on video: "this one's 
 **Keep:** the copy and the section title "What's Next In Iceland".
 
 **Changes:**
-- **To do** - the aerial sunset over the tented camp becomes the **background** (Slack, 05:39).
-  This settles the one item the video could not: his sentence fitted two readings, and the Slack
-  message with the attached image makes it explicit.
-- **To do** - "have the flyer for the event inlayed on the slide". The Midnight Sun flyer goes in
-  the panel the photo vacates.
+- **Done** - the aerial sunset over the tented camp is now the **background** (Slack, 05:39).
+  This settled the one item the video could not: his sentence fitted two readings, and the Slack
+  message with the attached image made it explicit. The whatsnext background video is retired.
+- **Done** - "have the flyer for the event inlayed on the slide". Lee asked him where the flyer
+  was; he replied "Just use the deck image?" so the panel now carries the Midnight Sun deck's own
+  cover card: the title, "a music gathering under the midnight sun", and the dates.
+- **Watch** - that cover card names the venue, Hlj&oacute;msk&aacute;lagar&eth;urinn Park in
+  Reykjav&iacute;k, while the slide's own subheadline still says "Secret Location, Iceland". One
+  of the two needs to change.
 - **Move** - from 17 to **18**.
 
 ---

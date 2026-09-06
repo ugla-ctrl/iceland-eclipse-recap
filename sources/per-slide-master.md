@@ -56,7 +56,8 @@ partners now carry their official logos, taken from the sponsor strip at the bot
 icelandeclipse.com exactly as he pointed. Lee then asked for a crew-at-work collage behind it and
 a partner photo with people in it, both done.
 
-**All 19 slides are locked** as of 2026-09-06. Nothing on any slide is to be changed, by anyone,
+**All 19 slides are locked** as of 2026-09-06. In the Press was briefly unlocked to swap its
+background to a mountain from the festival site, then locked again. Nothing on any slide is to be changed, by anyone,
 until Lee unlocks it. Positions are still free: Mitch's reorder can be applied without breaking a
 lock, because a lock covers a slide's content, not where it sits.
 
@@ -188,7 +189,7 @@ is the arrangement he asked for twice.
 
 ---
 
-## 10 · In the Press — **UNLOCKED** by Lee 2026-09-06 for the background swap
+## 10 · In the Press — **LOCKED** again (Lee, 2026-09-06) after the background swap
 
 **Keep:** the NYT feature, the CNN broadcast and the stratosphere eclipse, the outlet chips, and
 the headline. He has approved the slide itself: "I like this one."

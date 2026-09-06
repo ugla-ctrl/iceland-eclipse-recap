@@ -49,7 +49,12 @@ verbatim: the headline, the body about the blessing rather than a countdown, and
 Opening / Stillness / Totality. Ben's note to move it to the end of the festival section is
 satisfied by Mitch's reorder, which puts Ceremony at 14.
 
-Locked so far: **1 through 9, 11 and 12**. Open work is 10, then 13 onward.
+**Partners is locked** as of 2026-09-06, at position 18. His 05:40 ask is built: all four
+partners now carry their official logos, taken from the sponsor strip at the bottom of
+icelandeclipse.com exactly as he pointed. Lee then asked for a crew-at-work collage behind it and
+a partner photo with people in it, both done.
+
+Locked so far: **1 through 9, 11, 12 and 18**. Open work is 10, 13 to 17, and 19.
 
 ---
 
@@ -183,15 +188,18 @@ the headline. He has approved the slide itself: "I like this one."
 
 ---
 
-## 11 · Partners
+## 11 · Partners — **LOCKED** (Lee, 2026-09-06), currently at position 18
 
 **Keep:** the four partner names and the Icelandic Glacial platform photo.
 
-**Changes:**
-- **To do** - "need more/better photos on the Partners page" (05:40). He wants better images of
-  **Icelandic Glacial and 66°NORTH** specifically, and gave two sources: an Instagram post, and
-  the **logos at the bottom of icelandeclipse.com**. That last one closes the gap where the photo
-  catalog had nothing for three of his four partners.
+**Changes:** none outstanding.
+- **Done** - "need more/better photos on the Partners page" (05:40). All four partners now show
+  their official logos, pulled from the sponsor strip at the bottom of icelandeclipse.com, the
+  source he named. That closed the gap: three of his four had no photography in the catalog at
+  all. Only his four are used; the site's strip also lists Secret Solstice, which stays out.
+- **Done** - background is a six-frame collage of the crew at work, from the BUILD set.
+- **Done** - the inlaid photo is the Icelandic Glacial platform with guests on it, replacing the
+  empty booth.
 - **Move** - from 18 to **11**, a jump of seven places. This is the largest single move in his
   reorder.
 

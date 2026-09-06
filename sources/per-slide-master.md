@@ -188,16 +188,18 @@ is the arrangement he asked for twice.
 
 ---
 
-## 10 · In the Press — **LOCKED** (Lee, 2026-09-06), currently at position 12
+## 10 · In the Press — **UNLOCKED** by Lee 2026-09-06 for the background swap
 
 **Keep:** the NYT feature, the CNN broadcast and the stratosphere eclipse, the outlet chips, and
 the headline. He has approved the slide itself: "I like this one."
 
 **Changes:**
-- **Closed by the lock** - he asked three times for a different background: "the background isn't
-  really that helpful, maybe we find something else" (video), "background of slide 12?" (05:00),
-  "Press slide: background image improvement" (05:57). He never sent a picture, and Lee has locked
-  the slide as it stands, so it keeps the backdrop it has.
+- **Done** - he asked three times for a different background: "the background isn't really that
+  helpful, maybe we find something else" (video), "background of slide 12?" (05:00), "Press slide:
+  background image improvement" (05:57). He never sent a picture; Lee chose the subject, a
+  mountain shot from the festival site. It is now Snæfellsjökull in evening alpenglow above the
+  grounds, with the bell tents and people on the path visible at the right (Whitney Petters,
+  "HIKERS BEFORE GLACIATED VOLCANO"). Replaces the geodesic-dome panel discussion photo.
 - **Move** - from 12 to **10**.
 
 ---

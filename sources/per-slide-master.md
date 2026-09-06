@@ -30,8 +30,14 @@ sheet had dropped, and kept the 300 children stat he asked for in Slack.
 the astronaut group photo is the background at full resolution, and the art studio group portrait
 took the collage panel it vacated.
 
-Because of the By the Numbers move, the locked slides now sit at positions **1 through 7**. Open
-work starts at 8 Programming.
+**Programming is locked** as of 2026-09-06. Lee settled the clash between his two instructions:
+he asked for slide 13's background video on slide 8, but that is the same clip he had already
+asked to move to The Grounds. Her call was to leave Programming on the clip that Digital Reach
+carried after the earlier pass, accepting that it also plays behind slide 2. An attempt to give
+Programming its own distinct clip was built and reverted at her instruction.
+
+Because of the By the Numbers move, the locked slides now sit at positions **1 through 8**. Open
+work starts at 9 The Aurora.
 
 ---
 
@@ -120,17 +126,16 @@ Lee's, and the number animation was removed.
 
 ---
 
-## 8 · Programming
+## 8 · Programming — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the four pillars on the left and the lineup poster on the right, which is the structure
 he asked for. Keep the lineup audio, which moved here when The Music was cut.
 
-**Changes:**
-- **To do** - "not sure what's going on with slide 8, let's move the background video from slide
-  13 there" (Slack, 04:53). The Digital Reach video comes here.
-- **Reversal** - the Ceremony Garden clip added this morning comes back out. It was built on his
-  video note "I'm fine with having a video behind this one"; his later message names a specific
-  video instead.
+**Changes:** none outstanding.
+- **Done** - "not sure what's going on with slide 8, let's move the background video from slide
+  13 there" (Slack, 04:53). Programming carries the clip Digital Reach was on. The same clip also
+  plays behind slide 2; Lee reviewed that and is happy with it.
+- **Done** - the Ceremony Garden clip built from his video note is out, and the files are deleted.
 - **Done** - the section title now reads "Diverse, Intentional Programming". This was the exact
   title he highlighted on screen when he said "some of the titles aren't being updated".
 

@@ -21,58 +21,22 @@ order. What is frozen is what is on the slide: copy, photos, video, layout.
 
 ## Locked slides
 
-Lee has locked **Title, By the Numbers, Overview, The Moment, The Setting and The Grounds** as of
-2026-09-06. Nothing on those slides is to be touched, by anyone, until she unlocks them.
+**All 19 slides are locked** as of 2026-09-06, after Mitch's final run of notes. Everything he
+asked for is built:
 
-**By the Numbers** is locked in its final form: 4,200 participants, 75 countries represented, 287 artists & speakers, 300 children joined
-their families, 5 days under the glacier, all five in one row. That restored 287, which Mitch's
-sheet had dropped, and kept the 300 children stat he asked for in Slack.
+- 6 By the Numbers: the welcome-sign clip he sent, silent, background lightened at Lee's call
+- 8 Programming: the eclipse-ring photo as background, with the audio he wanted kept as its own loop
+- 9 The Aurora: recut portrait to the frame's own aspect and playing all nineteen seconds
+- 11 Partners: the full sponsor roll, rebuilt in our grid rather than pasted as his screenshot
+- 13 Testimonials: a different background, the golden-hour drone pass
+- 14 Ceremony: his drone shot of the crowd, sourced full resolution from the catalog
+- 15 The Portal: a Portal photo behind it, plus a Portal lockup of our own
+- 18 Midnight Sun: the aerial behind, his deck cover inlaid, venue named
+- 19 Thank You: spacing reworked so the contact block clears the credits
+- Link preview: a purpose-built card, since the page had no Open Graph tags at all
 
-**Our Community is locked** as of 2026-09-06, with both halves of Mitch's 05:16 instruction built:
-the astronaut group photo is the background at full resolution, and the art studio group portrait
-took the collage panel it vacated.
-
-**Programming is locked** as of 2026-09-06. Lee settled the clash between his two instructions:
-he asked for slide 13's background video on slide 8, but that is the same clip he had already
-asked to move to The Grounds. Her call was to leave Programming on the clip that Digital Reach
-carried after the earlier pass, accepting that it also plays behind slide 2. An attempt to give
-Programming its own distinct clip was built and reverted at her instruction.
-
-**The Aurora is locked** as of 2026-09-06, with both of Mitch's Slack items built: the clip plays
-with sound, and the background is the high-resolution Above & Beyond stage photo he named. The
-sound reverses Lee's earlier instruction to mute it; she chose to follow him.
-
-**In the Press is locked** as of 2026-09-06, at position 12. Note this closes his background
-request: he asked three times for a different backdrop and never sent one, so the slide keeps the
-one it has.
-
-**The Ceremonies is locked** as of 2026-09-06, at position 11. Its whole sheet row is in
-verbatim: the headline, the body about the blessing rather than a countdown, and all three rows,
-Opening / Stillness / Totality. Ben's note to move it to the end of the festival section is
-satisfied by Mitch's reorder, which puts Ceremony at 14.
-
-**Partners is locked** as of 2026-09-06, at position 18. His 05:40 ask is built: all four
-partners now carry their official logos, taken from the sponsor strip at the bottom of
-icelandeclipse.com exactly as he pointed. Lee then asked for a crew-at-work collage behind it and
-a partner photo with people in it, both done.
-
-**All 19 slides are locked** as of 2026-09-06. Two were unlocked afterwards and locked again:
-In the Press, to swap its background to a mountain from the festival site, and The Portal, which
-gained a lockup of its own and a background from the Telegram batch. Nothing on any slide is to be changed, by anyone,
-until Lee unlocks it. Positions are still free: Mitch's reorder can be applied without breaking a
-lock, because a lock covers a slide's content, not where it sits.
-
-Two of Mitch's asks are closed by the lock rather than built:
-
-- **Midnight Sun** - "move this image to background of Midnight Sun" and "have the flyer for the
-  event inlayed on the slide" (05:39). Not built.
-- **Testimonials** - "Testimonials: something with video" (05:36). The slide does carry a video
-  background, so this may already be met, but he was looking at it when he said it.
-
-Also still open and not a slide change: Digital Reach's figures come from the partnership deck
-rather than Google Analytics, and mitch@im-xp.com has not been given access to the sheet.
-
----
+Nothing on any slide is to be changed until Lee unlocks it. Positions stay free of the lock, and
+the running order now matches his 6 Sep sequence exactly.
 
 ## 1 · Title / Cover — **LOCKED** (Lee, 2026-09-06)
 

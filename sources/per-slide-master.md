@@ -5,9 +5,11 @@ his five screenshares, his edits and comments in the Content Editor sheet, and h
 through 2026-09-06 05:57. Where two instructions conflict, the later one wins and the older one is
 named so the reasoning is visible.
 
-Slides are listed in **the order he asked for on 06 Sep at 05:21**, which is not the order the
-deck is in yet. **The reorder is on hold at Lee's instruction** until she has finished reviewing
-the deck, so that slide numbers do not shift under her mid-review. "Move" lines under each slide are that reorder.
+Slides are listed in **the order he asked for on 06 Sep at 05:21**, which is now **applied**.
+
+One deliberate difference from his list: **By the Numbers sits at 2, not 6.** Lee moved it there
+after his own video note that the second page should carry the overall highlights, and locked it
+in that position. Everything else follows his sequence exactly. "Move" lines under each slide are that reorder.
 
 Legend: **Done** is live now. **To do** is decided and unbuilt. **Needs a call** is waiting on
 Lee or Mitch. **LOCKED** means Lee has approved the slide's **content** and no change is to be

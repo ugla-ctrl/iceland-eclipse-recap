@@ -211,6 +211,17 @@
   .pm-dates{margin-top:.45em}
   .portalslide .content{padding-top:clamp(1.2rem,3.5vh,2.6rem)}
   @media (max-width:1024px) and (orientation:portrait){
+    /* phones: let a long slide scroll inside itself rather than clip its last block */
+    .gslide .pad{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+      justify-content:flex-start;padding-top:5.5%;padding-bottom:7%}
+    .gslide .pad::-webkit-scrollbar{width:0;height:0}
+    /* the sponsor roll cannot be nine across on a phone */
+    .sr-grid{grid-template-columns:repeat(3,1fr);gap:1rem .9rem}
+    .sr-grid img{max-width:104px;opacity:.72}
+    .sponsorrow{margin-top:1.1rem}
+    .partnerslide .partnerlist .pn{min-height:62px}
+  }
+  @media (max-width:1024px) and (orientation:portrait){
     .portalmark{gap:.8rem}
     .pm-name{font-size:1.15rem}
     .pm-sub,.pm-meta{font-size:.5rem;letter-spacing:.12em}

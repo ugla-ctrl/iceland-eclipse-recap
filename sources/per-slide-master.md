@@ -54,7 +54,19 @@ partners now carry their official logos, taken from the sponsor strip at the bot
 icelandeclipse.com exactly as he pointed. Lee then asked for a crew-at-work collage behind it and
 a partner photo with people in it, both done.
 
-Locked so far: **1 through 9, 11, 12 and 18**. Open work is 10, 13 to 17, and 19.
+**All 19 slides are locked** as of 2026-09-06. Nothing on any slide is to be changed, by anyone,
+until Lee unlocks it. Positions are still free: Mitch's reorder can be applied without breaking a
+lock, because a lock covers a slide's content, not where it sits.
+
+Two of Mitch's asks are closed by the lock rather than built:
+
+- **Midnight Sun** - "move this image to background of Midnight Sun" and "have the flyer for the
+  event inlayed on the slide" (05:39). Not built.
+- **Testimonials** - "Testimonials: something with video" (05:36). The slide does carry a video
+  background, so this may already be met, but he was looking at it when he said it.
+
+Also still open and not a slide change: Digital Reach's figures come from the partnership deck
+rather than Google Analytics, and mitch@im-xp.com has not been given access to the sheet.
 
 ---
 
@@ -205,7 +217,7 @@ the headline. He has approved the slide itself: "I like this one."
 
 ---
 
-## 12 · Reach
+## 12 · Reach — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the four figures and the headline, which is his own wording.
 
@@ -219,7 +231,7 @@ the headline. He has approved the slide itself: "I like this one."
 
 ---
 
-## 13 · Testimonials
+## 13 · Testimonials — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the six quotes and the handles. Keep the larger type and the raised title from this
 morning's pass, which fixed "it's really hard to read".
@@ -243,22 +255,23 @@ morning's pass, which fixed "it's really hard to read".
 
 ---
 
-## 15 · Portal
+## 15 · Portal — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the three-phase structure, The Lab / The Offering / The Archive, drawn from his own
 Patron Deck.
 
 **Changes:**
-- **To do** - replace the photo with `THE PORTAL - Andrew Glenn - INDOOR PERFORMANCE INTIMATE
-  GATHERING.jpg`, which he sent at 05:37.
-- **To do** - "would also like to see background more" (05:39). Lighten the scrim on this slide so
-  the background photo reads.
+- **Done** - the photo is `THE PORTAL - Andrew Glenn - INDOOR PERFORMANCE INTIMATE GATHERING.jpg`,
+  the exact file he sent at 05:37, sourced full resolution from the catalog: a warm indoor
+  performance to a small crowd inside The Freezer.
+- **Done** - "would also like to see background more" (05:39). The scrim on this slide is much
+  lighter and the photo opacity raised, so the crowd behind actually reads.
 - **Done** - the slide moved earlier in the deck, per "let's move the portal page up".
 - **Move** - stays at 15.
 
 ---
 
-## 16 · Experiences / Side Quests
+## 16 · Experiences / Side Quests — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the four cards and his own copy for them, including the correction that the glacier
 concert was inside **Langjökull**. He approved the slide on video: "this one's good".
@@ -269,7 +282,7 @@ concert was inside **Langjökull**. He approved the slide on video: "this one's 
 
 ---
 
-## 17 · Trilogy
+## 17 · Trilogy — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the map and the three legs, Iceland 2026 / Egypt 2027 / Australasia 2028.
 
@@ -293,7 +306,7 @@ concert was inside **Langjökull**. He approved the slide on video: "this one's 
 
 ---
 
-## 19 · Thank You
+## 19 · Thank You — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** his own body copy, "participants" rather than "guests", and the line about "everything
 that played a role in parting the clouds". Mitch only on the contact.

@@ -159,6 +159,9 @@
   /* numbers: stats sit on the right, so darken that side more */
   /* side quests: the copy sits over open sky, so weight the scrim to the top */
   .gslide.underbg.questslide .softphoto:has(video)::after{background:linear-gradient(180deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.66) 38%,rgba(9,9,11,.42) 70%,rgba(9,9,11,.55) 100%)}
+  /* portal: Mitch asked to see more of the background on this slide */
+  .gslide.underbg.portalslide .softphoto img{opacity:.86}
+  .gslide.underbg.portalslide .softphoto::after{background:linear-gradient(112deg,rgba(9,9,11,.72) 0%,rgba(9,9,11,.5) 42%,rgba(9,9,11,.2) 72%,rgba(9,9,11,.34) 100%)}
   .gslide.underbg.numbg .softphoto::after{background:linear-gradient(245deg,rgba(9,9,11,0.76) 0%,rgba(9,9,11,0.48) 55%,rgba(9,9,11,0.62) 100%)}
   /* trilogy: soft-focus Iceland site under-layer so the map stays crisp */
   .gslide.trilogy .softphoto img,.gslide.trilogy .softphoto video{opacity:.75;filter:blur(3px);transform:scale(1.05)}
@@ -695,7 +698,7 @@
   </section>
 
   <!-- 15 · THE PORTAL -->
-  <section class="slide gslide underbg brandleft">
+  <section class="slide gslide underbg portalslide brandleft">
     <div class="softphoto"><img src="assets/sidequests-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">

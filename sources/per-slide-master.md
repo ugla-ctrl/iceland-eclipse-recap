@@ -56,8 +56,9 @@ partners now carry their official logos, taken from the sponsor strip at the bot
 icelandeclipse.com exactly as he pointed. Lee then asked for a crew-at-work collage behind it and
 a partner photo with people in it, both done.
 
-**All 19 slides are locked** as of 2026-09-06. In the Press was briefly unlocked to swap its
-background to a mountain from the festival site, then locked again. Nothing on any slide is to be changed, by anyone,
+**All 19 slides are locked** as of 2026-09-06. Two were unlocked afterwards and locked again:
+In the Press, to swap its background to a mountain from the festival site, and The Portal, which
+gained a lockup of its own and a background from the Telegram batch. Nothing on any slide is to be changed, by anyone,
 until Lee unlocks it. Positions are still free: Mitch's reorder can be applied without breaking a
 lock, because a lock covers a slide's content, not where it sits.
 
@@ -269,8 +270,13 @@ Patron Deck.
 - **Done** - the photo is `THE PORTAL - Andrew Glenn - INDOOR PERFORMANCE INTIMATE GATHERING.jpg`,
   the exact file he sent at 05:37, sourced full resolution from the catalog: a warm indoor
   performance to a small crowd inside The Freezer.
-- **Done** - "would also like to see background more" (05:39). The scrim on this slide is much
-  lighter and the photo opacity raised, so the crowd behind actually reads.
+- **Done** - "would also like to see background more" (05:39). The scrim is much lighter and the
+  photo opacity raised. The background is now its own clip, the dawn panorama over the peaks from
+  the Telegram batch, rather than the Side Quests still it was borrowing.
+- **Done, Lee's addition** - a Portal lockup drawn in the deck's own faces and palette, taking its
+  identity from Mitch's Patron Deck: a wireframe globe, "The Portal", "an experiential analog for
+  the interplanetary age", the three descriptors and the dates. Inline SVG and type, not an
+  imported page, so it stays sharp and follows the palette like the trilogy map.
 - **Done** - the slide moved earlier in the deck, per "let's move the portal page up".
 - **Move** - stays at 15.
 

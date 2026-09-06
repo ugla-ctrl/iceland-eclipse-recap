@@ -439,15 +439,6 @@
   .slide.onphoto .contact .em{margin-top:.5em}
   .slide.onphoto .sfoot{padding-bottom:clamp(.6rem,1.6vh,1.2rem)}
   .sfoot .credits{line-height:2.35;letter-spacing:.09em;max-width:none}
-  /* sound button (phones only) */
-  #soundbtn{position:fixed;right:1rem;bottom:4.2rem;z-index:60;display:flex;align-items:center;gap:.45em;
-    padding:.55em .85em;border-radius:999px;border:1px solid rgba(13,252,211,.5);
-    background:rgba(9,9,11,.72);backdrop-filter:blur(6px);color:var(--teal);
-    font-family:var(--label);font-weight:700;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase}
-  #soundbtn .sb-ico{font-size:.85rem;line-height:1}
-  #soundbtn.on{border-color:rgba(238,119,23,.6);color:var(--orange)}
-  @media (min-width:1025px){ #soundbtn{display:none} }
-
   #ctr{position:fixed;bottom:1vh;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:30}
   #ctr button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(20,26,38,.24);cursor:pointer;padding:0;transition:.3s}
   #ctr button:hover{background:rgba(20,26,38,.48)}
@@ -1014,9 +1005,7 @@
       }
       if(active.contains(v)){
         try{ v.currentTime=0; }catch(e){}
-        // phones refuse to autoplay with sound until the viewer taps, so start
-        // muted there and let the sound button turn it on
-        v.muted = !window.__soundOn; v.volume=1;
+        v.muted=false; v.volume=1;
         const p=v.play();
         if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
       } else { v.pause(); }
@@ -1051,30 +1040,6 @@
     if(Math.abs(e.deltaY)>30||Math.abs(e.deltaX)>30){wl=t;go(i+((e.deltaY+e.deltaX)>0?1:-1));}},{passive:true});
   go(0);
 
-  /* sound: phones block autoplay audio until the viewer asks for it */
-  (function(){
-    var coarse = window.matchMedia && matchMedia('(hover:none), (pointer:coarse)').matches;
-    window.__soundOn = !coarse;
-    var b=document.createElement('button');
-    b.id='soundbtn'; b.type='button';
-    b.setAttribute('aria-label','Turn sound on');
-    b.innerHTML='<span class="sb-ico">\u266A</span><span class="sb-tx">Sound on</span>';
-    b.hidden = !coarse;
-    b.addEventListener('click', function(){
-      window.__soundOn = !window.__soundOn;
-      b.classList.toggle('on', window.__soundOn);
-      b.querySelector('.sb-tx').textContent = window.__soundOn ? 'Sound on' : 'Sound off';
-      b.setAttribute('aria-label', window.__soundOn ? 'Turn sound off' : 'Turn sound on');
-      var act=document.querySelector('.slide.active');
-      if(!act) return;
-      act.querySelectorAll('video, audio').forEach(function(v){
-        if(v.classList.contains('mutedbg')) return;
-        v.muted = !window.__soundOn;
-        if(window.__soundOn){ var q=v.play(); if(q&&q.catch) q.catch(function(){}); }
-      });
-    });
-    document.body.appendChild(b);
-  })();
 </script>
 </body>
 </html>

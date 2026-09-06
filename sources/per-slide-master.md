@@ -40,8 +40,11 @@ Programming its own distinct clip was built and reverted at her instruction.
 with sound, and the background is the high-resolution Above & Beyond stage photo he named. The
 sound reverses Lee's earlier instruction to mute it; she chose to follow him.
 
-Because of the By the Numbers move, the locked slides now sit at positions **1 through 9**. Open
-work starts at 10 Unique Icelandic Experiences, which has nothing outstanding, then 11 onward.
+**In the Press is locked** as of 2026-09-06, at position 12. Note this closes his background
+request: he asked three times for a different backdrop and never sent one, so the slide keeps the
+one it has.
+
+Locked so far: **1 through 9, and 12**. Open work is 10, 11, 13 and 14 onward.
 
 ---
 
@@ -161,16 +164,16 @@ is the arrangement he asked for twice.
 
 ---
 
-## 10 · In the Press
+## 10 · In the Press — **LOCKED** (Lee, 2026-09-06), currently at position 12
 
 **Keep:** the NYT feature, the CNN broadcast and the stratosphere eclipse, the outlet chips, and
 the headline. He has approved the slide itself: "I like this one."
 
 **Changes:**
-- **Needs a call** - a new background. He has raised it three times: "the background isn't really
-  that helpful, maybe we find something else" (video), "background of slide 12?" (05:00), "Press
-  slide: background image improvement" (05:57). He has **not** sent a picture for it, so the
-  choice is ours to propose.
+- **Closed by the lock** - he asked three times for a different background: "the background isn't
+  really that helpful, maybe we find something else" (video), "background of slide 12?" (05:00),
+  "Press slide: background image improvement" (05:57). He never sent a picture, and Lee has locked
+  the slide as it stands, so it keeps the backdrop it has.
 - **Move** - from 12 to **10**.
 
 ---

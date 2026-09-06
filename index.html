@@ -40,6 +40,8 @@
   .accent.commcollage img{height:100%;width:auto;max-width:100%;object-fit:contain;
     border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
   .accent.commcollage::after{display:none}
+  /* the Midnight Sun cover is full-bleed artwork, so it sits flush with no frame */
+  .accent.flyercard img{border-radius:0;box-shadow:none}
   .accent::after{content:'';position:absolute;inset:0;
     background:linear-gradient(200deg,rgba(9,9,11,0.06) 55%,rgba(9,9,11,0.25));pointer-events:none}
   /* corner logo swaps sides (or hides) per slide instead of shrinking artwork */
@@ -857,11 +859,11 @@
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">What's Next In Iceland</div>
-        <h2>Midnight Sun Festival<span class="h2sub">9 – 11 July 2027 · Secret Location, Iceland</span></h2>
+        <h2>Midnight Sun Festival<span class="h2sub">9 &ndash; 11 July 2027 &middot; Hlj&oacute;msk&aacute;lagar&eth;urinn Park, Reykjav&iacute;k</span></h2>
         <p>IMXP is already building the next Icelandic gathering. Where Iceland Eclipse asked guests to travel to the edge of the world for two minutes, Midnight Sun moves into the heart of a city, at double the scale, for three days built around a sun that never sets.</p>
         <p class="small" style="margin-top:1em">The wilderness proved the demand. The city removes the cap.</p>
       </div>
-      <div class="accent commcollage"><img src="assets/midnight-sun-flyer.jpg" alt="Midnight Sun Festival, 9 to 11 July 2027, Reykjav&iacute;k"/></div>
+      <div class="accent commcollage flyercard"><img src="assets/midnight-sun-flyer.jpg" alt="Midnight Sun Festival, 9 to 11 July 2027, Reykjav&iacute;k"/></div>
     </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>18</span></div>
   </section>

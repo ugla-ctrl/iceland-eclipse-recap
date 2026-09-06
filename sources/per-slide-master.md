@@ -36,8 +36,12 @@ asked to move to The Grounds. Her call was to leave Programming on the clip that
 carried after the earlier pass, accepting that it also plays behind slide 2. An attempt to give
 Programming its own distinct clip was built and reverted at her instruction.
 
-Because of the By the Numbers move, the locked slides now sit at positions **1 through 8**. Open
-work starts at 9 The Aurora.
+**The Aurora is locked** as of 2026-09-06, with both of Mitch's Slack items built: the clip plays
+with sound, and the background is the high-resolution Above & Beyond stage photo he named. The
+sound reverses Lee's earlier instruction to mute it; she chose to follow him.
+
+Because of the By the Numbers move, the locked slides now sit at positions **1 through 9**. Open
+work starts at 10 Unique Icelandic Experiences, which has nothing outstanding, then 11 onward.
 
 ---
 
@@ -141,16 +145,19 @@ he asked for. Keep the lineup audio, which moved here when The Music was cut.
 
 ---
 
-## 9 · The Aurora
+## 9 · The Aurora — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the aurora clip inlaid in the frame, and the Above & Beyond crowd shot behind it. That
 is the arrangement he asked for twice.
 
-**Changes:**
-- **To do** - **unmute the clip** (Slack, 04:54). **This reverses Lee's instruction** to mute it.
-  Standing direction is to go with Mitch, but it is Lee's call to confirm.
-- **To do** - swap in the high-resolution `Above & Beyond - CONCERT CROWD STAGE LIGHTS 4.jpg` he
-  named (Slack, 04:59) in place of the crowd photo currently there.
+**Changes:** none outstanding.
+- **Done** - the clip plays with sound (Slack, 04:54). Lee's call was to follow Mitch, reversing
+  her earlier instruction to mute it. Verified that every other video pauses on this slide, so
+  nothing overlaps.
+- **Done** - the background is `Above & Beyond - CONCERT CROWD STAGE LIGHTS 4.jpg`, the exact file
+  he named at 04:59, sourced full resolution from the catalog. Its lighting rig blows out the top
+  of frame, so the photo is held back and the scrim weighted left, then lightened again at Lee's
+  request. `music-ab-crowd.jpg` is deleted.
 
 ---
 

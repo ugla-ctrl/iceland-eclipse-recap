@@ -161,6 +161,20 @@
   /* numbers: stats sit on the right, so darken that side more */
   /* side quests: the copy sits over open sky, so weight the scrim to the top */
   .gslide.underbg.questslide .softphoto:has(video)::after{background:linear-gradient(180deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.66) 38%,rgba(9,9,11,.42) 70%,rgba(9,9,11,.55) 100%)}
+  /* the site's own sponsor strip, sitting under the four named partners */
+  .sponsorrow{margin-top:clamp(.7rem,2vh,1.4rem);border-top:1px solid rgba(255,255,255,.13);
+    padding-top:clamp(.6rem,1.6vh,1rem)}
+  .sr-label{font-family:var(--label);font-weight:700;font-size:clamp(.42rem,.66vw,.56rem);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.9em}
+  .sr-grid{list-style:none;margin:0;padding:0;display:grid;
+    grid-template-columns:repeat(9,1fr);gap:clamp(.5rem,1.4vw,1.15rem) clamp(.7rem,1.8vw,1.5rem);align-items:center}
+  .sr-grid li{display:flex;align-items:center;justify-content:center}
+  .sr-grid img{width:100%;max-width:clamp(52px,6.4vw,96px);height:auto;opacity:.62;
+    filter:grayscale(1) brightness(1.5);transition:opacity .25s ease,filter .25s ease}
+  .sr-grid li:hover img{opacity:1;filter:none}
+  .partnerslide .content{padding-top:clamp(.6rem,2vh,1.5rem)}
+  .partnerslide .partnerlist{margin-top:clamp(.7rem,2vh,1.1rem)}
+  .partnerslide .partnerlist .pn{min-height:clamp(50px,6vw,78px);padding:.55em .8em .8em}
   /* partners: the crew collage is busy, so hold it back a little further */
   .gslide.underbg.partnerslide .softphoto img{opacity:.5}
   .gslide.underbg.partnerslide .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.8) 0%,rgba(9,9,11,.66) 45%,rgba(9,9,11,.6) 100%)}
@@ -659,7 +673,31 @@
         </div>
       </div>
       <div class="accent commcollage"><img src="assets/partners.jpg" alt="Guests on the Icelandic Glacial branded platform"/></div>
-    </div></div>
+    </div>
+    <div class="sponsorrow">
+      <div class="sr-label">Sponsors &amp; Supporters</div>
+      <ul class="sr-grid">
+        <li><img src="assets/sponsors/imlakesh-organics.png" alt="Imlakesh Organics"/></li>
+        <li><img src="assets/sponsors/pacific.png" alt="Pacific"/></li>
+        <li><img src="assets/sponsors/pulse.png" alt="Pulse"/></li>
+        <li><img src="assets/sponsors/audiopool.png" alt="Audiopool"/></li>
+        <li><img src="assets/sponsors/localvocal.png" alt="LocalVocal"/></li>
+        <li><img src="assets/sponsors/makesoil.png" alt="MakeSoil"/></li>
+        <li><img src="assets/sponsors/coca-cola.png" alt="Coca-Cola"/></li>
+        <li><img src="assets/sponsors/askur-gin.png" alt="Askur Gin"/></li>
+        <li><img src="assets/sponsors/helix7-vodka.png" alt="Helix7 Vodka"/></li>
+        <li><img src="assets/sponsors/hljodx.png" alt="Hljodx"/></li>
+        <li><img src="assets/sponsors/playing-for-change.png" alt="Playing For Change"/></li>
+        <li><img src="assets/sponsors/interplanetary-records.png" alt="Interplanetary Records"/></li>
+        <li><img src="assets/sponsors/66north.png" alt="66°NORTH"/></li>
+        <li><img src="assets/sponsors/sacred-synthesis.png" alt="The Sacred Synthesis"/></li>
+        <li><img src="assets/sponsors/einstok.png" alt="Einstok"/></li>
+        <li><img src="assets/sponsors/icelandic-glacial.png" alt="Icelandic Glacial"/></li>
+        <li><img src="assets/sponsors/snaefellsjokull.png" alt="Snæfellsjökull National Park"/></li>
+        <li><img src="assets/sponsors/snaefellsbaer.png" alt="Snæfellsbær"/></li>
+      </ul>
+    </div>
+    </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>11</span></div>
   </section>
 

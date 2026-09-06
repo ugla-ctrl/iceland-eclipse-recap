@@ -159,6 +159,32 @@
   /* numbers: stats sit on the right, so darken that side more */
   /* side quests: the copy sits over open sky, so weight the scrim to the top */
   .gslide.underbg.questslide .softphoto:has(video)::after{background:linear-gradient(180deg,rgba(9,9,11,.86) 0%,rgba(9,9,11,.66) 38%,rgba(9,9,11,.42) 70%,rgba(9,9,11,.55) 100%)}
+  /* partners: the crew collage is busy, so hold it back a little further */
+  .gslide.underbg.partnerslide .softphoto img{opacity:.5}
+  .gslide.underbg.partnerslide .softphoto::after{background:linear-gradient(115deg,rgba(9,9,11,.8) 0%,rgba(9,9,11,.66) 45%,rgba(9,9,11,.6) 100%)}
+  /* The Portal lockup: our own artifact, drawn from the Patron Deck's identity */
+  .portalmark{position:relative;display:flex;align-items:center;gap:clamp(.9rem,2vw,1.6rem);
+    margin-bottom:clamp(.9rem,2vh,1.4rem);padding-bottom:clamp(.8rem,1.8vh,1.2rem);
+    border-bottom:1px solid rgba(255,255,255,.14)}
+  .portalmark .pm-globe{flex:none;width:clamp(56px,7vw,96px);height:auto;opacity:.95}
+  .portalmark .pm-globe .g-line{fill:none;stroke:var(--teal);stroke-width:1.1;opacity:.75}
+  .portalmark .pm-globe .g-rim{fill:none;stroke:var(--teal);stroke-width:1.6}
+  .portalmark .pm-globe .g-core{fill:var(--orange);opacity:.9}
+  .pm-type{min-width:0}
+  .pm-name{font-family:var(--display);font-size:clamp(1rem,2.15vw,1.95rem);line-height:1;
+    letter-spacing:.06em;text-transform:uppercase;color:#fff}
+  .pm-sub{font-family:var(--label);font-weight:700;font-size:clamp(.44rem,.72vw,.62rem);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-top:.75em}
+  .pm-meta{font-family:var(--label);font-weight:600;font-size:clamp(.42rem,.68vw,.58rem);
+    letter-spacing:.13em;text-transform:uppercase;color:var(--body);margin-top:.6em}
+  .pm-meta span{color:var(--orange)}
+  .pm-dates{margin-top:.45em}
+  .portalslide .content{padding-top:clamp(1.2rem,3.5vh,2.6rem)}
+  @media (max-width:1024px) and (orientation:portrait){
+    .portalmark{gap:.8rem}
+    .pm-name{font-size:1.15rem}
+    .pm-sub,.pm-meta{font-size:.5rem;letter-spacing:.12em}
+  }
   /* portal: Mitch asked to see more of the background on this slide */
   .gslide.underbg.portalslide .softphoto img{opacity:.86}
   .gslide.underbg.portalslide .softphoto::after{background:linear-gradient(112deg,rgba(9,9,11,.72) 0%,rgba(9,9,11,.5) 42%,rgba(9,9,11,.2) 72%,rgba(9,9,11,.34) 100%)}
@@ -616,7 +642,7 @@
   </section>
 
   <!-- 11 · PARTNERS -->
-  <section class="slide gslide underbg brandleft">
+  <section class="slide gslide underbg partnerslide brandleft">
     <div class="softphoto"><img src="assets/partners-build.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
@@ -693,7 +719,23 @@
     <div class="softphoto"><img src="assets/sidequests-bg.jpg" alt=""/></div>
     <div class="pad"><div class="split">
       <div class="content">
-        <div class="eyebrow">The Portal</div>
+        <div class="portalmark">
+          <svg class="pm-globe" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="g-rim" cx="50" cy="50" r="34"/>
+            <ellipse class="g-line" cx="50" cy="50" rx="34" ry="12"/>
+            <ellipse class="g-line" cx="50" cy="50" rx="34" ry="24"/>
+            <ellipse class="g-line" cx="50" cy="50" rx="12" ry="34"/>
+            <ellipse class="g-line" cx="50" cy="50" rx="24" ry="34"/>
+            <line class="g-line" x1="16" y1="50" x2="84" y2="50"/>
+            <circle class="g-core" cx="50" cy="50" r="3.4"/>
+          </svg>
+          <div class="pm-type">
+            <div class="pm-name">The Portal</div>
+            <div class="pm-sub">An experiential analog for the interplanetary age</div>
+            <div class="pm-meta">Innovation residency &middot; Immersive retreat &middot; Pop-up village</div>
+            <div class="pm-meta pm-dates"><span>19 July &ndash; 15 August 2026</span> &middot; Sn&aelig;fellsnes Peninsula</div>
+          </div>
+        </div>
         <h2>A Month <em>Before the Festival.</em></h2>
         <p>Part innovation residency, part pop-up village, The Portal ran as an analog space mission. From 19 July to 15 August, around fifty artists, scientists and builders lived together at The Freezer in R&iacute;f and made the work that later appeared across the festival site.</p>
         <div class="legs" style="grid-template-columns:1fr;gap:clamp(.7rem,1.4vw,1.05rem);margin-top:1.1em">

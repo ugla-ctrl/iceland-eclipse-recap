@@ -7,9 +7,10 @@ named so the reasoning is visible.
 
 Slides are listed in **the order he asked for on 06 Sep at 05:21**, which is now **applied**.
 
-One deliberate difference from his list: **By the Numbers sits at 2, not 6.** Lee moved it there
-after his own video note that the second page should carry the overall highlights, and locked it
-in that position. Everything else follows his sequence exactly. "Move" lines under each slide are that reorder.
+It now matches his list exactly. **By the Numbers has moved back to 6**: Lee had put it at 2 on
+the strength of his video note about the second page, and on 6 Sep he answered that directly,
+"By the numbers looks good, just needs to go in between Grounds and Community". The deck and the
+Content Editor sheet both follow his sequence. "Move" lines under each slide are that reorder.
 
 Legend: **Done** is live now. **To do** is decided and unbuilt. **Needs a call** is waiting on
 Lee or Mitch. **LOCKED** means Lee has approved the slide's **content** and no change is to be
@@ -23,8 +24,7 @@ order. What is frozen is what is on the slide: copy, photos, video, layout.
 Lee has locked **Title, By the Numbers, Overview, The Moment, The Setting and The Grounds** as of
 2026-09-06. Nothing on those slides is to be touched, by anyone, until she unlocks them.
 
-**By the Numbers moved to position 2** at her instruction and is now locked there in its final
-form: 4,200 participants, 75 countries represented, 287 artists & speakers, 300 children joined
+**By the Numbers** is locked in its final form: 4,200 participants, 75 countries represented, 287 artists & speakers, 300 children joined
 their families, 5 days under the glacier, all five in one row. That restored 287, which Mitch's
 sheet had dropped, and kept the 300 children stat he asked for in Slack.
 
@@ -132,7 +132,7 @@ carries one.
 
 ---
 
-## 6 · By the Numbers — **LOCKED** (Lee, 2026-09-06), now at position 2
+## 6 · By the Numbers — **LOCKED** (Lee, 2026-09-06)
 
 **Keep:** the five stats as they now read - 4,200 participants, 75 countries represented, 287
 artists & speakers, 300 children joined their families, 5 days under the glacier - and his own

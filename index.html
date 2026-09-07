@@ -238,13 +238,16 @@
     .pm-sub,.pm-meta{font-size:.5rem;letter-spacing:.12em}
   }
   /* ceremonies: a single pull quote under the three rows */
-  .cerquote{margin:clamp(.5rem,1.2vh,.9rem) 0 0;padding-left:.85em;border-left:2px solid var(--teal);
+  .cerquote cite{display:block;margin-top:.35em;font-style:normal;font-family:var(--label);font-weight:700;
+    font-size:clamp(.4rem,.66vw,.56rem);letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+  .cerquote{margin:clamp(.4rem,.9vh,.7rem) 0 0;padding-left:.85em;border-left:2px solid var(--teal);
     font-style:italic;font-size:clamp(.5rem,.82vw,.72rem);line-height:1.4;color:var(--ink);max-width:50ch}
   /* the quote adds a block, so tighten this slide the way The Portal was tightened */
-  .ceremonyslide .legs{gap:clamp(.4rem,.9vh,.75rem)!important;margin-top:.7em!important}
-  .ceremonyslide .leg{padding-top:.5em}
-  .ceremonyslide .leg .lg-note{margin-top:.28em;line-height:1.4}
-  .ceremonyslide .content>p{margin-top:.7em;line-height:1.55}
+  .ceremonyslide .legs{gap:clamp(.3rem,.7vh,.6rem)!important;margin-top:.55em!important}
+  .ceremonyslide .leg{padding-top:.42em}
+  .ceremonyslide .leg .lg-note{margin-top:.25em;line-height:1.36;font-size:clamp(.46rem,.76vw,.68rem)}
+  .ceremonyslide .content>p{max-width:56ch}
+  .ceremonyslide .content>p{margin-top:.6em;line-height:1.5}
   /* portal: the lockup plus three phases is a tall column, so tighten it on
      shorter windows where the last phase was running over the footer */
   .portalslide .portalmark{margin-bottom:clamp(.5rem,1.2vh,1rem);padding-bottom:clamp(.45rem,1vh,.8rem)}
@@ -806,7 +809,7 @@
           <div class="leg"><div class="lg-ph">Eclipse Ceremony</div><div class="lg-yr">Hosted by UNIFY.ORG</div><div class="lg-note">A musical meditation ceremony featuring Isis Indriya, Porangu&iacute;, Snow Raven, Ruby Chase, Emily Fletcher and Scarlett de la Torre, with a choir of 12 women and 12 drummers.</div></div>
           <div class="leg"><div class="lg-ph">Daily Ceremonies</div><div class="lg-yr">Temple of the Bird Tribes, Howl of the Wolfpack, Way of the Dragon, Closing Ceremony</div><div class="lg-note">Daily ceremonies birthed through Icelandic mythology, weaving together ceremonial musicians from around the world.</div></div>
         </div>
-        <blockquote class="cerquote">"The Eclipse Ceremony they had at this festival was the most epic musical ceremony I&rsquo;ve ever been to. Wow."</blockquote>
+        <blockquote class="cerquote">"We are so grateful for such a rich and deep experience&hellip; intimate and adventurous moments connecting to the land and our hearts."<cite>@heidrunmaria</cite></blockquote>
       </div>
       <div class="accent"><img src="assets/ceremony-crowd.jpg" alt="Ceremony beneath the glacier"/></div>
     </div></div>

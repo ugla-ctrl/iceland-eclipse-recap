@@ -149,6 +149,17 @@
   .lu-names{font-family:var(--display);font-size:clamp(.92rem,1.6vw,1.5rem);line-height:1.34;color:#fff;letter-spacing:-.01em}
   .lu-talks{margin-top:.95em;font-size:clamp(.58rem,.92vw,.8rem);line-height:1.5;color:var(--body)}
   .pillar:hover{transform:translateY(-3px);border-color:rgba(13,252,211,.4);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  /* programming: the four strands as people, not text panels */
+  .pillarpics{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.4vw,1.1rem);margin-top:clamp(.9rem,2.4vh,1.5rem)}
+  .ppic{margin:0;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 12px 32px rgba(0,0,0,.45);transition:transform .25s ease,border-color .25s ease}
+  .ppic:hover{transform:translateY(-3px);border-color:rgba(13,252,211,.45)}
+  .ppic img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .ppic figcaption{position:absolute;inset:auto 0 0 0;padding:clamp(.5rem,1.1vw,.85rem);
+    background:linear-gradient(transparent,rgba(9,9,11,.82) 45%,rgba(9,9,11,.94));display:flex;flex-direction:column;gap:.25em}
+  .pp-t{font-family:var(--display);font-size:clamp(.62rem,1.05vw,.92rem);letter-spacing:.02em;text-transform:uppercase;color:var(--teal)}
+  .pp-s{font-family:var(--label);font-weight:600;font-size:clamp(.42rem,.68vw,.58rem);
+    letter-spacing:.13em;text-transform:uppercase;color:var(--body)}
   /* side-quest image cards */
   .quests{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.6rem,1.3vw,1.1rem);margin-top:1.2em}
   .quest{border-radius:10px;overflow:hidden;background:var(--panel);border:1px solid var(--line);
@@ -535,7 +546,7 @@
       <div class="content">
         <div class="eyebrow">The Moment &middot; Totality</div>
         <p class="lead">At 17:47 UTC on 12 August 2026, totality swept across Snæfellsnes for 2 minutes and 7 seconds.</p>
-        <p style="margin-top:1.2em">Iceland&rsquo;s last total solar eclipse was in 1954. Reykjav&iacute;k was clouded out completely. In Hellissandur the sky held, and many who were there called it the most powerful thing they have witnessed.</p>
+        <p style="margin-top:1.2em">Iceland&rsquo;s last total solar eclipse was in 1954. This year, while Reykjav&iacute;k was clouded out completely, in Hellissandur the sky held. Many who were there called it the most powerful eclipse they have witnessed.</p>
         <div class="tiles t3" style="margin-top:1.3em">
           <div class="tile"><div class="n">27 years</div><div class="l">Since Europe last saw totality</div></div>
           <div class="tile"><div class="n">2196</div><div class="l">Year of Iceland&rsquo;s next total eclipse</div></div>
@@ -588,12 +599,11 @@
         <div class="eyebrow">By the Numbers</div>
         <h2>Thank you, <em>Eclipse Seekers.</em></h2>
         <p>The Eclipse Seeker community came from all around the world to gather at the edge of the Earth. It was a group that included astronauts, scientists, artists, healers and many others exploring the borders of our shared reality.</p>
-        <div class="tiles t5" style="margin-top:1.2em">
+        <div class="tiles" style="margin-top:1.2em">
           <div class="tile"><div class="n" data-count>4,200</div><div class="l">Participants</div></div>
           <div class="tile"><div class="n">75</div><div class="l">Countries represented</div></div>
           <div class="tile"><div class="n">250</div><div class="l">Artists &amp; speakers</div></div>
           <div class="tile"><div class="n">300</div><div class="l">Children joined their families</div></div>
-          <div class="tile"><div class="n" data-count>5</div><div class="l">Days under the glacier</div></div>
         </div>
       </div>
     </div></div>
@@ -607,7 +617,7 @@
       <div class="content">
         <div class="eyebrow">Our Community</div>
         <h2>Influential. Educated. <em>Global.</em></h2>
-        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions and representation from 40+ countries. Three in four held a higher-education degree.</p>
+        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions.</p>
         <div class="tiles t3" style="margin-top:1.2em">
           <div class="tile"><div class="n" data-count>35</div><div class="l">Average age</div></div>
           <div class="tile"><div class="n" data-count>75%</div><div class="l">Hold a higher-education degree</div></div>
@@ -627,11 +637,11 @@
       <div class="content">
         <div class="eyebrow">Diverse, Intentional Programming</div>
         <h2>Dance. Learn. Connect. Explore.</h2>
-        <div class="pillars" style="grid-template-columns:1fr 1fr">
-          <div class="pillar"><div class="t">DANCE</div><p>Global music, from Icelandic dreamscapes to electronic live performances</p></div>
-          <div class="pillar"><div class="t">LEARN</div><p>International leaders in science, technology and innovation</p></div>
-          <div class="pillar"><div class="t">CONNECT</div><p>Yoga, ceremony and story, guided by wellness visionaries</p></div>
-          <div class="pillar"><div class="t">EXPLORE</div><p>Iceland&rsquo;s iconic landmarks and elemental wilderness</p></div>
+        <div class="pillarpics">
+          <figure class="ppic"><img src="assets/prog-dance.jpg" alt="Apashe and the Brass Orchestra on the Eclipse Stage"/><figcaption><span class="pp-t">Dance</span><span class="pp-s">Apashe &amp; Brass Orchestra</span></figcaption></figure>
+          <figure class="ppic"><img src="assets/prog-learn.jpg" alt="Dr. Rick Doblin speaking at Aurora"/><figcaption><span class="pp-t">Learn</span><span class="pp-s">Dr. Rick Doblin</span></figcaption></figure>
+          <figure class="ppic"><img src="assets/prog-connect.jpg" alt="A meditation and sound performance"/><figcaption><span class="pp-t">Connect</span><span class="pp-s">Meditation &amp; sound</span></figcaption></figure>
+          <figure class="ppic"><img src="assets/prog-explore.jpg" alt="A concert inside the lava tunnel"/><figcaption><span class="pp-t">Explore</span><span class="pp-s">Inside the lava tunnel</span></figcaption></figure>
         </div>
       </div>
       <div class="lineupframe">

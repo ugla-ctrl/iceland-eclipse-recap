@@ -237,6 +237,15 @@
     .pm-name{font-size:1.15rem}
     .pm-sub,.pm-meta{font-size:.5rem;letter-spacing:.12em}
   }
+  /* portal: the lockup plus three phases is a tall column, so tighten it on
+     shorter windows where the last phase was running over the footer */
+  .portalslide .portalmark{margin-bottom:clamp(.5rem,1.2vh,1rem);padding-bottom:clamp(.45rem,1vh,.8rem)}
+  .portalslide .pm-globe{width:clamp(40px,4.8vw,66px)}
+  .portalslide h2{margin-bottom:.1em}
+  .portalslide .content>p{margin-top:.65em;line-height:1.55}
+  .portalslide .legs{gap:clamp(.35rem,.8vh,.7rem);margin-top:.6em!important}
+  .portalslide .leg{padding-top:.5em}
+  .portalslide .leg .lg-note{margin-top:.3em;line-height:1.42;font-size:clamp(.46rem,.76vw,.68rem)}
   /* portal: Mitch asked to see more of the background on this slide */
   .gslide.underbg.portalslide .softphoto img{opacity:.86}
   .gslide.underbg.portalslide .softphoto::after{background:linear-gradient(112deg,rgba(9,9,11,.72) 0%,rgba(9,9,11,.5) 42%,rgba(9,9,11,.2) 72%,rgba(9,9,11,.34) 100%)}

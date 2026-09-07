@@ -270,3 +270,11 @@ silently dropped Polaris and Sacred Fire, two of the three busiest venues on sit
 Fixed: the By the Numbers tile now reads 6, and The Music's body names all six. The Music's
 headline lost its stage count entirely, becoming "Five Nights, 287 Artists", so the number is
 not asserted three times in three slides. Nothing else in the deck states a stage count.
+
+## Audio credit (2026-09-08)
+
+`experiences-ambient.m4a` is a 48-second excerpt of **"November" by jeff carter**, released under
+**CC0 1.0 Universal**, a public domain dedication, from the Internet Archive
+(archive.org/details/November_849). CC0 waives all rights, so no attribution is required and the
+track can be used commercially. The excerpt is faded in and out and normalised to about -24 dB so
+it sits under the slide rather than over it. Checked for vocals before use: it is instrumental.

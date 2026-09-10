@@ -12,6 +12,34 @@ the strength of his video note about the second page, and on 6 Sep he answered t
 "By the numbers looks good, just needs to go in between Grounds and Community". The deck and the
 Content Editor sheet both follow his sequence. "Move" lines under each slide are that reorder.
 
+## 2026-09-10 · Reviewer pass, applied at Lee's instruction
+
+Lee brought in a four-item review of the deck and unlocked what was needed to apply all of it.
+The deck is now **18 slides**, not 19. Every per-slide entry below still describes the right
+content, but the numbers in the headings are one lower from Our Community onwards.
+
+1. **Lead with the result.** Slide 2 now opens "4,200 people. 75 countries. One shared totality."
+   with 250 artists & speakers and 300 children as supporting tiles. Mitch's definition sentence
+   is kept, demoted to a sub-line under the headline. **By the Numbers is retired as a slide**;
+   its Eclipse Seeker paragraph folded into Our Community. *This reverses his 6 Sep thread
+   instruction to keep By the Numbers between Grounds and Community. Lee was shown that conflict
+   and called it anyway. Raise it with him.*
+2. **One clear action at the end.** The closer keeps the thank-you and Mitch's contact and adds
+   "Partner with IMXP's next gathering" over a teal CTA button, "Discuss 2027 partnerships",
+   linking to mitch@imxp.org. Audience chosen by Lee: prospective partners.
+3. **The Ceremonies and The Portal cut back.** Shorter intros, shorter note lines, the six
+   Eclipse Ceremony artist names dropped, and the compression overrides that had been added to
+   stop these two overflowing are relaxed, so the type is larger and the rows have room.
+4. **Testimonials.** Six quotes down to three, follower counts removed, attributed
+   "@handle · Attendee". The generic ones ("Amazing work", "Such a cool experience") are gone.
+   **Still open:** the reviewer asked for name plus role or attendee context. We hold only
+   Instagram handles, so nothing more specific can be added without sourcing new quotes.
+
+Two notes under slide 6 below are stale, not regressions: Mitch corrected 287 artists to 250 on
+6 Sep, and removed the days-under-the-glacier tile himself in his 22:16 notes.
+
+---
+
 Legend: **Done** is live now. **To do** is decided and unbuilt. **Needs a call** is waiting on
 Lee or Mitch. **LOCKED** means Lee has approved the slide's **content** and no change is to be
 made to it, including changes Mitch asks for, until she says it is unlocked.

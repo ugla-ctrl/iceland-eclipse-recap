@@ -240,23 +240,23 @@
   /* ceremonies: a single pull quote under the three rows */
   .cerquote cite{display:block;margin-top:.35em;font-style:normal;font-family:var(--label);font-weight:700;
     font-size:clamp(.4rem,.66vw,.56rem);letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
-  .cerquote{margin:clamp(.4rem,.9vh,.7rem) 0 0;padding-left:.85em;border-left:2px solid var(--teal);
-    font-style:italic;font-size:clamp(.5rem,.82vw,.72rem);line-height:1.4;color:var(--ink);max-width:50ch}
-  /* the quote adds a block, so tighten this slide the way The Portal was tightened */
-  .ceremonyslide .legs{gap:clamp(.3rem,.7vh,.6rem)!important;margin-top:.55em!important}
-  .ceremonyslide .leg{padding-top:.42em}
-  .ceremonyslide .leg .lg-note{margin-top:.25em;line-height:1.36;font-size:clamp(.46rem,.76vw,.68rem)}
-  .ceremonyslide .content>p{max-width:56ch}
-  .ceremonyslide .content>p{margin-top:.6em;line-height:1.5}
+  .cerquote{margin:clamp(.9rem,2vh,1.5rem) 0 0;padding-left:1.05em;border-left:3px solid var(--teal);
+    font-style:italic;font-size:clamp(.66rem,1.08vw,.96rem);line-height:1.5;color:var(--ink);max-width:48ch}
+  .cerquote cite{font-size:clamp(.46rem,.74vw,.62rem)}
+  /* trimmed to three concise highlights, so the slide can breathe */
+  .ceremonyslide .legs{gap:clamp(.7rem,1.5vh,1.2rem)!important;margin-top:1em!important}
+  .ceremonyslide .leg{padding-top:.7em}
+  .ceremonyslide .leg .lg-note{margin-top:.4em;line-height:1.5}
+  .ceremonyslide .content>p{max-width:52ch;margin-top:.75em;line-height:1.6;font-size:clamp(.62rem,1.02vw,.92rem)}
   /* portal: the lockup plus three phases is a tall column, so tighten it on
      shorter windows where the last phase was running over the footer */
   .portalslide .portalmark{margin-bottom:clamp(.5rem,1.2vh,1rem);padding-bottom:clamp(.45rem,1vh,.8rem)}
   .portalslide .pm-globe{width:clamp(40px,4.8vw,66px)}
   .portalslide h2{margin-bottom:.1em}
-  .portalslide .content>p{margin-top:.65em;line-height:1.55}
-  .portalslide .legs{gap:clamp(.35rem,.8vh,.7rem);margin-top:.6em!important}
-  .portalslide .leg{padding-top:.5em}
-  .portalslide .leg .lg-note{margin-top:.3em;line-height:1.42;font-size:clamp(.46rem,.76vw,.68rem)}
+  .portalslide .content>p{margin-top:.8em;line-height:1.6;font-size:clamp(.62rem,1.02vw,.92rem)}
+  .portalslide .legs{gap:clamp(.7rem,1.5vh,1.2rem);margin-top:1em!important}
+  .portalslide .leg{padding-top:.7em}
+  .portalslide .leg .lg-note{margin-top:.4em;line-height:1.5}
   /* portal: Mitch asked to see more of the background on this slide */
   .gslide.underbg.portalslide .softphoto img{opacity:.86}
   .gslide.underbg.portalslide .softphoto::after{background:linear-gradient(112deg,rgba(9,9,11,.72) 0%,rgba(9,9,11,.5) 42%,rgba(9,9,11,.2) 72%,rgba(9,9,11,.34) 100%)}
@@ -358,6 +358,14 @@
   .statementslide .pad{justify-content:center}
   .statement{max-width:19ch;font-size:clamp(1.5rem,4.4vw,3.6rem);line-height:1.06;margin:0}
   .statement em{font-style:normal;color:var(--orange)}
+  .statement-sub{max-width:46ch;margin:clamp(.9em,2.2vh,1.4em) 0 0;font-size:clamp(.62rem,1.02vw,.92rem);color:var(--body);line-height:1.5}
+  .statement-tiles{margin-top:clamp(1.2em,2.8vh,1.9em);max-width:min(46ch,52%);grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.6rem)}
+  .cta{margin-top:clamp(1.5em,3.2vh,2.4em);display:flex;flex-direction:column;align-items:center;gap:clamp(.7em,1.6vh,1.1em)}
+  .cta-line{font-family:var(--display);font-size:clamp(.95rem,1.9vw,1.6rem);color:var(--ink);line-height:1.15;text-align:center}
+  .cta-btn{display:inline-block;font-family:var(--label);font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+    font-size:clamp(.56rem,.88vw,.76rem);color:#09090b;background:var(--teal);border-radius:999px;
+    padding:.95em 2.1em;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+  .cta-btn:hover,.cta-btn:focus-visible{background:#fff;transform:translateY(-2px);box-shadow:0 10px 30px rgba(13,252,211,.28)}
   .gslide.underbg.statementslide .softphoto video{opacity:.9;filter:brightness(1.05)}
   .gslide.underbg.statementslide .softphoto::after{background:linear-gradient(102deg,rgba(9,9,11,0.8) 0%,rgba(9,9,11,0.56) 34%,rgba(9,9,11,0.14) 72%,rgba(9,9,11,0.34) 100%)}
   .gslide.underbg.ceremonyslide .softphoto video{opacity:1;filter:brightness(1.28) saturate(1.06) blur(4px);transform:scale(1.04)}
@@ -394,6 +402,11 @@
   /* testimonials slide */
   .voices.vgrid{grid-template-columns:repeat(6,1fr);gap:clamp(1.1rem,2.6vw,2.2rem);margin-top:clamp(.9em,2.2vh,1.4em)}
   .voices.vgrid .vq{grid-column:span 2}
+  .voices.vgrid3{grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3.2vw,2.8rem)}
+  .voices.vgrid3 .vq{grid-column:auto;border-left-width:3px;padding-left:1.05em}
+  .voices.vgrid3 .vq p{font-size:clamp(.95rem,1.62vw,1.44rem);line-height:1.42}
+  .voices.vgrid3 .vq span{font-size:clamp(.56rem,.9vw,.76rem)}
+  @media (max-width:1024px) and (orientation:portrait){ .voices.vgrid3{grid-template-columns:1fr;gap:1.4rem} }
   .voices.vgrid .vq p{font-size:clamp(.82rem,1.35vw,1.2rem);line-height:1.45}
   .voices.vgrid .vq span{font-size:clamp(.54rem,.86vw,.72rem);margin-top:.5em}
   .voiceslide .softphoto img,.voiceslide .softphoto video{opacity:.72}
@@ -497,6 +510,10 @@
     .cover-sub{font-size:.56rem;letter-spacing:.14em}
     .cover-tag{font-size:.8rem}
     .cover-note{font-size:.82rem}
+    .statement-sub{font-size:.8rem;max-width:none}
+    .statement-tiles{max-width:none;gap:1.2rem}
+    .cta-line{font-size:1.05rem}
+    .cta-btn{font-size:.68rem;padding:1em 2em}
     h2{font-size:1.3rem}
     .h2sub{font-size:.62rem}
     p{font-size:.9rem;max-width:none}
@@ -533,6 +550,8 @@
     .gslide.underbg .softphoto::after,.gslide.underbg.numbg .softphoto::after,.gslide.trilogy .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,0.68) 0%,rgba(9,9,11,0.76) 55%,rgba(9,9,11,0.7) 100%)}
     .gslide.underbg.auroraslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,0.6) 0%,rgba(9,9,11,0.52) 45%,rgba(9,9,11,0.62) 100%)}
     .gslide.underbg.ceremonyslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,0.64) 0%,rgba(9,9,11,0.56) 45%,rgba(9,9,11,0.64) 100%)}
+    /* portrait puts the bright dome under the stat labels, so scrim top-to-bottom instead of left-to-right */
+    .gslide.underbg.statementslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,0.5) 0%,rgba(9,9,11,0.62) 42%,rgba(9,9,11,0.8) 100%)}
     .gslide .eyebrow,.gslide h2,.gslide p,.gslide .small,.gslide .tile .n,.gslide .tile .l,.gslide .quote,.gslide .quote-src{text-shadow:0 1px 10px rgba(0,0,0,.92)}
   }
 </style>
@@ -550,11 +569,16 @@
     </div>
   </section>
 
-  <!-- 2 · WHAT IT WAS -->
+  <!-- 2 · THE RESULT -->
   <section class="slide gslide underbg statementslide nobrand">
     <div class="softphoto"><video class="bgvid" src="assets/drone-site.mp4" data-poster="assets/moment-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad">
-      <h2 class="statement">Iceland Eclipse was a five-day destination festival with visionaries &amp; artists at the intersection of <em>music, space and spirit.</em></h2>
+      <h2 class="statement">4,200 people. 75 countries. <em>One shared totality.</em></h2>
+      <p class="statement-sub">Iceland Eclipse was a five-day destination festival with visionaries &amp; artists at the intersection of music, space and spirit.</p>
+      <div class="tiles statement-tiles">
+        <div class="tile"><div class="n">250</div><div class="l">Artists &amp; speakers</div></div>
+        <div class="tile"><div class="n">300</div><div class="l">Children joined their families</div></div>
+      </div>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>02</span></div>
   </section>
@@ -610,34 +634,14 @@
     <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>05</span></div>
   </section>
 
-  <!-- 6 · BY THE NUMBERS -->
-  <section class="slide gslide underbg numbg">
-    <div class="softphoto"><video class="bgvid mutedbg" src="assets/numbers-sign.mp4" data-poster="assets/numbers-sign.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
-    <div class="pad"><div class="split" style="grid-template-columns:.75fr 1.25fr">
-      <div class="accent"><img data-src="assets/numbers.jpg" alt="" loading="lazy" decoding="async"/></div>
-      <div class="content">
-        <div class="eyebrow">By the Numbers</div>
-        <h2>Thank you, <em>Eclipse Seekers.</em></h2>
-        <p>The Eclipse Seeker community came from all around the world to gather at the edge of the Earth. It was a group that included astronauts, scientists, artists, healers and many others exploring the borders of our shared reality.</p>
-        <div class="tiles" style="margin-top:1.2em">
-          <div class="tile"><div class="n" data-count>4,200</div><div class="l">Participants</div></div>
-          <div class="tile"><div class="n">75</div><div class="l">Countries represented</div></div>
-          <div class="tile"><div class="n">250</div><div class="l">Artists &amp; speakers</div></div>
-          <div class="tile"><div class="n">300</div><div class="l">Children joined their families</div></div>
-        </div>
-      </div>
-    </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>06</span></div>
-  </section>
-
-  <!-- 7 · OUR COMMUNITY -->
+  <!-- 6 · OUR COMMUNITY -->
   <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img data-src="assets/community-astronauts.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">Our Community</div>
         <h2>Influential. Educated. <em>Global.</em></h2>
-        <p>Renowned entrepreneurs, scientists, activists, astronauts, artists and musicians made up the collective, with a cumulative reach in the hundreds of millions.</p>
+        <p>The Eclipse Seeker community came from all around the world to gather at the edge of the Earth: renowned entrepreneurs, scientists, activists, astronauts, artists and musicians, with a cumulative reach in the hundreds of millions.</p>
         <div class="tiles t3" style="margin-top:1.2em">
           <div class="tile"><div class="n" data-count>35</div><div class="l">Average age</div></div>
           <div class="tile"><div class="n" data-count>75%</div><div class="l">Hold a higher-education degree</div></div>
@@ -646,10 +650,10 @@
       </div>
       <div class="accent commcollage"><img data-src="assets/community.jpg" alt="Iceland Eclipse community: Dr. Sian Proctor with astronaut Huie, a performer before the eclipse ring, and Alex and Allyson Grey on stage" loading="lazy" decoding="async"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>07</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>06</span></div>
   </section>
 
-  <!-- 8 · PROGRAMMING -->
+  <!-- 7 · PROGRAMMING -->
   <section class="slide gslide underbg programming nobrand">
     <div class="softphoto"><video class="bgvid" src="assets/numbers-bg.mp4" data-poster="assets/numbers-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.04fr .96fr;gap:4.5%">
@@ -667,10 +671,10 @@
         <img data-src="assets/lineup-poster.jpg" alt="The official Iceland Eclipse 2026 lineup poster" loading="lazy" decoding="async"/>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>08</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>07</span></div>
   </section>
 
-  <!-- 9 · THE AURORA -->
+  <!-- 8 · THE AURORA -->
   <section class="slide gslide underbg auroraslide brandleft">
     <div class="softphoto"><img data-src="assets/aurora-ab-stage.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.05fr .95fr;gap:5%">
@@ -685,10 +689,10 @@
         <figcaption>Aurora borealis over the site &middot; 14 August</figcaption>
       </figure>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>09</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>08</span></div>
   </section>
 
-  <!-- 10 · IN THE PRESS -->
+  <!-- 9 · IN THE PRESS -->
   <section class="slide gslide underbg press">
     <div class="softphoto"><img data-src="assets/press-mountain.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad presspad">
@@ -718,10 +722,10 @@
         <figure class="pcard"><img data-src="assets/press-dorothy.jpg" alt="Totality captured from the stratosphere" loading="lazy" decoding="async"/><figcaption>From the stratosphere</figcaption></figure>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>10</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>09</span></div>
   </section>
 
-  <!-- 11 · PARTNERS -->
+  <!-- 10 · PARTNERS -->
   <section class="slide gslide underbg partnerslide brandleft">
     <div class="softphoto"><img data-src="assets/partners-build.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split">
@@ -759,10 +763,10 @@
       </ul>
     </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>11</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>10</span></div>
   </section>
 
-  <!-- 12 · DIGITAL REACH -->
+  <!-- 11 · DIGITAL REACH -->
   <section class="slide gslide underbg reachslide">
     <div class="softphoto"><img data-src="assets/reach-crowd-screen.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad">
@@ -775,48 +779,45 @@
         <div class="tile"><div class="n" data-count>44k+</div><div class="l">Instagram audience</div></div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>12</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>11</span></div>
   </section>
 
-  <!-- 13 · TESTIMONIALS -->
+  <!-- 12 · TESTIMONIALS -->
   <section class="slide gslide underbg voiceslide">
     <div class="softphoto"><video class="bgvid mutedbg" src="assets/whatsnext-bg.mp4" data-poster="assets/whatsnext-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad">
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
-      <div class="voices vgrid">
-        <div class="vq"><p>"Many thanks again for making this extraordinary experience possible."</p><span>@tinabrummer_balance &middot; 1.9k</span></div>
-        <div class="vq"><p>"A fantastic group of future makers."</p><span>@cosmobiologist &middot; 6.1k</span></div>
-        <div class="vq"><p>"I love that you captured the beautiful moment we were all having."</p><span>@hippieonahiway &middot; 1.2k</span></div>
-        <div class="vq"><p>"Such a cool experience."</p><span>@harley_xcx &middot; 4.1k</span></div>
-        <div class="vq"><p>"Amazing work."</p><span>@ascensionacres &middot; 12.1k</span></div>
-        <div class="vq"><p>"This was so epic. What a way to open a festival."</p><span>@naturalsymphonylive &middot; 9k</span></div>
+      <div class="voices vgrid vgrid3">
+        <div class="vq"><p>"This was so epic. What a way to open a festival."</p><span>@naturalsymphonylive &middot; Attendee</span></div>
+        <div class="vq"><p>"I love that you captured the beautiful moment we were all having."</p><span>@hippieonahiway &middot; Attendee</span></div>
+        <div class="vq"><p>"A fantastic group of future makers."</p><span>@cosmobiologist &middot; Attendee</span></div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>13</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>12</span></div>
   </section>
 
-  <!-- 14 · THE CEREMONIES -->
+  <!-- 13 · THE CEREMONIES -->
   <section class="slide gslide underbg brandleft ceremonyslide">
     <div class="softphoto"><video class="bgvid" src="assets/ceremony-live.mp4" data-poster="assets/tradition-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="pad"><div class="split">
       <div class="content">
         <div class="eyebrow">The Ceremonies</div>
         <h2>Holding the Energy of <em>the Land.</em></h2>
-        <p>The Ceremony Garden was the heart of the festival, curating daily ceremonies led by UNIFY.ORG, Icelandic Elders, and a collection of conscious musicians and artists. A place of refuge for festival goers to ground and deepen their connection to the sacred and each other.</p>
+        <p>The heart of the festival: a place of refuge to ground and deepen connection to the sacred, and to each other.</p>
         <div class="legs" style="grid-template-columns:1fr;gap:clamp(.7rem,1.4vw,1.05rem);margin-top:1.1em">
-          <div class="leg"><div class="lg-ph">Opening Ceremony</div><div class="lg-yr">Icelandic Elders &amp; AWAR&Euml; DJ Set</div><div class="lg-note">Icelandic music, opening prayer, Icelandic mythology and a ceremonial dance set.</div></div>
-          <div class="leg"><div class="lg-ph">Eclipse Ceremony</div><div class="lg-yr">Hosted by UNIFY.ORG</div><div class="lg-note">A musical meditation ceremony featuring Isis Indriya, Porangu&iacute;, Snow Raven, Ruby Chase, Emily Fletcher and Scarlett de la Torre, with a choir of 12 women and 12 drummers.</div></div>
-          <div class="leg"><div class="lg-ph">Daily Ceremonies</div><div class="lg-yr">Temple of the Bird Tribes, Howl of the Wolfpack, Way of the Dragon, Closing Ceremony</div><div class="lg-note">Daily ceremonies birthed through Icelandic mythology, weaving together ceremonial musicians from around the world.</div></div>
+          <div class="leg"><div class="lg-ph">Opening Ceremony</div><div class="lg-yr">Icelandic Elders &amp; AWAR&Euml; DJ Set</div><div class="lg-note">Opening prayer, Icelandic mythology, a ceremonial dance set.</div></div>
+          <div class="leg"><div class="lg-ph">Eclipse Ceremony</div><div class="lg-yr">Hosted by UNIFY.ORG</div><div class="lg-note">A musical meditation with a choir of 12 women and 12 drummers.</div></div>
+          <div class="leg"><div class="lg-ph">Daily Ceremonies</div><div class="lg-yr">Bird Tribes &middot; Wolfpack &middot; Way of the Dragon &middot; Closing</div><div class="lg-note">Birthed through Icelandic mythology, with ceremonial musicians from around the world.</div></div>
         </div>
         <blockquote class="cerquote">"We are so grateful for such a rich and deep experience&hellip; intimate and adventurous moments connecting to the land and our hearts."<cite>@heidrunmaria</cite></blockquote>
       </div>
       <div class="accent"><img data-src="assets/ceremony-crowd.jpg" alt="Ceremony beneath the glacier" loading="lazy" decoding="async"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>14</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>13</span></div>
   </section>
 
-  <!-- 15 · THE PORTAL -->
+  <!-- 14 · THE PORTAL -->
   <section class="slide gslide underbg portalslide brandleft">
     <div class="softphoto"><img data-src="assets/portal-dusk.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split">
@@ -834,24 +835,23 @@
           <div class="pm-type">
             <div class="pm-name">The Portal</div>
             <div class="pm-sub">An experiential analog for the interplanetary age</div>
-            <div class="pm-meta">Innovation residency &middot; Immersive retreat &middot; Pop-up village</div>
             <div class="pm-meta pm-dates"><span>19 July &ndash; 15 August 2026</span> &middot; Sn&aelig;fellsnes Peninsula</div>
           </div>
         </div>
         <h2>A Month <em>Before the Festival.</em></h2>
-        <p>Part innovation residency, part pop-up village, The Portal ran as an analog space mission. From 19 July to 15 August, around fifty artists, scientists and builders lived together at The Freezer in R&iacute;f and made the work that later appeared across the festival site.</p>
+        <p>Part innovation residency, part pop-up village, The Portal ran as an analog space mission. Around fifty artists, scientists and builders lived together at The Freezer in R&iacute;f and made the work that later appeared across the festival site.</p>
         <div class="legs" style="grid-template-columns:1fr;gap:clamp(.7rem,1.4vw,1.05rem);margin-top:1.1em">
-          <div class="leg"><div class="lg-ph">Phase One</div><div class="lg-yr">The Lab</div><div class="lg-note">A month of shared living and co-creation on the Sn&aelig;fellsnes peninsula.</div></div>
-          <div class="leg"><div class="lg-ph">Phase Two</div><div class="lg-yr">The Offering</div><div class="lg-note">Installations, performances and conversations woven into the five days.</div></div>
-          <div class="leg"><div class="lg-ph">Phase Three</div><div class="lg-yr">The Archive</div><div class="lg-note">The work digitised into a LifeShip time capsule and launched into space.</div></div>
+          <div class="leg"><div class="lg-ph">Phase One</div><div class="lg-yr">The Lab</div><div class="lg-note">A month of shared living and co-creation.</div></div>
+          <div class="leg"><div class="lg-ph">Phase Two</div><div class="lg-yr">The Offering</div><div class="lg-note">Installations and performances woven into the five days.</div></div>
+          <div class="leg"><div class="lg-ph">Phase Three</div><div class="lg-yr">The Archive</div><div class="lg-note">Digitised into a LifeShip time capsule, launched into space.</div></div>
         </div>
       </div>
       <div class="accent"><img data-src="assets/portal.jpg" alt="The Portal community gathered inside The Freezer in R&iacute;f" loading="lazy" decoding="async"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>15</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>14</span></div>
   </section>
 
-  <!-- 16 · SIDE QUESTS -->
+  <!-- 15 · SIDE QUESTS -->
   <section class="slide gslide underbg questslide">
     <div class="softphoto"><video class="bgvid mutedbg" src="assets/sidequests-bg.mp4" data-poster="assets/sidequests-bg.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <audio class="bgaud" src="assets/experiences-ambient.m4a" loop preload="none"></audio>
@@ -878,10 +878,10 @@
         </div>
       </div>
     </div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>16</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>15</span></div>
   </section>
 
-  <!-- 17 · THE ECLIPSE TRILOGY -->
+  <!-- 16 · THE ECLIPSE TRILOGY -->
   <section class="slide gslide underbg trilogy brandleft">
     <div class="softphoto"><img data-src="assets/trilogy-moon.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split" style="grid-template-columns:1.02fr .98fr;gap:4%">
@@ -951,10 +951,10 @@
 </svg>
       </div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>17</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>16</span></div>
   </section>
 
-  <!-- 18 · WHAT'S NEXT -->
+  <!-- 17 · WHAT'S NEXT -->
   <section class="slide gslide underbg brandleft">
     <div class="softphoto"><img data-src="assets/whatsnext.jpg" alt="" loading="lazy" decoding="async"/></div>
     <div class="pad"><div class="split">
@@ -966,16 +966,20 @@
       </div>
       <div class="accent commcollage flyercard"><img data-src="assets/midnight-sun-flyer.jpg" alt="Midnight Sun Festival, 9 to 11 July 2027, Reykjav&iacute;k" loading="lazy" decoding="async"/></div>
     </div></div>
-    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>18</span></div>
+    <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>17</span></div>
   </section>
 
-  <!-- 19 · THANK YOU + CONTACT -->
+  <!-- 18 · THANK YOU + CONTACT -->
   <section class="slide onphoto">
     <div class="coverbg" style="--o:.8"><img data-src="assets/thankyou.jpg" alt="" style="opacity:.8" loading="lazy" decoding="async"/></div>
     <div class="coverwrap">
       <div class="cover-mark closer-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse"/></div>
       <h1 class="word" style="font-size:clamp(1.4rem,4vw,3.2rem)">Thank <em>You</em></h1>
       <div class="cover-note">To the participants who made the dream real, to the people of Hellissandur and Sn&aelig;fellsb&aelig;r who welcomed us, to the volunteers and build crew, and to the glacier. For everything that played a role in parting the clouds when it mattered most.</div>
+      <div class="cta">
+        <div class="cta-line">Partner with IMXP&rsquo;s next gathering.</div>
+        <a class="cta-btn" href="mailto:mitch@imxp.org?subject=2027%20partnerships">Discuss 2027 partnerships</a>
+      </div>
       <div class="contacts" style="grid-template-columns:minmax(0,340px)">
         <div class="contact" style="text-align:center"><div class="nm">Mitch Morales</div><div class="rl">Founder · IMXP</div><div class="em">mitch@imxp.org</div></div>
       </div>

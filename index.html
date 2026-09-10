@@ -36,7 +36,7 @@
   html,body{height:100%;overflow:hidden;font-family:var(--body-font);-webkit-font-smoothing:antialiased;
     background:linear-gradient(170deg,#EEF1F6,#EDE7F0)}
   #frame{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:2.6vh 2vw}
-  #stage{position:relative;aspect-ratio:16/9;width:min(96vw,calc(94vh*16/9));
+  #stage{position:relative;container-type:size;aspect-ratio:16/9;width:min(96vw,calc(94vh*16/9));
     border-radius:12px;overflow:hidden;background:var(--bg);
     box-shadow:0 28px 70px rgba(20,22,34,.32),0 6px 20px rgba(20,22,34,.16)}
   .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease;background:var(--bg)}
@@ -421,6 +421,10 @@
   .lineupframe{display:flex;align-items:center;justify-content:center;min-width:0}
   .lineupframe img{max-width:100%;max-height:80vh;width:auto;height:auto;border-radius:12px;
     box-shadow:0 18px 50px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08);display:block}
+  /* grounds map: cap to the content box (not the viewport) so it never bleeds past the
+     footer, and lift it a touch so it sits within the deck margin */
+  .groundsslide .lineupframe{align-items:center}
+  .groundsslide .lineupframe img{max-height:78cqh;transform:translateY(-1.5%)}
   .presspad{justify-content:flex-start;gap:clamp(.6rem,1.8vh,1.2rem);padding:4% 6% 4.6%}
   .presspad h2{font-size:clamp(1.1rem,2.5vw,2.3rem)}
   .presshead{display:grid;grid-template-columns:1.02fr 1fr;gap:5%;align-items:start;flex:none}
@@ -789,7 +793,7 @@
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
       <div class="voices vgrid vgrid3">
-        <div class="vq"><p>"This was so epic. What a way to open a festival."</p><span>@naturalsymphonylive &middot; Attendee</span></div>
+        <div class="vq"><p>"Witnessing a spectacular cosmic event even on the cloudiest day&hellip; I couldn't have imagined a more solid, genuine crew of spirits to embrace this Icelandic Eclipse with."</p><span>@mikayla.mynx &middot; Attendee</span></div>
         <div class="vq"><p>"I have no words to describe what this trip meant to me. Thank you for creating this space for me to play and create art. I am filled with gratitude."</p><span>@jamescook88 &middot; Attendee</span></div>
         <div class="vq"><p>"It was so powerful experiencing your medicine. I felt something ancient in your song, and the invitation to sing along helped that ancient primal voice awaken within myself."</p><span>@zachariah_wild1 &middot; Attendee</span></div>
       </div>

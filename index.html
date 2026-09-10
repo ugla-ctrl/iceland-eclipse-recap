@@ -409,6 +409,33 @@
   @media (max-width:1024px) and (orientation:portrait){ .voices.vgrid3{grid-template-columns:1fr;gap:1.4rem} }
   .voices.vgrid .vq p{font-size:clamp(.82rem,1.35vw,1.2rem);line-height:1.45}
   .voices.vgrid .vq span{font-size:clamp(.54rem,.86vw,.72rem);margin-top:.5em}
+  /* testimonials: glass quote-cards (redesign) */
+  .voiceslide .voices.vgrid3{grid-template-columns:repeat(3,1fr);gap:clamp(1rem,1.9vw,1.8rem);align-items:stretch}
+  .voiceslide .vq{position:relative;display:flex;flex-direction:column;margin:0;padding:clamp(1.15rem,2vw,1.9rem) clamp(1.1rem,1.9vw,1.7rem) clamp(1rem,1.7vw,1.5rem);
+    border:1px solid var(--line);border-top:0;border-radius:16px;overflow:hidden;grid-column:auto;
+    background:linear-gradient(160deg,rgba(22,22,28,.60),rgba(12,12,16,.40));
+    -webkit-backdrop-filter:blur(12px) saturate(1.05);backdrop-filter:blur(12px) saturate(1.05);
+    box-shadow:0 20px 46px rgba(0,0,0,.42);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .voiceslide .vq::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal)}
+  .voiceslide .vq:nth-child(2)::before{background:var(--orange)}
+  .voiceslide .vq:nth-child(3)::before{background:var(--teal-deep)}
+  .voiceslide .vq::after{content:'\201C';position:absolute;top:clamp(.1rem,.4vw,.35rem);left:clamp(.55rem,1vw,.9rem);
+    font-family:var(--display);font-size:clamp(3.2rem,6vw,5.4rem);line-height:1;color:var(--teal);opacity:.16;pointer-events:none}
+  .voiceslide .vq:nth-child(2)::after{color:var(--orange)}
+  .voiceslide .vq:nth-child(3)::after{color:var(--teal-deep)}
+  .voiceslide .vq:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.2);box-shadow:0 26px 60px rgba(0,0,0,.5)}
+  .voiceslide .vq blockquote{margin:clamp(.9rem,1.7vh,1.5rem) 0 0;padding:0;border:0;position:relative;z-index:1;
+    font-style:italic;color:var(--ink);font-size:clamp(.86rem,1.42vw,1.24rem);line-height:1.48;flex:1}
+  .voiceslide .vq figcaption{margin-top:clamp(1rem,2vh,1.5rem);padding-top:clamp(.7rem,1.4vh,1.05rem);
+    border-top:1px solid rgba(255,255,255,.10);display:flex;align-items:baseline;gap:.6em;flex-wrap:wrap}
+  .voiceslide .vq .vq-h{font-family:var(--label);font-weight:700;letter-spacing:.03em;
+    font-size:clamp(.6rem,1vw,.84rem);color:var(--ink);display:inline-flex;align-items:center;gap:.5em}
+  .voiceslide .vq .vq-h::before{content:'';width:.5em;height:.5em;border-radius:50%;background:var(--teal);flex:none;box-shadow:0 0 10px rgba(13,252,211,.6)}
+  .voiceslide .vq:nth-child(2) .vq-h::before{background:var(--orange);box-shadow:0 0 10px rgba(238,119,23,.6)}
+  .voiceslide .vq:nth-child(3) .vq-h::before{background:var(--teal-deep);box-shadow:0 0 10px rgba(11,217,180,.6)}
+  .voiceslide .vq .vq-r{font-family:var(--label);font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    font-size:clamp(.42rem,.68vw,.56rem);color:var(--dim)}
+  @media (max-width:1024px) and (orientation:portrait){ .voiceslide .voices.vgrid3{grid-template-columns:1fr;gap:1.1rem} }
   .voiceslide .softphoto img,.voiceslide .softphoto video{opacity:.72}
   .gslide.underbg.voiceslide .softphoto video{opacity:.9;filter:brightness(1.02) saturate(.98) blur(6px);transform:scale(1.06)}
   .gslide.underbg.voiceslide .softphoto::after{background:linear-gradient(180deg,rgba(9,9,11,.56) 0%,rgba(9,9,11,.46) 45%,rgba(9,9,11,.58) 100%)}
@@ -793,9 +820,9 @@
       <div class="eyebrow">Testimonials</div>
       <h2 style="max-width:22ch">What They Carried Home.</h2>
       <div class="voices vgrid vgrid3">
-        <div class="vq"><p>"Witnessing a spectacular cosmic event even on the cloudiest day&hellip; I couldn't have imagined a more solid, genuine crew of spirits to embrace this Icelandic Eclipse with."</p><span>@mikayla.mynx &middot; Attendee</span></div>
-        <div class="vq"><p>"I have no words to describe what this trip meant to me. Thank you for creating this space for me to play and create art. I am filled with gratitude."</p><span>@jamescook88 &middot; Attendee</span></div>
-        <div class="vq"><p>"It was so powerful experiencing your medicine. I felt something ancient in your song, and the invitation to sing along helped that ancient primal voice awaken within myself."</p><span>@zachariah_wild1 &middot; Attendee</span></div>
+        <figure class="vq"><blockquote>Witnessing a spectacular cosmic event even on the cloudiest day&hellip; I couldn't have imagined a more solid, genuine crew of spirits to embrace this Icelandic Eclipse with.</blockquote><figcaption><span class="vq-h">@mikayla.mynx</span><span class="vq-r">Attendee</span></figcaption></figure>
+        <figure class="vq"><blockquote>I have no words to describe what this trip meant to me. Thank you for creating this space for me to play and create art. I am filled with gratitude.</blockquote><figcaption><span class="vq-h">@jamescook88</span><span class="vq-r">Attendee</span></figcaption></figure>
+        <figure class="vq"><blockquote>It was so powerful experiencing your medicine. I felt something ancient in your song, and the invitation to sing along helped that ancient primal voice awaken within myself.</blockquote><figcaption><span class="vq-h">@zachariah_wild1</span><span class="vq-r">Attendee</span></figcaption></figure>
       </div>
     </div>
     <div class="sfoot"><span>Iceland Eclipse 2026 &middot; Recap</span><span>12</span></div>

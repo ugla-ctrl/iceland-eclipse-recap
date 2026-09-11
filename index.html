@@ -102,13 +102,14 @@
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,0.1) 0%,rgba(9,9,11,0.52) 68%,rgba(9,9,11,0.78) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
   .coverslide .coverbg img{opacity:.8}
-  .coverslide .coverbg::after{background:radial-gradient(62% 72% at 50% 52%,rgba(9,9,11,0.58) 0%,rgba(9,9,11,0.36) 60%,rgba(9,9,11,0.5) 100%)}
-  .coverslide .cover-tag,.coverslide .cover-stats{text-shadow:0 2px 14px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.6)}
+  .coverslide .coverbg::after{background:linear-gradient(180deg,rgba(9,9,11,0.42) 0%,rgba(9,9,11,0.3) 30%,rgba(9,9,11,0.62) 68%,rgba(9,9,11,0.82) 100%)}
+  .coverslide .cover-tag{text-shadow:0 2px 12px rgba(0,0,0,.8)}
+  .coverslide .cover-punch{text-shadow:0 3px 22px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.55)}
   .coverslide .cover-imxp img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.75))}
   /* cover logo marks */
   .cover-mark{margin-bottom:0}
-  .cover-mark img{width:clamp(210px,42vh,404px);height:auto;display:block;filter:drop-shadow(0 0 40px rgba(0,0,0,.45))}
-  .cover-imxp{margin-top:1.5em}
+  .cover-mark img{width:clamp(140px,26vh,252px);height:auto;display:block;filter:drop-shadow(0 0 40px rgba(0,0,0,.45))}
+  .cover-imxp{margin-top:clamp(1.2em,3vh,2em)}
   .cover-imxp img{width:clamp(84px,9vw,124px);height:auto;display:block;opacity:.92;filter:drop-shadow(0 0 14px rgba(0,0,0,.5))}
   @media (prefers-reduced-motion: reduce){
     .slide{transition:none}
@@ -116,13 +117,12 @@
   }
   .cover-sub{margin-top:1.7em;font-family:var(--label);font-weight:600;letter-spacing:.18em;text-transform:uppercase;
     font-size:clamp(.52rem,.92vw,.78rem);line-height:2.1;color:var(--body)}
-  .cover-tag{margin-top:1.1em;font-family:var(--label);font-weight:700;font-size:clamp(1.35rem,3.4vw,2.7rem);
-    letter-spacing:.34em;text-transform:uppercase;color:var(--orange)}
-  .cover-stats{margin-top:1.2em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-    gap:.4em .85em;font-family:var(--label);font-weight:700;letter-spacing:.15em;text-transform:uppercase;
-    font-size:clamp(.6rem,1.15vw,.95rem);color:#fff}
-  .cover-stats b{color:var(--orange);font-weight:800}
-  .cover-stats .dot{color:#fff;opacity:.4}
+  .cover-tag{margin-top:clamp(.9em,2.2vh,1.4em);font-family:var(--label);font-weight:700;font-size:clamp(.56rem,.98vw,.82rem);
+    letter-spacing:.42em;text-transform:uppercase;color:var(--body)}
+  .cover-punch{margin-top:clamp(.5em,1.4vh,.9em);display:flex;flex-direction:column;align-items:center;
+    font-family:var(--display);text-transform:uppercase;letter-spacing:-.01em;line-height:1.04;
+    font-size:clamp(1.45rem,4.1vw,3.3rem);color:var(--ink)}
+  .cover-punch .hit{color:var(--orange)}
   .cover-note{margin-top:1.5em;font-weight:400;font-size:clamp(.68rem,1.1vw,.92rem);line-height:1.72;
     color:var(--body);max-width:58ch}
   /* soft photo backdrop (section slides) */
@@ -521,9 +521,8 @@
     .coverwrap{padding:10% 7%}
     h1.word{font-size:clamp(1.5rem,7.4vw,3rem)}
     .cover-sub{font-size:.56rem;letter-spacing:.14em}
-    .cover-tag{font-size:.8rem}
-    .cover-stats{flex-direction:column;gap:.3em;font-size:.66rem;letter-spacing:.12em}
-    .cover-stats .dot{display:none}
+    .cover-tag{font-size:.58rem;letter-spacing:.32em}
+    .cover-punch{font-size:clamp(.98rem,5.3vw,1.55rem);line-height:1.12}
     .cover-note{font-size:.82rem}
     .cta-line{font-size:1.05rem}
     .cta-btn{font-size:.68rem;padding:1em 2em}
@@ -578,12 +577,10 @@
     <div class="coverwrap">
       <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse · 11-15 August 2026"/></div>
       <div class="cover-tag">Event Recap</div>
-      <div class="cover-stats">
-        <span><b>4,200</b> people</span>
-        <span class="dot">&middot;</span>
-        <span><b>75</b> countries</span>
-        <span class="dot">&middot;</span>
-        <span>one shared <b>totality</b></span>
+      <div class="cover-punch">
+        <span>4,200 people.</span>
+        <span>75 countries.</span>
+        <span class="hit">One shared totality.</span>
       </div>
       <div class="cover-imxp"><img src="assets/imxp-logo.png" alt="IMXP" loading="lazy" decoding="async"/></div>
     </div>

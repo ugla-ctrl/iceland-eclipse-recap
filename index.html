@@ -90,6 +90,8 @@
     /* the closer photo is bright behind the text on a phone: sink it further */
     .slide.onphoto .coverbg img{opacity:.34!important}
     .slide.onphoto .coverbg::after{background:linear-gradient(rgba(9,9,11,0.72),rgba(9,9,11,0.52) 42%,rgba(9,9,11,0.8))}
+    .slide.onphoto.coverslide .coverbg img{opacity:.72!important;object-position:40% 50%}
+    .slide.onphoto.coverslide .coverbg::after{background:linear-gradient(rgba(9,9,11,0.5),rgba(9,9,11,0.4) 42%,rgba(9,9,11,0.62))}
     .cover-mark.closer-mark img{width:clamp(150px,46vw,196px)}
     .cover-mark.closer-mark{margin-top:0;margin-bottom:1.2em}
   }
@@ -99,6 +101,10 @@
   .coverbg::after{content:'';position:absolute;inset:0;
     background:radial-gradient(108% 108% at 50% 42%,rgba(9,9,11,0.1) 0%,rgba(9,9,11,0.52) 68%,rgba(9,9,11,0.78) 100%)}
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
+  .coverslide .coverbg img{opacity:.8}
+  .coverslide .coverbg::after{background:radial-gradient(62% 72% at 50% 52%,rgba(9,9,11,0.58) 0%,rgba(9,9,11,0.36) 60%,rgba(9,9,11,0.5) 100%)}
+  .coverslide .cover-tag,.coverslide .cover-stats{text-shadow:0 2px 14px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.6)}
+  .coverslide .cover-imxp img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.75))}
   /* cover logo marks */
   .cover-mark{margin-bottom:0}
   .cover-mark img{width:clamp(210px,42vh,404px);height:auto;display:block;filter:drop-shadow(0 0 40px rgba(0,0,0,.45))}
@@ -567,7 +573,7 @@
 <div id="frame"><div id="stage">
 
   <!-- 1 · COVER -->
-  <section class="slide active onphoto">
+  <section class="slide active onphoto coverslide">
     <div class="coverbg"><img src="assets/cover.jpg" alt=""/></div>
     <div class="coverwrap">
       <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse · 11-15 August 2026"/></div>
@@ -843,7 +849,7 @@
         </div>
         <blockquote class="cerquote">"We are so grateful for such a rich and deep experience&hellip; intimate and adventurous moments connecting to the land and our hearts."<cite>@heidrunmaria</cite></blockquote>
       </div>
-      <div class="accent"><img data-src="assets/ceremony-crowd.jpg" alt="Ceremony beneath the glacier" loading="lazy" decoding="async"/></div>
+      <div class="accent"><img data-src="assets/ceremony-aerial.jpg" alt="Aerial view of the ceremony crowd gathered around the Ceremony Garden tent" loading="lazy" decoding="async"/></div>
     </div></div>
     <div class="sfoot"><span>Iceland Eclipse 2026 · Recap</span><span>14</span></div>
   </section>

@@ -106,8 +106,11 @@
   /* cover logo marks */
   .cover-mark{margin-bottom:0}
   .cover-mark img{width:clamp(140px,26vh,252px);height:auto;display:block;filter:drop-shadow(0 0 40px rgba(0,0,0,.45))}
-  .cover-imxp{margin-top:clamp(1.2em,3vh,2em)}
+  .cover-imxp{margin-top:clamp(2.4em,6vh,4em);display:flex;flex-direction:column;align-items:center}
+  .cover-imxp-by{font-family:var(--label);font-weight:600;font-size:clamp(.44rem,.72vw,.62rem);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.55em;text-shadow:0 1px 6px rgba(0,0,0,.85)}
   .cover-imxp img{width:clamp(84px,9vw,124px);height:auto;display:block;opacity:.92;filter:drop-shadow(0 0 14px rgba(0,0,0,.5))}
+  .imxp-sub{position:absolute;bottom:3.6%;left:50%;transform:translateX(-50%);z-index:5;opacity:.28;pointer-events:none;line-height:0}
+  .imxp-sub img{height:clamp(9px,1.3vh,17px);width:auto;display:block;filter:drop-shadow(0 1px 4px rgba(0,0,0,.55))}
   @media (prefers-reduced-motion: reduce){
     .slide{transition:none}
     .slide.active .accent img{animation:none}
@@ -582,7 +585,7 @@
         <div class="tile"><div class="n">75</div><div class="l">Countries</div></div>
         <div class="tile"><div class="n">1</div><div class="l">Shared totality</div></div>
       </div>
-      <div class="cover-imxp"><img src="assets/imxp-logo.png" alt="IMXP" loading="lazy" decoding="async"/></div>
+      <div class="cover-imxp"><div class="cover-imxp-by">Powered by</div><img src="assets/imxp-logo.png" alt="IMXP" loading="lazy" decoding="async"/></div>
     </div>
   </section>
 
@@ -1113,6 +1116,13 @@
     if(Math.abs(e.deltaY)>30||Math.abs(e.deltaX)>30){wl=t;go(i+((e.deltaY+e.deltaX)>0?1:-1));}},{passive:true});
   go(0);
 
+  // subtle IMXP logo on all interior gslides
+  document.querySelectorAll('.gslide').forEach(s=>{
+    const d=document.createElement('div');
+    d.className='imxp-sub';
+    d.innerHTML='<img src="assets/imxp-logo.png" alt="IMXP"/>';
+    s.appendChild(d);
+  });
 </script>
 </body>
 </html>

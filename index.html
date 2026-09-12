@@ -101,6 +101,7 @@
   .coverwrap{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%}
   .coverslide .cover-tag{text-shadow:0 2px 12px rgba(0,0,0,.8)}
   .coverslide .cover-punch{text-shadow:0 3px 22px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.55)}
+  .coverslide .tile .n,.coverslide .tile .l{text-shadow:0 2px 18px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.55)}
   .coverslide .cover-imxp img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.75))}
   /* cover logo marks */
   .cover-mark{margin-bottom:0}
@@ -576,10 +577,10 @@
     <div class="coverwrap">
       <div class="cover-mark"><img src="assets/iceland-eclipse-logo.png" alt="Iceland Eclipse · 11-15 August 2026"/></div>
       <div class="cover-tag">Event Recap</div>
-      <div class="cover-punch">
-        <span>4,200 people.</span>
-        <span>75 countries.</span>
-        <span class="hit">One shared totality.</span>
+      <div class="tiles t3" style="margin-top:1.4em;width:clamp(260px,78%,620px)">
+        <div class="tile"><div class="n">4,200</div><div class="l">People</div></div>
+        <div class="tile"><div class="n">75</div><div class="l">Countries</div></div>
+        <div class="tile"><div class="n">One</div><div class="l">Shared totality</div></div>
       </div>
       <div class="cover-imxp"><img src="assets/imxp-logo.png" alt="IMXP" loading="lazy" decoding="async"/></div>
     </div>

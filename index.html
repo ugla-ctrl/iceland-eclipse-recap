@@ -503,6 +503,16 @@
   #ctr button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(20,26,38,.24);cursor:pointer;padding:0;transition:.3s}
   #ctr button:hover{background:rgba(20,26,38,.48)}
   #ctr button.on{background:var(--teal);box-shadow:0 0 0 1.5px rgba(20,26,38,.28),0 0 10px rgba(13,252,211,.55);transform:scale(1.25)}
+  /* scroll hint arrow */
+  #scroll-hint{position:fixed;right:clamp(10px,2.4vw,24px);top:50%;transform:translateY(-50%);z-index:25;
+    color:rgba(255,255,255,.52);pointer-events:none;
+    animation:hintdrift 1.9s ease-in-out infinite;
+    transition:opacity .7s ease,visibility .7s ease}
+  #scroll-hint.gone{opacity:0;visibility:hidden}
+  @keyframes hintdrift{
+    0%,100%{transform:translateY(-50%) translateX(0)}
+    50%{transform:translateY(-50%) translateX(8px)}
+  }
   @media(max-width:760px){
     .split{grid-template-columns:1fr}.accent{display:none}
     .tiles,.pillars,.quests{grid-template-columns:repeat(2,1fr)}
@@ -1060,6 +1070,7 @@
     i=Math.max(0,Math.min(slides.length-1,n));
     slides.forEach((s,k)=>s.classList.toggle('active',k===i));
     [...ctr.children].forEach((d,k)=>d.classList.toggle('on',k===i));
+    if(i>0){ const h=document.getElementById('scroll-hint'); if(h) h.classList.add('gone'); }
     const active=slides[i];
     brand.hidden = active.classList.contains('onphoto') || active.classList.contains('nobrand');
     brand.classList.toggle('left', active.classList.contains('brandleft'));
@@ -1131,5 +1142,6 @@
     s.appendChild(d);
   });
 </script>
+<div id="scroll-hint" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
 </body>
 </html>

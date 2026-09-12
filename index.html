@@ -478,6 +478,8 @@
   .contact .rl{font-family:var(--label);font-weight:600;font-size:clamp(.46rem,.74vw,.64rem);letter-spacing:.14em;
     text-transform:uppercase;color:var(--teal);margin:.5em 0 .45em}
   .contact .em{font-family:var(--label);font-weight:500;font-size:clamp(.54rem,.9vw,.8rem);color:var(--body)}
+  .contact .rl:has(.rl-logo){display:inline-flex;align-items:center;justify-content:center;gap:.5em}
+  .contact .rl-logo{height:1.7em;width:auto;display:block}
   .sfoot{position:absolute;left:7%;right:7%;bottom:3.8%;display:flex;justify-content:space-between;gap:2em;z-index:5;
     font-family:var(--label);font-weight:600;font-size:clamp(.4rem,.62vw,.54rem);letter-spacing:.16em;
     text-transform:uppercase;color:#5a5d66;pointer-events:none;line-height:1.9;align-items:flex-end}
@@ -1011,7 +1013,7 @@
         <a class="cta-btn" href="mailto:mitch@imxp.org?subject=2027%20partnerships">Discuss 2027 partnerships</a>
       </div>
       <div class="contacts" style="grid-template-columns:minmax(0,340px)">
-        <div class="contact" style="text-align:center"><div class="nm">Mitch Morales</div><div class="rl">Founder · IMXP</div><div class="em">mitch@imxp.org</div></div>
+        <div class="contact" style="text-align:center"><div class="nm">Mitch Morales</div><div class="rl">Founder · <img class="rl-logo" src="assets/imxp-logo.png" alt="IMXP" /></div><div class="em">mitch@imxp.org</div></div>
       </div>
     </div>
     <div class="sfoot"><span class="credits">Photography · The Bailey Perspective · Jake Rosenberg · Andrianna Kaimis · James Cook · Monica Cazes · Allison Powers · Kayla Pittman · Caitlin Guidry · Lauren Bruno<br>Daniel · Thad · Nanaka · Shane Baby Billy Fowler · Whitney Petters · Freyr Guðjónsson · Patrick O’Leary Jr · Andrew Glenn</span><span></span></div>

@@ -1069,7 +1069,6 @@
       }
       if(active.contains(v)){
         try{ v.currentTime=0; }catch(e){}
-        v.muted=false; v.volume=1;
         const p=v.play();
         if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
       } else { v.pause(); }

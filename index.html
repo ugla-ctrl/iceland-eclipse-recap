@@ -1088,10 +1088,10 @@
       }
       if(active.contains(v)){
         try{ v.currentTime=0; }catch(e){}
-        // bgaud and controls-videos should carry sound; reset any muted flag
-        // left over from a prior autoplay-block catch so they play audibly on return visits.
-        // bgvid elements have the muted HTML attribute and must stay silent.
-        if(v.classList.contains('bgaud')||v.hasAttribute('controls')){ v.muted=false; v.volume=1; }
+        // the active slide's background video/audio carries sound. Only one slide is
+        // active at a time, so audio never overlaps; .mutedbg backgrounds (handled above)
+        // stay silent, and the autoplay-block catch below re-mutes if the browser blocks it.
+        v.muted=false; v.volume=1;
         const p=v.play();
         if(p&&p.catch) p.catch(()=>{ v.muted=true; const q=v.play(); if(q&&q.catch) q.catch(()=>{}); });
       } else { v.pause(); }
